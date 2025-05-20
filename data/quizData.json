@@ -1,0 +1,2298 @@
+{
+  "categorias": [
+    "Héroes", 
+    "Mapas", 
+    "Habilidades", 
+    "Historia", 
+    "Competitivo", 
+    "Actualizaciones"
+  ],
+  "dificultades": {
+    "fácil": 1,
+    "media": 2,
+    "difícil": 3,
+    "experto": 5
+  },
+  "preguntas": [
+    {
+      "id": "h1",
+      "texto": "¿Qué héroe de tanque fue añadido en la Temporada 2 de Overwatch 2?",
+      "opciones": ["Kiriko", "Ramattra", "Sojourn", "Junker Queen"],
+      "respuestaCorrecta": 1,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h2",
+      "texto": "¿Qué rol tiene Sojourn en Overwatch 2?",
+      "opciones": ["Tanque", "Daño", "Apoyo", "Multirrol"],
+      "respuestaCorrecta": 1,
+      "categoria": "Héroes",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h3",
+      "texto": "¿Cuál es la nacionalidad de Kiriko?",
+      "opciones": ["Coreana", "China", "Japonesa", "Tailandesa"],
+      "respuestaCorrecta": 2,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h4",
+      "texto": "¿Qué héroe de apoyo utiliza cartas con efectos curativos?",
+      "opciones": ["Mercy", "Kiriko", "Baptiste", "Lifeweaver"],
+      "respuestaCorrecta": 3,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "m1",
+      "texto": "¿Qué mapa se introdujo junto con el lanzamiento de Overwatch 2?",
+      "opciones": ["Paraíso", "Circuit Royal", "Midtown", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m2",
+      "texto": "¿En qué país se ambienta el mapa 'Paraíso'?",
+      "opciones": ["México", "Colombia", "Brasil", "Portugal"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h5",
+      "texto": "¿Qué arma principal utiliza Mauga?",
+      "opciones": ["Rifle de asalto", "Escudo y maza", "Ametralladoras duales", "Lanzagranadas"],
+      "respuestaCorrecta": 2,
+      "categoria": "Héroes",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha1",
+      "texto": "¿De qué organización era anteriormente miembro Mauga?",
+      "opciones": ["Overwatch", "Null Sector", "Vishkar", "Talon"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a1",
+      "texto": "¿Qué nuevo modo de juego se introdujo con el lanzamiento de Overwatch 2?",
+      "opciones": ["Control", "Empuje", "Captura la bandera", "Deathmatch por equipos"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c1",
+      "texto": "¿Qué cambio importante recibió el sistema competitivo en Overwatch 2?",
+      "opciones": ["Eliminación de las divisiones", "Cambio a 5v5", "Clasificaciones por roles separadas", "Nuevo rango por encima de Gran Maestro"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd1",
+      "texto": "¿Cuál es la habilidad definitiva de Illari?",
+      "opciones": ["Pirámide solar", "Tótem de sanación", "Destello solar", "Protección celestial"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h6",
+      "texto": "¿Qué héroe fue reclasificado de Daño a Tanque en Overwatch 2?",
+      "opciones": ["Mei", "Doomfist", "Cassidy", "Symmetra"],
+      "respuestaCorrecta": 1,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h7",
+      "texto": "¿Qué nacionalidad tiene Lifeweaver?",
+      "opciones": ["Filipina", "Vietnamita", "Tailandesa", "Indonesia"],
+      "respuestaCorrecta": 2,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha2",
+      "texto": "¿Quién es el hermano de Genji Shimada?",
+      "opciones": ["Hanzo", "McCree", "Reaper", "Doomfist"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m3",
+      "texto": "¿Qué característica principal tiene el modo de juego 'Empuje'?",
+      "opciones": ["Escoltar una carga", "Capturar puntos", "Empujar un robot", "Defender zonas"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+        {
+      "id": "h8",
+      "texto": "¿Qué héroe de daño fue añadido en la Temporada 6 de Overwatch 2?",
+      "opciones": ["Ramattra", "Lifeweaver", "Illari", "Mauga"],
+      "respuestaCorrecta": 2,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h9",
+      "texto": "¿Qué habilidad característica tiene Junker Queen?",
+      "opciones": ["Grito de guerra", "Juicio divino", "Comandar", "Barrera protectora"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h10",
+      "texto": "¿Qué héroe puede volar libremente durante su ultimate?",
+      "opciones": ["Mercy", "Pharah", "Echo", "Sigma"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m4",
+      "texto": "¿En qué país está ambientado el mapa 'Colosseo'?",
+      "opciones": ["España", "Grecia", "Italia", "Francia"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m5",
+      "texto": "¿Qué mapa fue eliminado temporalmente con la llegada de Overwatch 2?",
+      "opciones": ["Hanamura", "Temple of Anubis", "Blizzard World", "Ambos A y B"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h11",
+      "texto": "¿Qué tipo de habilidad definitiva tiene Ramattra en su forma Némesis?",
+      "opciones": ["Escudo protector", "Anillo de destrucción", "Tormenta de aniquilación", "Ola de aniquilación"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha3",
+      "texto": "¿Quién es el líder actual de Null Sector?",
+      "opciones": ["Doomfist", "Maximilien", "Ramattra", "Reaper"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a2",
+      "texto": "¿Qué cambio significativo recibieron todos los héroes de apoyo en Overwatch 2?",
+      "opciones": ["Mayor daño", "Curación pasiva", "Habilidad de movilidad", "Nuevo diseño visual"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c2",
+      "texto": "¿Cuántos jugadores componen un equipo en el modo competitivo de Overwatch 2?",
+      "opciones": ["4", "5", "6", "7"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h12",
+      "texto": "¿En qué país nació Cassidy (anteriormente McCree)?",
+      "opciones": ["México", "Estados Unidos", "Australia", "Canadá"],
+      "respuestaCorrecta": 1,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "hd2",
+      "texto": "¿Qué tipo de munición utiliza Sojourn en su modo de disparo principal?",
+      "opciones": ["Balas explosivas", "Energía", "Proyectiles normales", "Dardos venenosos"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m6",
+      "texto": "¿Qué característica única tiene el mapa 'Circuit Royal'?",
+      "opciones": ["Múltiples rutas secundarias", "El auto de carreras F1", "Plataformas móviles", "Efectos climáticos"],
+      "respuestaCorrecta": 1,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha4",
+      "texto": "¿Cuál es la relación entre Fareeha Amari (Pharah) y Ana Amari?",
+      "opciones": ["Compañeras de equipo", "Hermanas", "Madre e hija", "Mentora y aprendiz"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c3",
+      "texto": "¿Qué se requiere para desbloquear el modo competitivo en Overwatch 2?",
+      "opciones": ["Ganar 10 partidas", "Alcanzar nivel 25", "Completar 50 partidas", "Ganar 50 partidas en modo rápido"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h13",
+      "texto": "¿Qué héroe puede crear paredes de hielo?",
+      "opciones": ["Mei", "Symmetra", "Sigma", "Kiriko"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+        {
+      "id": "h14",
+      "texto": "¿Qué héroe de apoyo fue lanzado junto con Overwatch 2?",
+      "opciones": ["Kiriko", "Brigitte", "Lifeweaver", "Illari"],
+      "respuestaCorrecta": 0,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h15",
+      "texto": "¿Qué tipo de arma utiliza Illari?",
+      "opciones": ["Bastón solar", "Rifle energético", "Orbe de energía", "Pistola láser"],
+      "respuestaCorrecta": 0,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "h16",
+      "texto": "¿Cuál es la nacionalidad de Mauga?",
+      "opciones": ["Neozelandés", "Hawaiano", "Samoano", "Tongano"],
+      "respuestaCorrecta": 2,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "m7",
+      "texto": "¿Qué mecanismo interactivo es característico del mapa 'Eichenwalde'?",
+      "opciones": ["La puerta del castillo", "El río con corriente", "La catapulta", "El puente levadizo"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m8",
+      "texto": "¿En qué continente está ubicado el mapa 'Numbani'?",
+      "opciones": ["Europa", "África", "Asia", "América"],
+      "respuestaCorrecta": 1,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h17",
+      "texto": "¿Qué nuevo efecto introduce la habilidad 'Puño rocoso' de Ramattra?",
+      "opciones": ["Aturdimiento", "Ralentización", "Silenciamiento", "Inmovilización"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha5",
+      "texto": "¿Qué evento narrativo principal ocurrió en la historia de Overwatch 2 durante su lanzamiento?",
+      "opciones": ["Reunión de Overwatch", "Caída de Talon", "Segunda Crisis Ómnica", "Invasión de Null Sector"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a3",
+      "texto": "¿Qué cambio significativo se realizó al sistema de monetización con Overwatch 2?",
+      "opciones": ["Eliminación de las cajas de botín", "Reducción del precio de skins", "Mayor cantidad de recompensas gratuitas", "Sistema de intercambio entre jugadores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c4",
+      "texto": "¿Cuántos rangos competitivos existen en Overwatch 2?",
+      "opciones": ["5", "7", "8", "9"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h18",
+      "texto": "¿Qué héroe puede hackear a los enemigos y paquetes de salud?",
+      "opciones": ["Sombra", "Echo", "Tracer", "Moira"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd3",
+      "texto": "¿Qué nueva interacción introdujo la habilidad 'Desplazamiento' de Kiriko?",
+      "opciones": ["Atravesar paredes", "Inmunidad a efectos de control", "Invisibilidad temporal", "Curación en área"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m9",
+      "texto": "¿Qué mapa de Overwatch 1 fue rediseñado significativamente para Overwatch 2?",
+      "opciones": ["King's Row", "Route 66", "Dorado", "Rialto"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha6",
+      "texto": "¿Quién es el mentor de Kiriko según la historia?",
+      "opciones": ["Hanzo", "Genji", "Su madre", "Su abuela"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c5",
+      "texto": "¿Qué nuevo modo competitivo se introdujo con las temporadas de Overwatch 2?",
+      "opciones": ["Competitivo abierto", "Juego de rol competitivo", "Torneos", "Ligas por rango"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h19",
+      "texto": "¿Qué héroe recibió una revisión completa de habilidades con el lanzamiento de Overwatch 2?",
+      "opciones": ["Bastion", "Torbjörn", "Symmetra", "Mei"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h20",
+      "texto": "¿Qué nueva mecánica de movimiento tiene Lifeweaver?",
+      "opciones": ["Vuelo", "Teletransporte", "Plataforma rejuvenecedora", "Salto potenciado"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h21",
+      "texto": "¿Cuál es el nombre real de Cassidy?",
+      "opciones": ["Jesse McCree", "Joel Morricone", "James Deadeye", "Cole Cassidy"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "h22",
+      "texto": "¿Qué tipo de recurso utiliza Zarya para sus habilidades?",
+      "opciones": ["Munición", "Energía", "Cargas de escudo", "Poder ómnico"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m10",
+      "texto": "¿Qué característica climática presenta el mapa 'Oasis'?",
+      "opciones": ["Lluvia", "Nieve", "Ambiente desértico", "Tormenta de arena"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m11",
+      "texto": "¿En qué ciudad real está inspirado el mapa 'King's Row'?",
+      "opciones": ["París", "Londres", "Berlín", "Edimburgo"],
+      "respuestaCorrecta": 1,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h23",
+      "texto": "¿Qué tipo de daño predominante causa Junkrat?",
+      "opciones": ["Daño directo", "Daño explosivo", "Daño por quemadura", "Daño perforante"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha7",
+      "texto": "¿Qué relación tiene Torbjörn con Brigitte?",
+      "opciones": ["Mentor", "Tío", "Padre", "Amigo"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "a4",
+      "texto": "¿Qué modo PvE se lanzó con la Temporada 6 de Overwatch 2?",
+      "opciones": ["Misiones de Archivo", "Invasión", "Archivos de Overwatch", "Jefes Legendarios"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "c6",
+      "texto": "¿Cuál es el rango más alto en el sistema competitivo de Overwatch 2?",
+      "opciones": ["Diamante", "Gran Maestro", "Campeon", "Top 500"],
+      "respuestaCorrecta": 2,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h24",
+      "texto": "¿Qué héroe de apoyo tiene la habilidad 'Amplificador de daño'?",
+      "opciones": ["Mercy", "Ana", "Zenyatta", "Baptiste"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd4",
+      "texto": "¿Qué efecto único tiene la habilidad pasiva de Lifeweaver 'Curación por pares'?",
+      "opciones": ["Aumenta su curación cuando está cerca de aliados", "Recibe curación al curar a otros", "Cura automáticamente al aliado más cercano", "Reduce el tiempo de enfriamiento de sus habilidades"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "m12",
+      "texto": "¿Qué mapa tiene zonas con peligros ambientales que pueden eliminar jugadores?",
+      "opciones": ["Ilios", "Nepal", "Busan", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha8",
+      "texto": "¿Qué personaje resultó ser el padre de Pharah según la historia de Overwatch?",
+      "opciones": ["Reinhardt", "Soldado: 76", "Gabriel Reyes", "Sam, un nativo americano"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c7",
+      "texto": "¿Qué cambio recibió la estructura competitiva en Overwatch 2?",
+      "opciones": ["Temporadas más cortas", "Eliminación de las divisiones numéricas", "Clasificación solo por rol", "Mayor número de partidas de colocación"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h25",
+      "texto": "¿Qué cambio recibió Reinhardt en Overwatch 2?",
+      "opciones": ["Dos cargas de Carga", "Escudo más resistente", "Mayor velocidad de movimiento", "Capacidad de cancelar su carga"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h26",
+      "texto": "¿Qué héroe puede alterar temporalmente la gravedad?",
+      "opciones": ["Zarya", "Sigma", "Ramattra", "Winston"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h27",
+      "texto": "¿Qué nueva interacción entre héroes se introdujo con Lifeweaver y D.Va?",
+      "opciones": ["Combinación de ultimates", "Diálogos exclusivos", "Potenciación de movilidad", "Sinergia de habilidades"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "h28",
+      "texto": "¿Cuál es la principal debilidad de Tracer según el diseño del juego?",
+      "opciones": ["Baja movilidad", "Poco daño por disparo", "Baja salud", "Largos tiempos de recarga"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m13",
+      "texto": "¿Qué aspecto único tiene el mapa 'Antarctic Peninsula'?",
+      "opciones": ["Terreno resbaladizo", "Zonas submarinas", "Instalaciones científicas", "Base militar oculta"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m14",
+      "texto": "¿Qué evento narrativo ocurre durante las partidas en el mapa 'Rialto'?",
+      "opciones": ["Escolta del líder de Talon", "Sabotaje a instalaciones de Blackwatch", "Transporte de armas", "Misión encubierta"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h29",
+      "texto": "¿Qué héroe recibió una skin legendaria basada en mitología griega?",
+      "opciones": ["Reinhardt", "Mercy", "Echo", "Widowmaker"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "ha9",
+      "texto": "¿Qué conflicto principal se desarrolla en la narrativa de Overwatch 2?",
+      "opciones": ["Guerra entre Overwatch y Talon", "Nuevo levantamiento ómnico", "Invasión de Null Sector", "Conflicto entre naciones"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a5",
+      "texto": "¿Qué nueva función se añadió al sistema de comunicación en Overwatch 2?",
+      "opciones": ["Traductor automático de chat", "Ping avanzado con información contextual", "Chat de voz con filtro de toxicidad", "Comandos de voz para estrategias"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c8",
+      "texto": "¿Qué cambio se implementó en el sistema de emparejamiento competitivo en Overwatch 2?",
+      "opciones": ["Emparejamiento basado en comportamiento", "Matchmaking por nivel de cuenta", "Restricciones de grupos por rango", "Ajuste por estadísticas individuales"],
+      "respuestaCorrecta": 2,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h30",
+      "texto": "¿Qué héroe puede ver a través de las paredes como parte de su kit básico?",
+      "opciones": ["Widowmaker", "Hanzo", "Sojourn", "Cassidy"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd5",
+      "texto": "¿Qué tipo de daño predominante causa Moira?",
+      "opciones": ["Daño por área", "Daño directo", "Daño a través del tiempo", "Daño basado en porcentaje de salud"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m15",
+      "texto": "¿Qué característica única tiene el modo 'Empuje' de Overwatch 2?",
+      "opciones": ["Objetivo móvil que hay que escoltar", "Robot que empuja una barrera", "Múltiples objetivos simultáneos", "Captura de zonas móviles"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha10",
+      "texto": "¿Qué revelación sorprendente se hizo sobre Soldier: 76 en los cómics?",
+      "opciones": ["Es el padre de Pharah", "Tiene una relación con Ana", "Es homosexual", "Es un clon mejorado"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c9",
+      "texto": "¿Qué cambio se implementó en el sistema de emparejamiento de grupos en Overwatch 2?",
+      "opciones": ["Restricción por rango competitivo", "Equilibrio obligatorio de roles", "Preferencia de idioma", "Matchmaking por comportamiento"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h31",
+      "texto": "¿Qué héroe puede detectar enemigos cuando están a baja salud?",
+      "opciones": ["Hanzo", "Widowmaker", "Kiriko", "Genji"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+        {
+      "id": "h32",
+      "texto": "¿Qué nueva función tiene Mercy en Overwatch 2 comparado con Overwatch 1?",
+      "opciones": ["Curación en área", "Mayor movilidad durante Valkyrie", "Resurrección múltiple", "Vuelo vertical controlado"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "h33",
+      "texto": "¿Qué tipo de control de masas introdujo la habilidad 'Barrera cinética' de Orisa en su rediseño?",
+      "opciones": ["Ralentización", "Empuje", "Atracción", "Aturdimiento"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h34",
+      "texto": "¿Qué héroe recibió la capacidad de trepar paredes en su rediseño para Overwatch 2?",
+      "opciones": ["Hanzo", "Junkrat", "Orisa", "Bastion"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m16",
+      "texto": "¿Qué característica ambiental especial tiene el mapa 'Ilios'?",
+      "opciones": ["Pozo en el centro", "Acantilados al mar", "Ruinas antiguas", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m17",
+      "texto": "¿Qué evento histórico se celebra en el mapa 'Blizzard World'?",
+      "opciones": ["La fundación de Blizzard", "Aniversario de juegos clásicos", "Un parque temático ficticio", "Victoria contra los ómnicos"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h35",
+      "texto": "¿Qué característica única tiene el diseño de Ramattra?",
+      "opciones": ["Es mitad ómnico, mitad humano", "Puede cambiar entre dos formas", "Usa tecnología alienígena", "Tiene partes orgánicas"],
+      "respuestaCorrecta": 1,
+      "categoria": "Héroes",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha11",
+      "texto": "¿Qué conexión narrativa existe entre Reaper y Soldado: 76?",
+      "opciones": ["Son hermanos", "Fueron compañeros en Overwatch", "Mentor y aprendiz", "Rivales desde jóvenes"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a6",
+      "texto": "¿Qué nueva característica se añadió al sistema de Pase de Batalla en Overwatch 2?",
+      "opciones": ["Recompensas personalizadas", "Progresión gratuita y premium", "Mythic skins", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c10",
+      "texto": "¿Qué nuevo incentivo se añadió para jugar como roles menos populares en Overwatch 2?",
+      "opciones": ["Créditos adicionales", "Experiencia extra", "Recompensas exclusivas", "Menor tiempo de espera"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h36",
+      "texto": "¿Qué habilidad única tiene Sojourn que afecta a su arma principal?",
+      "opciones": ["Recarga automática", "Acumulación de energía para disparos potentes", "Cambio entre modos de disparo", "Munición infinita temporal"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "hd6",
+      "texto": "¿Qué efecto secundario tiene la ultimate de Kiriko en los aliados?",
+      "opciones": ["Inmunidad a control de masas", "Reducción de enfriamientos", "Aumento de velocidad", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m18",
+      "texto": "¿Qué ciudad real inspiró el diseño del mapa 'Numbani'?",
+      "opciones": ["Lagos, Nigeria", "Nairobi, Kenia", "Adís Abeba, Etiopía", "Ciudad ficticia futurista"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "ha12",
+      "texto": "¿Qué personaje no jugable importante fue introducido en las misiones de Historia?",
+      "opciones": ["El líder de Null Sector", "El Director de Overwatch", "Maximilien", "Athena"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c11",
+      "texto": "¿Qué cambio se hizo al sistema de clasificación competitiva en Overwatch 2?",
+      "opciones": ["Eliminación de SR visible", "Introducción de divisiones", "Reinicio completo entre temporadas", "Clasificación solo por victorias"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h37",
+      "texto": "¿Qué héroe recibió una revisión completa de su kit en Overwatch 2?",
+      "opciones": ["Bastion", "Torbjörn", "Mei", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h38",
+      "texto": "¿Qué nueva habilidad pasiva compartida recibieron todos los héroes de tanque en Overwatch 2?",
+      "opciones": ["Regeneración de salud", "Resistencia a efectos de control", "Reducción del retroceso por daño", "Menos generación de ultimate para enemigos"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "h39",
+      "texto": "¿Qué característica especial tiene el arma principal de Baptiste?",
+      "opciones": ["Disparo triple a ráfagas", "Munición infinita", "Modo alternativo de curación", "Daño que aumenta con la distancia"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h40",
+      "texto": "¿Qué héroe de daño puede copiar las habilidades de otros héroes?",
+      "opciones": ["Sombra", "Echo", "Symmetra", "Tracer"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m19",
+      "texto": "¿Qué civilización antigua inspiró el diseño del mapa 'Temple of Anubis'?",
+      "opciones": ["Maya", "Azteca", "Egipcia", "Mesopotámica"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m20",
+      "texto": "¿Qué característica ambiental dinámica se introdujo en el mapa 'Paraíso'?",
+      "opciones": ["Club nocturno con música", "Playa con marea cambiante", "Tráfico de vehículos", "Sistema de iluminación dinámica"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h41",
+      "texto": "¿Qué nuevo sistema de interacción entre héroes se introdujo en Overwatch 2?",
+      "opciones": ["Combinación de ultimates", "Diálogos situacionales", "Sistema de ping", "Habilidades de equipo"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha13",
+      "texto": "¿Qué evento importante ocurrió con Winston en la narrativa de Overwatch 2?",
+      "opciones": ["Encontró a otros gorilas modificados", "Regresó a la base lunar", "Lideró la reactivación de Overwatch", "Desarrolló nueva tecnología de escudo"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a7",
+      "texto": "¿Qué nueva función se añadió al sistema de comunicación en equipo en Overwatch 2?",
+      "opciones": ["Chat de voz transcrito automáticamente", "Sistema de ping contextual", "Frases predefinidas por rol", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c12",
+      "texto": "¿Qué requisito especial se estableció para participar en competitivo en Overwatch 2?",
+      "opciones": ["Verificación por SMS", "Completar 50 partidas", "Tener cuenta Battle.net", "Jugar con todos los roles"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h42",
+      "texto": "¿Qué cambio significativo recibió Lúcio en Overwatch 2?",
+      "opciones": ["Mayor radio de aura", "Cambio automático entre canciones", "Menos curación pero más velocidad", "Mayor daño de proyectiles"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "hd7",
+      "texto": "¿Qué efecto único tiene la habilidad 'Tormenta Kitsune' de Kiriko?",
+      "opciones": ["Daño por área", "Curación en grupo", "Invulnerabilidad temporal", "Varios efectos positivos a la vez"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m21",
+      "texto": "¿Qué característica única del modo de juego tiene el mapa 'Circuit Royal'?",
+      "opciones": ["Múltiples rutas alternativas", "Zonas con gravedad reducida", "Escolta de vehículo F1", "Activación de elementos interactivos"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha14",
+      "texto": "¿Qué relación se reveló entre Reaper y Soldado: 76 en la narrativa?",
+      "opciones": ["Son hermanos", "Antiguos amigos", "Excompañeros de Overwatch", "Rivales desde la infancia"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c13",
+      "texto": "¿Qué nuevo sistema de premios se introdujo en el competitivo de Overwatch 2?",
+      "opciones": ["Créditos competitivos por nivel", "Recompensas por temporada basadas en rango", "Armas doradas mejoradas", "Premios por roles menos jugados"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h43",
+      "texto": "¿Qué modificación recibió Zarya en Overwatch 2?",
+      "opciones": ["Dos cargas de barrera compartidas", "Mayor duración de barreras", "Mayor daño máximo", "Sistema de energía rediseñado"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h44",
+      "texto": "¿Qué héroe puede bloquear habilidades enemigas?",
+      "opciones": ["Sombra", "Ana", "Cassidy", "Kiriko"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h45",
+      "texto": "¿Qué tipo de munición utiliza Sigma?",
+      "opciones": ["Proyectiles estándar", "Esferas de gravedad", "Energía hiperespacial", "Fragmentos de escombros"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h46",
+      "texto": "¿Qué nuevo sistema de movimiento recibió Tracer en Overwatch 2?",
+      "opciones": ["Mayor distancia de parpadeo", "Más cargas de parpadeo", "Menor tiempo de enfriamiento", "Ninguno de los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m22",
+      "texto": "¿Qué evento global inspira el diseño del mapa 'Busan'?",
+      "opciones": ["Festival tradicional coreano", "Competiciones de eSports", "Cultura K-pop", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m23",
+      "texto": "¿Qué característica única tiene el sistema de sonido en 'Rialto'?",
+      "opciones": ["Música de ópera", "Sonidos de góndolas", "Campanas de iglesia", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h47",
+      "texto": "¿Qué héroe recibió un rediseño visual completo con el lanzamiento de Overwatch 2?",
+      "opciones": ["Cassidy", "Bastion", "Doomfist", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha15",
+      "texto": "¿Qué organización antagonista principal apareció en la campaña PvE de Overwatch 2?",
+      "opciones": ["Talon", "Null Sector", "Vishkar", "Deadlock Gang"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "a8",
+      "texto": "¿Qué nueva mecánica se añadió al tutorial de Overwatch 2?",
+      "opciones": ["Tutorial específico por rol", "Entrenamiento contra bots con dificultad ajustable", "Tutorial de comunicación en equipo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "c14",
+      "texto": "¿Qué sistema reemplazó a las tarjetas de final de partida en Overwatch 2?",
+      "opciones": ["Premios automáticos", "Pantalla de estadísticas completa", "Sistema de reconocimiento por votación", "Destacados de jugada"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h48",
+      "texto": "¿Qué capacidad única de movimiento tiene Lucio?",
+      "opciones": ["Patinaje en paredes", "Triple salto", "Teleportación corta", "Propulsión con disparos"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd8",
+      "texto": "¿Qué nueva mecánica de ultimates se introdujo en Overwatch 2?",
+      "opciones": ["Carga pasiva para todos los héroes", "Menor costo general", "Carga más rápida para tanques", "Mayor duración"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m24",
+      "texto": "¿Qué elemento interactivo especial hay en el mapa 'Eichenwalde'?",
+      "opciones": ["Puente levadizo", "Portones del castillo", "Carga en movimiento", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha16",
+      "texto": "¿Qué importante evento narrativo involucró a Zenyatta en los cómics?",
+      "opciones": ["Encontró a Iris", "Visitó Shambali", "Enfrentó a Ramattra", "Regresó a Nepal"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c15",
+      "texto": "¿Qué nuevo sistema de emparejamiento se introdujo en Overwatch 2?",
+      "opciones": ["Basado en comportamiento", "SBMM mejorado", "Preferencia de roles flexibles", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h49",
+      "texto": "¿Qué nuevo sistema de cancelación de habilidades se introdujo para Doomfist en Overwatch 2?",
+      "opciones": ["Cancelación de puñetazo cohete", "Cancelación de meteoro", "Combinación de habilidades", "Ninguna de las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h50",
+      "texto": "¿Qué héroe recibió un cambio fundamental en su ultimate con Overwatch 2?",
+      "opciones": ["Cassidy", "Bastion", "Orisa", "Sombra"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "h51",
+      "texto": "¿Qué característica especial tienen los kunais de Kiriko?",
+      "opciones": ["Daño que ignora escudos", "Daño crítico automático en cabeza", "Capacidad de rebotar", "Velocidad de proyectil variable"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h52",
+      "texto": "¿Qué tipo de munición utiliza Illari?",
+      "opciones": ["Proyectiles energéticos solares", "Balas estándar", "Munición explosiva", "Disparos láser"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m25",
+      "texto": "¿Qué evento climático ocurre en el mapa 'Nepal'?",
+      "opciones": ["Tormenta de nieve", "Avalancha", "Niebla densa", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m26",
+      "texto": "¿Qué característica única tiene el punto de control central en 'Busan: Downtown'?",
+      "opciones": ["Se mueve ligeramente", "Está en el interior de un edificio", "Tiene un tren que lo atraviesa", "Incluye objetos destructibles"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h53",
+      "texto": "¿Qué habilidad pasiva recibieron todos los héroes de apoyo en Overwatch 2?",
+      "opciones": ["Autodaño", "Autoheal", "Mayor velocidad", "Carga de ultimate pasiva"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha17",
+      "texto": "¿Qué revelación se hizo sobre los orígenes de Echo?",
+      "opciones": ["Fue creada por Torbjörn", "Contiene la conciencia de su creadora", "Es un prototipo de Vishkar", "Es la versión mejorada de Athena"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a9",
+      "texto": "¿Qué sistema de personalización se introdujo con Overwatch 2?",
+      "opciones": ["Skins personalizables", "Efectos visuales a medida", "Skins míticas", "Poses de victoria editables"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c16",
+      "texto": "¿Qué característica se añadió al sistema de clan en Overwatch 2?",
+      "opciones": ["Bases de clan personalizables", "Torneos automatizados", "No existe sistema de clanes aún", "Sistema de reclutamiento avanzado"],
+      "respuestaCorrecta": 2,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h54",
+      "texto": "¿Qué héroe puede crear portales para el equipo?",
+      "opciones": ["Symmetra", "Mercy", "Winston", "Kiriko"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd9",
+      "texto": "¿Qué nuevo tipo de daño introdujo Lifeweaver?",
+      "opciones": ["Daño basado en curación", "Daño con carga", "Daño por plantas espinosas", "Daño que reduce curación"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "m27",
+      "texto": "¿Qué característica especial tiene el modo de juego 'Control' en términos de jugabilidad?",
+      "opciones": ["Tiempo limitado por ronda", "Múltiples puntos de control", "Progreso que puede revertirse", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha18",
+      "texto": "¿Qué organización reactivaron Winston y Tracer en la narrativa de Overwatch 2?",
+      "opciones": ["Blackwatch", "Overwatch", "Talon", "Strike Team"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c17",
+      "texto": "¿Qué sistema reemplazó a los niveles de cuenta en Overwatch 2?",
+      "opciones": ["Niveles de pase de batalla", "Rangos por experiencia", "Títulos de veteranía", "Nada, se eliminaron"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h55",
+      "texto": "¿Qué héroe puede temporizador su daño a costa de recibir más daño?",
+      "opciones": ["Cassidy", "Ramattra", "Roadhog", "Zarya"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+        {
+      "id": "h56",
+      "texto": "¿Qué sistema de salud único tiene D.Va?",
+      "opciones": ["Escudo regenerativo", "Armadura mezclada con salud", "Dos pools de vida (mech y piloto)", "Escudo temporal"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h57",
+      "texto": "¿Qué habilidad pasiva tienen todos los héroes de daño desde Overwatch 2?",
+      "opciones": ["Velocidad aumentada", "Recarga más rápida", "Menor retroceso", "Mayor velocidad de movimiento"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h58",
+      "texto": "¿Qué sistema único de munición utiliza Echo?",
+      "opciones": ["Munición que se recarga automáticamente", "Energía que fluctúa", "No necesita recargar manualmente", "Proyectiles que vuelven al disparar"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m28",
+      "texto": "¿Qué evento real inspiró el diseño del mapa 'Havana'?",
+      "opciones": ["Festival de música cubana", "Revolución cubana", "Exportación de ron", "Destilería histórica"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m29",
+      "texto": "¿Qué característica climática tiene el mapa 'Oasis'?",
+      "opciones": ["Tormenta de arena ocasional", "Calor extremo", "Ambiente desértico", "Viento que afecta el movimiento"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h59",
+      "texto": "¿Qué importante rework recibió D.Va en Overwatch 2?",
+      "opciones": ["Nueva ultimate", "Sistema de defensa modificado", "Mayor resistencia en forma piloto", "Mecánica de remech mejorada"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha19",
+      "texto": "¿Qué acontecimiento importante ocurrió en Hanamura según la narrativa de Overwatch?",
+      "opciones": ["Genji fue casi asesinado por Hanzo", "El clan Shimada fue destruido", "Overwatch arrestó al líder Shimada", "Se estableció una base de Talon"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a10",
+      "texto": "¿Qué nuevo modo de juego temporal se introduce regularmente en Overwatch 2?",
+      "opciones": ["Arcas", "Eventos estacionales", "Modo Historia", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c18",
+      "texto": "¿Qué nuevo requisito se implementó para el modo competitivo en Overwatch 2?",
+      "opciones": ["Verificación por SMS", "Completar un tutorial avanzado", "Ganar 50 partidas", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h60",
+      "texto": "¿Qué característica única tienen los proyectiles de Hanzo?",
+      "opciones": ["Trayectoria curva", "Daño por distancia", "Rebote en superficies", "Penetración de escudos"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd10",
+      "texto": "¿Qué efecto secundario tiene la ultimate de Sombra en los enemigos?",
+      "opciones": ["Reduce su velocidad", "Revela su posición", "Hackea todas sus habilidades", "Reduce su armadura"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m30",
+      "texto": "¿Qué elemento interactivo único tiene el mapa 'Hollywood'?",
+      "opciones": ["Puertas del estudio", "Limosina en movimiento", "Cámaras de seguridad", "Set de filmación"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha20",
+      "texto": "¿Qué importante revelación se hizo sobre el pasado de Ana?",
+      "opciones": ["Era miembro fundadora de Overwatch", "Fingió su muerte durante años", "Es la madre de Pharah", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c19",
+      "texto": "¿Qué característica especial tienen los torneos mensuales de Overwatch?",
+      "opciones": ["Mapas exclusivos", "Modos de juego alternativos", "Recompensas especiales", "No existen torneos mensuales oficiales"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h61",
+      "texto": "¿Qué nueva mecánica de carga de ultimate se introdujo en Overwatch 2?",
+      "opciones": ["Carga por proximidad a payload", "Acumulación pasiva para todos", "Carga por recibir daño", "Reducción al cambiar de héroe"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h62",
+      "texto": "¿Qué héroe puede crear zonas donde los enemigos se vuelven visibles para el equipo?",
+      "opciones": ["Hanzo", "Widowmaker", "Sojourn", "Ashe"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h63",
+      "texto": "¿Qué característica única tiene la ultimate de Mauga?",
+      "opciones": ["Daño por área masivo", "Invulnerabilidad temporal", "Fuego cruzado con dos ametralladoras", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h64",
+      "texto": "¿Qué habilidad compartida recibieron todos los tanques en Overwatch 2?",
+      "opciones": ["Mayor resistencia a control de masas", "Reducción de retroceso", "Menor generación de ultimate para enemigos", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m31",
+      "texto": "¿Qué nueva mecánica ambiental se añadió a algunos mapas en Overwatch 2?",
+      "opciones": ["Clima dinámico", "Destrucción del terreno", "Iluminación mejorada", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m32",
+      "texto": "¿Qué característica única tiene el mapa 'Antarctic Peninsula'?",
+      "opciones": ["Estación científica", "Zona submarina", "Pesca bajo hielo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h65",
+      "texto": "¿Qué nuevo sistema de jugabilidad se introdujo con Ramattra?",
+      "opciones": ["Cambio de forma", "Escudo móvil", "Movimiento mejorado", "Cancelación de habilidades"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha21",
+      "texto": "¿Qué importante evento narrativo involucró a Lúcio en los cómics?",
+      "opciones": ["Lucha contra Vishkar en Rio", "Creación de tecnología de sonido", "Concierto benéfico mundial", "Unirse a Overwatch"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a11",
+      "texto": "¿Qué nueva característica se añadió al sistema de resumen de partidas en Overwatch 2?",
+      "opciones": ["Estadísticas detalladas", "Repeticiones automáticas", "Mejor jugada mejorada", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c20",
+      "texto": "¿Qué nuevo formato competitivo se introdujo en Overwatch 2?",
+      "opciones": ["Torneos por temporada", "Competitivo por roles", "Sistema de rangos con divisiones", "Eliminación del SR visible"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h66",
+      "texto": "¿Qué cambio recibió la habilidad de resurrección de Mercy en Overwatch 2?",
+      "opciones": ["Mayor alcance", "Menor tiempo de canalización", "Invulnerabilidad durante el proceso", "Ningún cambio significativo"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd11",
+      "texto": "¿Qué efecto único tiene Zenyatta sobre la curación y el daño?",
+      "opciones": ["Curación pasiva en área", "Orbe de discordia aumenta daño recibido", "Orbe de armonía cura a múltiples objetivos", "Puede curar y dañar simultáneamente"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m33",
+      "texto": "¿Qué característica especial tiene el mapa 'Ilios: Well'?",
+      "opciones": ["Peligro ambiental en el centro", "Vista al mar", "Arquitectura griega", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha22",
+      "texto": "¿Qué evento conecta a Echo con Overwatch?",
+      "opciones": ["Fue activada por Winston", "Misiyn contenia sus comandos", "Su creadora trabajaba para Overwatch", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c21",
+      "texto": "¿Qué sistema reemplazó a las medallas de rendimiento en Overwatch 2?",
+      "opciones": ["Puntuación de rendimiento dinámica", "Tabla detallada de estadísticas", "Sistema de insignias de especialización", "Ninguno, se eliminaron"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h67",
+      "texto": "¿Qué modificación recibió la habilidad de Sombra 'Translocalizador' en Overwatch 2?",
+      "opciones": ["Mayor duración", "Invisibilidad al teleportarse", "Menor tiempo de lanzamiento", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h68",
+      "texto": "¿Qué nuevo tipo de escudo introdujo Junker Queen?",
+      "opciones": ["Escudo temporal de salud", "Barrera direccional", "Sobrecarga de escudo", "No tiene ningún escudo"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h69",
+      "texto": "¿Qué característica especial tiene la habilidad principal de Sojourn?",
+      "opciones": ["Disparos que marcan enemigos", "Proyectiles que rebotan", "Raíl de energía secundario", "Daño que aumenta con disparos consecutivos"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h70",
+      "texto": "¿Qué mecánica de salud única recibió Zenyatta en Overwatch 2?",
+      "opciones": ["Mayor regeneración de escudos", "Más escudos y menos salud base", "Patada con retroceso", "Auto-curación al usar transcendencia"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m34",
+      "texto": "¿Qué elemento único interactúa con las habilidades de los héroes en el mapa 'Blizzard World'?",
+      "opciones": ["Puertas del parque", "Atracciones temáticas", "Plataformas móviles", "Referencias a otros juegos"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m35",
+      "texto": "¿Qué sistema de clima dinámico se introdujo en el mapa 'Paraíso'?",
+      "opciones": ["Lluvia ocasional", "Ciclo día-noche", "Iluminación de club nocturno", "Efectos de iluminación dinámica"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h71",
+      "texto": "¿Qué nuevo tipo de daño se introdujo con Illari?",
+      "opciones": ["Daño solar acumulativo", "Daño que reduce curación", "Daño por área concentrado", "Daño que escala con la distancia"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha23",
+      "texto": "¿Qué importante descubrimiento sobre los ómnicos se reveló en la historia de Overwatch?",
+      "opciones": ["Origen de su conciencia", "Protocolo de rebelión programado", "Conexión con Dios en Numbani", "La existencia de Iris"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "a12",
+      "texto": "¿Qué nuevo sistema de recompensas se introdujo en Overwatch 2?",
+      "opciones": ["Créditos de Overwatch 2", "Pase de batalla con niveles", "Desafíos diarios y semanales", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c22",
+      "texto": "¿Qué sistema de balance se implementó en partidas competitivas de Overwatch 2?",
+      "opciones": ["Ajuste por rango oculto", "Restricciones de grupo por nivel", "SBMM mejorado", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h72",
+      "texto": "¿Qué característica innovadora tiene la ultimate de Junker Queen?",
+      "opciones": ["Daño en área", "Anti-curación", "Escudos temporales", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "hd12",
+      "texto": "¿Qué efecto tiene la habilidad 'Impulso de riel' de Sojourn?",
+      "opciones": ["Deslizamiento rápido", "Salto propulsado", "Aceleración temporal", "Empuje a enemigos"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m36",
+      "texto": "¿Qué evento global inspiró el diseño del mapa 'Busan'?",
+      "opciones": ["Juegos Olímpicos de Invierno", "Campeonatos de eSports", "Cultura tradicional y moderna de Corea", "Festival de Año Nuevo Lunar"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha24",
+      "texto": "¿Qué revelación impactante sobre Reaper se hizo en la historia de Overwatch?",
+      "opciones": ["Es inmortal debido a experimentos", "Era Gabriel Reyes de Blackwatch", "Fue el primer líder de Overwatch", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c23",
+      "texto": "¿Qué nuevo incentivo se ofrece a los jugadores para jugar como tanque en Overwatch 2?",
+      "opciones": ["Créditos adicionales", "Menor tiempo de espera", "Experiencia extra", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h73",
+      "texto": "¿Qué cambio recibió la ultimate de Cassidy en Overwatch 2?",
+      "opciones": ["Se eliminó el 'Es la hora'", "Ahora se llama 'Deadeye'", "Se convirtió en una granada adherente", "Tiene mayor radio de efecto"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h74",
+      "texto": "¿Qué nuevo sistema de sinergia se implementó entre Reinhardt y Brigitte?",
+      "opciones": ["Aumento de escudo mutuo", "Líneas de diálogo exclusivas", "Combinación de ultimates", "Bonus de velocidad"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h75",
+      "texto": "¿Qué característica única tiene la habilidad defensiva de Kiriko?",
+      "opciones": ["Invulnerabilidad para aliados", "Curación en área", "Protección contra control de masas", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h76",
+      "texto": "¿Qué héroe puede alterar temporalmente la dirección de los proyectiles enemigos?",
+      "opciones": ["Sigma", "D.Va", "Genji", "Winston"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m37",
+      "texto": "¿Qué tipo de tecnología futurista caracteriza al mapa 'Oasis'?",
+      "opciones": ["Jardines artificiales avanzados", "Vehículos autónomos", "Ciudad universitaria de alta tecnología", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m38",
+      "texto": "¿Qué característica única tiene el sistema de plataformas en 'Eichenwalde'?",
+      "opciones": ["Se mueven con el payload", "Cambian de configuración a mitad de partida", "Múltiples rutas de acceso al objetivo", "Portón destruible"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h77",
+      "texto": "¿Qué mecánica especial recibió Roadhog en Overwatch 2?",
+      "opciones": ["Mayor daño de gancho", "Nueva habilidad secundaria", "Menor tiempo de recarga", "Cambios en el disparo secundario"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha25",
+      "texto": "¿Qué revelación importante sobre Doomfist se hizo en la historia de Overwatch?",
+      "opciones": ["Su conexión con Talon", "El origen de su guantelete", "Su rivalidad con Orisa", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a13",
+      "texto": "¿Qué sistema de comunicación no verbal se añadió en Overwatch 2?",
+      "opciones": ["Ping contextual", "Comandos de voz automatizados", "Emotes tácticos", "Menú de estrategias"],
+      "respuestaCorrecta": 0,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c24",
+      "texto": "¿Qué mecánica se implementó en el competitivo de Overwatch 2?",
+      "opciones": ["Sistema de veto de mapas", "Selección de roles antes de la partida", "Recompensas por rango alcanzado", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h78",
+      "texto": "¿Qué héroe puede temporalmente convertir el daño en curación para aliados?",
+      "opciones": ["Baptiste", "Kiriko", "Ana", "Mercy"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "hd13",
+      "texto": "¿Qué efecto único tiene la habilidad 'Desvío' de Genji?",
+      "opciones": ["Bloquea todo tipo de proyectiles", "Refleja proyectiles hacia su origen", "Otorga invulnerabilidad", "Aumenta su velocidad"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m39",
+      "texto": "¿Qué característica especial tiene el modo de juego 'Escolta' en términos de progresión de mapa?",
+      "opciones": ["Checkpoints que aseguran el progreso", "Tiempo adicional al alcanzar objetivos", "Cambios de ruta según el tiempo", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha26",
+      "texto": "¿Qué conexión se reveló entre Genji y Zenyatta en la narrativa?",
+      "opciones": ["Mentor espiritual", "Compañeros de batalla", "Rivales convertidos en aliados", "Creador y creación"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c25",
+      "texto": "¿Qué sistema revolucionario de emparejamiento se implementó en Overwatch 2?",
+      "opciones": ["Matchmaking basado en habilidad", "Equilibrio de roles automático", "Emparejamiento por comportamiento", "Grupos equilibrados por nivel"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h79",
+      "texto": "¿Qué nuevo sistema de recarga implementó Illari?",
+      "opciones": ["Recarga que cura a aliados cercanos", "Recarga que genera energía solar", "Recarga automática con el tiempo", "Recarga más rápida bajo el sol"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+        {
+      "id": "h80",
+      "texto": "¿Qué tipo de daño hace Junkrat que lo diferencia de otros héroes?",
+      "opciones": ["Daño de rebote amplificado", "Proyectiles explosivos", "Daño que ignora escudos", "Daño que causa efecto de quemadura"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h81",
+      "texto": "¿Qué característica única tiene la ultimate de Lifeweaver?",
+      "opciones": ["Árbol curativo", "Campo de fuerza vegetal", "Creación de plantas explosivas", "Alteración del terreno"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h82",
+      "texto": "¿Qué modificación recibió el sistema de escudo de Reinhardt en Overwatch 2?",
+      "opciones": ["Escudo con regeneración más rápida", "Menor salud del escudo", "Mayor movilidad con escudo activo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m40",
+      "texto": "¿Qué evento histórico se representa en el mapa 'King's Row'?",
+      "opciones": ["La Revolución Ómnica", "La fundación de Overwatch", "Tensiones entre humanos y ómnicos", "Crisis diplomática"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m41",
+      "texto": "¿Qué característica interactiva tiene el mapa 'Busan' que afecta la jugabilidad?",
+      "opciones": ["Tren que cruza el punto", "Ascensores utilizables", "Consolas activables", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h83",
+      "texto": "¿Qué característica especial tiene el exotraje de D.Va?",
+      "opciones": ["Puede autodestruirse", "Regeneración de vida del mech", "Sistema de vuelo temporal", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha27",
+      "texto": "¿Qué importante evento ocurrió en Nepal según la narrativa de Overwatch?",
+      "opciones": ["Fundación del monasterio Shambali", "Muerte de Mondatta", "Descubrimiento de Iris", "Conflicto entre ómnicos"],
+      "respuestaCorrecta": 0,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a14",
+      "texto": "¿Qué nuevo sistema de personalización se introdujo para los héroes en Overwatch 2?",
+      "opciones": ["Efectos visuales personalizados", "Skins Míticas personalizables", "Sonidos de armas alternativos", "Emblemas de jugador"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c26",
+      "texto": "¿Qué formato competitivo reemplazó al tradicional en Overwatch 2?",
+      "opciones": ["Partidas con roles fijos 5v5", "Sistema de ligas por divisiones", "Clasificación sin SR visible", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h84",
+      "texto": "¿Qué mecánica permite a Moira recuperar su recurso de curación?",
+      "opciones": ["Daño con orbe de desgaste", "Habilidad biótica de daño", "Toque vampírico", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd14",
+      "texto": "¿Qué efecto secundario tiene la habilidad 'Orbe Biótico' de Moira en los enemigos?",
+      "opciones": ["Distorsión visual", "Ralentización", "Daño constante", "Reducción de curación"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m42",
+      "texto": "¿Qué característica única tiene el punto de control central en 'Nepal: Sanctum'?",
+      "opciones": ["Ubicación en altura", "Peligro ambiental en el borde", "Estatua ómnica central", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha28",
+      "texto": "¿Qué antigua tecnología se descubrió según la historia de Overwatch en el mapa 'Temple of Anubis'?",
+      "opciones": ["IA avanzada", "Tecnología ómnica original", "Armas de Anubis", "Programa Dios"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c27",
+      "texto": "¿Qué incentivo especial reciben los jugadores en Overwatch 2 al jugar con amigos?",
+      "opciones": ["XP adicional", "Desafíos especiales", "Recompensas exclusivas", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h85",
+      "texto": "¿Qué héroe recibió un cambio fundamental en su ultimate al pasar a Overwatch 2?",
+      "opciones": ["Cassidy", "Orisa", "Bastion", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+        {
+      "id": "h86",
+      "texto": "¿Qué característica única tiene la visión de combate de Widowmaker?",
+      "opciones": ["Detecta enemigos a través de paredes", "Marca puntos débiles", "Revela enemigos para todo el equipo", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h87",
+      "texto": "¿Qué elemento visual distintivo tiene Reaper con su traje?",
+      "opciones": ["Máscara de calavera", "Capucha negra", "Escopetas gemelas", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Héroes",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h88",
+      "texto": "¿Qué nueva mecánica de movilidad se introdujo para todos los personajes de apoyo en Overwatch 2?",
+      "opciones": ["Salto propulsado", "Deslizamiento táctico", "Autodaño pasivo", "Ninguna específica para todos"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m43",
+      "texto": "¿Qué antigua civilización inspiró el diseño del mapa 'Temple of Anubis'?",
+      "opciones": ["Maya", "Azteca", "Egipcia", "Babilónica"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m44",
+      "texto": "¿Qué característica ambiental única tiene 'Route 66'?",
+      "opciones": ["Tren que bloquea caminos", "Gasolinera abandonada", "Cañón desértico", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h89",
+      "texto": "¿Qué nueva interacción tiene Symmetra con su teletransportador en Overwatch 2?",
+      "opciones": ["Mayor distancia", "Duración infinita", "Múltiples cargas", "Mayor velocidad de despliegue"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha29",
+      "texto": "¿Qué revelación importante sobre Null Sector se hizo en la narrativa de Overwatch 2?",
+      "opciones": ["Tienen base en la luna", "Dirigidos por Ramattra", "Buscan liberación ómnica", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a15",
+      "texto": "¿Qué modo de juego experimental se convirtió en permanente en Overwatch 2?",
+      "opciones": ["Deathmatch por equipos", "Captura la bandera", "Empuje", "Bola lúcida"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c28",
+      "texto": "¿Qué nuevo sistema se implementó para reducir los abandonos en partidas competitivas?",
+      "opciones": ["Penalizaciones más severas", "Sistema de sustitución limitada", "Compensación de SR para equipos incompletos", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h90",
+      "texto": "¿Qué héroe puede temporalmente neutralizar los escudos enemigos?",
+      "opciones": ["Sombra", "Symmetra", "Sigma", "Winston"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd15",
+      "texto": "¿Qué efecto secundario tiene la ultimate de Lucio en los enemigos?",
+      "opciones": ["No tiene efecto en enemigos", "Los ralentiza", "Los empuja", "Reduce su daño"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m45",
+      "texto": "¿Qué característica única tienen los puntos de control en el modo 'Control'?",
+      "opciones": ["Se desbloquean progresivamente", "Solo pueden ser capturados una vez", "El progreso puede revertirse", "Cambian de ubicación"],
+      "respuestaCorrecta": 2,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha30",
+      "texto": "¿Qué relación se reveló entre Torbjörn y Bastion en los cómics?",
+      "opciones": ["Enemigos convertidos en aliados", "Creador y creación", "Torbjörn reparó a Bastion", "Compañeros en Overwatch"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c29",
+      "texto": "¿Qué requisito se implementó para participar en el competitivo de Overwatch 2?",
+      "opciones": ["Verificación por SMS", "Nivel mínimo de cuenta", "Ganar 50 partidas en modo rápido", "Completar el tutorial avanzado"],
+      "respuestaCorrecta": 0,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h91",
+      "texto": "¿Qué héroe puede temporalmente duplicar a otros héroes?",
+      "opciones": ["Echo", "Symmetra", "Mercy", "Sombra"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+        {
+      "id": "h92",
+      "texto": "¿Qué mecánica única introdujo Brigitte para el combate cuerpo a cuerpo?",
+      "opciones": ["Escudo con embestida", "Látigo sanador", "Aturdimiento con escudo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h93",
+      "texto": "¿Qué nueva mecánica de movimiento se introdujo para Winston en Overwatch 2?",
+      "opciones": ["Triple salto", "Control direccional del salto", "Carga del salto", "Mayor distancia de salto"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "h94",
+      "texto": "¿Qué nuevo tipo de curación implementó Ana en el juego?",
+      "opciones": ["Curación a distancia con francotirador", "Granadas de área", "Inyecciones de nanobots", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m46",
+      "texto": "¿Qué característica única de jugabilidad ofrece el mapa 'Oasis'?",
+      "opciones": ["Vehículos que pueden atropellar", "Plataformas de salto", "Centro de control elevado", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m47",
+      "texto": "¿Qué tipo de clima tiene el mapa 'Nepal'?",
+      "opciones": ["Lluvia intensa", "Nieve constante", "Clima despejado", "Tormenta de arena"],
+      "respuestaCorrecta": 1,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h95",
+      "texto": "¿Qué cambio recibió la habilidad de teletransporte de Symmetra en Overwatch 2?",
+      "opciones": ["Mayor alcance", "Múltiples portales simultáneos", "Mayor velocidad de despliegue", "Mayor duración"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha31",
+      "texto": "¿Qué importante descubrimiento hizo Winston según la narrativa de Overwatch?",
+      "opciones": ["Tecnología de escudo burbuja", "Portal dimensional", "Reactivación de Athena", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a16",
+      "texto": "¿Qué sistema se implementó para reducir la toxicidad en Overwatch 2?",
+      "opciones": ["Detección automática de comportamiento", "Sistema de defensa", "Chat con filtro de palabras", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c30",
+      "texto": "¿Qué recompensa exclusiva se otorga a los jugadores competitivos en Overwatch 2?",
+      "opciones": ["Puntos competitivos para armas doradas", "Iconos de temporada", "Sprays exclusivos", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h96",
+      "texto": "¿Qué mecánica única de daño tiene Hanzo?",
+      "opciones": ["Flechas que penetran escudos", "Proyectiles con trayectoria parabólica", "Impactos críticos automáticos", "Flechas que revelan enemigos"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd16",
+      "texto": "¿Qué efecto tiene la habilidad 'Granada biótica' de Ana?",
+      "opciones": ["Solo daña a enemigos", "Solo cura a aliados", "Aumenta curación recibida por aliados", "Todas las anteriores excepto A y B"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m48",
+      "texto": "¿Qué elemento arquitectónico único caracteriza al mapa 'Rialto'?",
+      "opciones": ["Canales de agua con góndolas", "Puentes venecianos", "Plaza central con fuente", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha32",
+      "texto": "¿Qué conexión narrativa se reveló entre Pharah y Soldier: 76?",
+      "opciones": ["Mentor y aprendiz", "Antiguos compañeros", "No tienen conexión directa", "Padre e hija"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c31",
+      "texto": "¿Qué cambio se implementó en el sistema de Juego de Rol en Overwatch 2?",
+      "opciones": ["Clasificaciones separadas por rol", "Recompensas específicas por rol", "Roles flexibles", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h97",
+      "texto": "¿Qué héroe recibió una revisión completa de su árbol de talentos en el modo PvE de Overwatch 2?",
+      "opciones": ["Reinhardt", "Mercy", "Todos los héroes", "Sojourn"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+        {
+      "id": "h98",
+      "texto": "¿Qué característica única tiene el sistema de munición de Ashe?",
+      "opciones": ["Recarga cada bala individualmente", "Balas que causan daño por tiempo", "Proyectiles explosivos", "Munición infinita"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h99",
+      "texto": "¿Qué tipo de habilidades puede copiar Echo cuando usa su ultimate?",
+      "opciones": ["Solo ultimates", "Habilidades principales", "Todas las habilidades del héroe copiado", "Solo habilidades de daño"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h100",
+      "texto": "¿Qué mejora recibió la habilidad 'Escudo barrera' de Reinhardt en Overwatch 2?",
+      "opciones": ["Mayor salud", "Más velocidad de movimiento", "Mayor velocidad de regeneración", "Menor tiempo de enfriamiento"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "m49",
+      "texto": "¿Qué característica arquitectónica exclusiva tiene 'Hollywood'?",
+      "opciones": ["Set de filmación activo", "Estudio de cine", "Limusina de celebridades", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m50",
+      "texto": "¿Qué elemento interactivo afecta la jugabilidad en 'Ilios: Well'?",
+      "opciones": ["Pozo en el centro del punto", "Edificios destruibles", "Plataformas móviles", "Trampas activables"],
+      "respuestaCorrecta": 0,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h101",
+      "texto": "¿Qué cambio recibieron las habilidades de movimiento de Doomfist al pasar a ser tanque en Overwatch 2?",
+      "opciones": ["Mayor alcance", "Mayor daño", "Mayor resistencia durante uso", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha33",
+      "texto": "¿Qué revelación importante sobre Zenyatta se hizo en la narrativa de Overwatch?",
+      "opciones": ["Es uno de los líderes Shambali", "Fue construido por Mondatta", "Abandonó el monasterio por diferencias filosóficas", "Todas las anteriores"],
+      "respuestaCorrecta": 2,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "a17",
+      "texto": "¿Qué sistema de personalización se introdujo en Overwatch 2?",
+      "opciones": ["Editor de armas", "Personalización de efectos de eliminación", "Skins míticas personalizables", "Emblemas personalizados"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c32",
+      "texto": "¿Qué formato específico se implementó para los partidos competitivos en Overwatch 2?",
+      "opciones": ["Sistema de liga", "Formato 5v5", "Selección de roles antes de la partida", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h102",
+      "texto": "¿Qué nuevo tipo de curación implementó Kiriko?",
+      "opciones": ["Curación que otorga invulnerabilidad", "Talismanes de curación a distancia", "Curación en área con efectos adicionales", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "hd17",
+      "texto": "¿Qué efecto único tiene la habilidad 'Inmortalidad' de Baptiste?",
+      "opciones": ["Cura instantáneamente a aliados críticos", "Evita que aliados bajen de cierta salud", "Revive a aliados caídos", "Otorga vida extra temporal"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m51",
+      "texto": "¿Qué característica de jugabilidad única ofrece el mapa 'Junkertown'?",
+      "opciones": ["Trampas mecánicas", "Arena circular central", "Puerta principal que debe abrirse", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "ha34",
+      "texto": "¿Qué descubrimiento importante hizo Moira según la narrativa de Overwatch?",
+      "opciones": ["Tecnología de manipulación genética", "Cura para enfermedades degenerativas", "Tecnología de teletransporte", "Fusión de energía y biología"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "difícil"
+    },
+    {
+      "id": "c33",
+      "texto": "¿Qué sistema se implementó para mejorar el balance en partidas competitivas de Overwatch 2?",
+      "opciones": ["Equilibrio dinámico de habilidades", "Matchmaking mejorado", "Límite de un tanque por equipo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h103",
+      "texto": "¿Qué característica especial tiene el sistema de movimiento de Lucio?",
+      "opciones": ["Patinaje en paredes", "Triple salto", "Propulsión sónica", "Teletransporte corto"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+        {
+      "id": "h104",
+      "texto": "¿Qué héroe puede temporalmente anular el daño enemigo?",
+      "opciones": ["D.Va", "Zarya", "Genji", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h105",
+      "texto": "¿Qué tipo de visión mejorada recibió Hanzo tras el rediseño de su habilidad 'Visión sónica'?",
+      "opciones": ["Mayor duración", "Mayor área de efecto", "Visión a través de paredes para todo el equipo", "Marca enemigos para daño crítico"],
+      "respuestaCorrecta": 2,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h106",
+      "texto": "¿Qué efecto secundario tiene la habilidad definitiva de Sombra?",
+      "opciones": ["Silencia a los enemigos", "Hackea todas las habilidades", "Revela la posición de los enemigos", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "m52",
+      "texto": "¿Qué característica única del terreno tiene 'Ilios: Ruins'?",
+      "opciones": ["Zona central elevada", "Múltiples rutas de flanqueo", "Acantilados peligrosos", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m53",
+      "texto": "¿Qué elemento interactivo único hay en 'Circuit Royale'?",
+      "opciones": ["Auto de F1", "Garage con puertas", "Tiendas de lujo", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "h107",
+      "texto": "¿Qué característica especial tiene la ultimate de D.Va?",
+      "opciones": ["Explosión masiva en área", "Daño basado en proximidad", "Expulsa a D.Va del mech", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha35",
+      "texto": "¿Qué conexión importante se reveló entre Ashe y McCree/Cassidy?",
+      "opciones": ["Antiguos amigos", "Ex-pareja", "Miembros de Deadlock Gang", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a18",
+      "texto": "¿Qué característica de accesibilidad se implementó en Overwatch 2?",
+      "opciones": ["Opciones de daltonismo mejoradas", "Control de contraste y tamaño de texto", "Sistema de ping para comunicación no verbal", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c34",
+      "texto": "¿Qué sistema se implementó para reducir el 'smurfing' en Overwatch 2?",
+      "opciones": ["Verificación por SMS", "Detección de habilidad", "Análisis de comportamiento", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h108",
+      "texto": "¿Qué héroe recibió la capacidad de reflejar proyectiles?",
+      "opciones": ["Genji", "D.Va", "Sigma", "Winston"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd18",
+      "texto": "¿Qué efecto único tiene la habilidad 'Amplificación de daño' de Mercy?",
+      "opciones": ["Aumenta el daño de un aliado", "Aumenta la velocidad de ataque", "Reduce el tiempo de enfriamiento", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m54",
+      "texto": "¿Qué característica de jugabilidad única tiene el modo 'Escolta'?",
+      "opciones": ["Payload móvil", "Checkpoints que aseguran progreso", "Extensión de tiempo al completar fases", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha36",
+      "texto": "¿Qué importante revelación narrativa se hizo sobre los orígenes de Overwatch?",
+      "opciones": ["Creado para combatir la Crisis Ómnica", "Formado por héroes de diversos países", "Financiado por las Naciones Unidas", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c35",
+      "texto": "¿Qué sistema innovador se implementó para los espectadores en Overwatch 2?",
+      "opciones": ["Cámaras en primera persona mejoradas", "Mapa de calor de actividad", "Estadísticas en tiempo real", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h109",
+      "texto": "¿Qué nuevo sistema de movilidad recibió Sojourn?",
+      "opciones": ["Propulsión horizontal", "Deslizamiento con cancelación", "Salto potenciado vertical", "Todas las anteriores"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+        {
+      "id": "h110",
+      "texto": "¿Qué héroe tiene la capacidad de marcar enemigos para que todo el equipo los vea?",
+      "opciones": ["Widowmaker", "Hanzo", "Ashe", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    },
+    {
+      "id": "h111",
+      "texto": "¿Qué característica única tiene el sistema de cooldown de la habilidad 'Guardian Angel' de Mercy en Overwatch 2?",
+      "opciones": ["Se reinicia con eliminaciones", "Cooldown basado en distancia recorrida", "Múltiples cargas", "Cancelable a mitad de uso"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "media"
+    },
+    {
+      "id": "h112",
+      "texto": "¿Qué mecánica de escudo implementó Sigma?",
+      "opciones": ["Barrera rectangular", "Escudo que absorbe proyectiles", "Campo de fuerza esférico", "Todas las anteriores"],
+      "respuestaCorrecta": 0,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m55",
+      "texto": "¿Qué característica ambiental única tiene el mapa 'Havana'?",
+      "opciones": ["Destilería de ron", "Tormenta tropical", "Ambiente costero", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "media"
+    },
+    {
+      "id": "m56",
+      "texto": "¿Qué particularidad tiene el sistema de plataformas en 'Lijiang Tower: Garden'?",
+      "opciones": ["Puentes estrechos sobre agua", "Zona central elevada", "Área de combate circular", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h113",
+      "texto": "¿Qué nuevo sistema de turreta recibió Torbjörn en su rediseño?",
+      "opciones": ["Torretas automáticas de nivel 3", "Torreta lanzable a distancia", "Múltiples torretas pequeñas", "Torreta con modos de ataque"],
+      "respuestaCorrecta": 1,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha37",
+      "texto": "¿Qué revelación importante sobre Talon se hizo en la narrativa de Overwatch?",
+      "opciones": ["Organización terrorista global", "Conexión con la caída de Overwatch", "Consejo de líderes secretos", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "a19",
+      "texto": "¿Qué sistema revolucionario se implementó para los controles en Overwatch 2?",
+      "opciones": ["Control personalizado por héroe", "Sistema de asistencia de apuntado", "Sensibilidad específica por arma", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Actualizaciones",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "c36",
+      "texto": "¿Qué método innovador se introdujo para el emparejamiento en Overwatch 2?",
+      "opciones": ["SBMM mejorado", "Emparejamiento por comportamiento", "Equilibrio de roles y habilidad", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "media"
+    },
+    {
+      "id": "h114",
+      "texto": "¿Qué característica especial tiene la modalidad de disparo secundario de Roadhog?",
+      "opciones": ["Disparo explosivo", "Metralla en área", "Proyectiles múltiples", "Mayor alcance"],
+      "respuestaCorrecta": 2,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "hd19",
+      "texto": "¿Qué efecto único tiene el campo de energía de Winston?",
+      "opciones": ["Bloquea solo proyectiles", "Permite disparar desde dentro hacia fuera", "Cura aliados dentro", "Ralentiza enemigos"],
+      "respuestaCorrecta": 1,
+      "categoria": "Habilidades",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "m57",
+      "texto": "¿Qué característica especial tiene la fase final del mapa 'Eichenwalde'?",
+      "opciones": ["Castillo fortificado", "Sala del trono", "Puerta que debe ser destruida", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Mapas",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "ha38",
+      "texto": "¿Qué conexión narrativa se estableció entre Bastion y Torbjörn?",
+      "opciones": ["Enemigos convertidos en aliados", "Bastion fue reparado por Torbjörn", "Compañeros en Overwatch", "Se conocieron después de la Crisis Ómnica"],
+      "respuestaCorrecta": 1,
+      "categoria": "Historia",
+      "dificultad": "media"
+    },
+    {
+      "id": "c37",
+      "texto": "¿Qué sistema de recompensas se implementó para el modo competitivo en Overwatch 2?",
+      "opciones": ["Puntos para armas doradas", "Recompensas por rango alcanzado", "Sprays y iconos exclusivos", "Todas las anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Competitivo",
+      "dificultad": "fácil"
+    },
+    {
+      "id": "h115",
+      "texto": "¿Qué héroe puede crear zonas de curación para todo el equipo?",
+      "opciones": ["Baptiste", "Moira", "Brigitte", "Todos los anteriores"],
+      "respuestaCorrecta": 3,
+      "categoria": "Habilidades",
+      "dificultad": "media"
+    }
+  ]
+}

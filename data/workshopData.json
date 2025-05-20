@@ -1,0 +1,1054 @@
+{
+  "workshopCodes": [
+    {
+      "id": 1,
+      "code": "VAXTA",
+      "title": "Aim Trainer: Miyagi Method",
+      "author": "KarQ",
+      "description": "Entrenador de puntería basado en el método Miyagi. Practica tu puntería con Ana sin alcance aplicando la regla 'no puedes fallar'.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Ana"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.9,
+        "count": 245
+      },
+      "dateAdded": "2022-11-15",
+      "lastUpdated": "2025-03-10",
+      "imageUrl": "https://i.ytimg.com/vi/PjR97QzOrJM/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/VAXTA",
+      "tags": [
+        "aim",
+        "training",
+        "ana",
+        "healing"
+      ],
+      "popularity": 99,
+      "submittedBy": null
+    },
+    {
+      "id": 2,
+      "code": "JPYHG",
+      "title": "Adaptive Aim Trainer",
+      "author": "iostux",
+      "description": "Entrenador de puntería adaptativo que ajusta la dificultad según tu rendimiento. Ideal para mejorar con héroes de proyectiles y hitscan.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.8,
+        "count": 310
+      },
+      "dateAdded": "2023-05-15",
+      "lastUpdated": "2025-02-20",
+      "imageUrl": "https://i.ytimg.com/vi/pVpDu3lmE3o/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/JPYHG",
+      "tags": [
+        "aim",
+        "adaptive",
+        "training",
+        "warmup"
+      ],
+      "popularity": 95,
+      "submittedBy": null
+    },
+    {
+      "id": 3,
+      "code": "4GAAD",
+      "title": "Aim Challenge Mode",
+      "author": "Desconocido",
+      "description": "Modo de entrenamiento de puntería con niveles de dificultad progresiva. Mejora tu precisión y velocidad de reacción.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.7,
+        "count": 200
+      },
+      "dateAdded": "2023-03-05",
+      "lastUpdated": "2025-01-10",
+      "imageUrl": "https://i.ytimg.com/vi/pVpDu3lmE3o/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/4GAAD",
+      "tags": [
+        "aim",
+        "challenge",
+        "training",
+        "progressive"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 4,
+      "code": "KAVE5",
+      "title": "PMAJellies Aim Trainer v5",
+      "author": "PMAJellies",
+      "description": "Entrenador de puntería versátil con múltiples configuraciones y personalizaciones. Adecuado para todos los niveles.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 180
+      },
+      "dateAdded": "2023-04-10",
+      "lastUpdated": "2025-03-01",
+      "imageUrl": "https://i.ytimg.com/vi/9-PSQtdSDU0/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/KAVE5",
+      "tags": [
+        "aim",
+        "training",
+        "customizable",
+        "versatile"
+      ],
+      "popularity": 88,
+      "submittedBy": null
+    },
+    {
+      "id": 5,
+      "code": "A9FBX",
+      "title": "Advanced Dodge AI Trainer",
+      "author": "Desconocido",
+      "description": "Entrenador avanzado con bots que esquivan tus ataques, ideal para mejorar la precisión y el seguimiento.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.5,
+        "count": 150
+      },
+      "dateAdded": "2023-06-20",
+      "lastUpdated": "2025-04-05",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/A9FBX",
+      "tags": [
+        "aim",
+        "dodge",
+        "training",
+        "advanced"
+      ],
+      "popularity": 85,
+      "submittedBy": null
+    },
+    {
+      "id": 6,
+      "code": "MGGS",
+      "title": "Entrenador de puntería con robots en Junktown",
+      "author": "Desconocido",
+      "description": "Practica tu puntería en escenarios realistas enfrentándote a bots en Junktown. Mejora tu precisión y toma de decisiones en situaciones similares a partidas reales.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 180
+      },
+      "dateAdded": "2023-03-15",
+      "lastUpdated": "2025-01-20",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/MGGS",
+      "tags": [
+        "aim",
+        "training",
+        "junktown",
+        "bots"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 7,
+      "code": "9J4NE",
+      "title": "La papa caliente de McCree",
+      "author": "Kevlar",
+      "description": "Un divertido minijuego donde los jugadores se pasan una 'papa caliente' que explota si la mantienes demasiado tiempo. ¡Pásala antes de que sea demasiado tarde!",
+      "category": "Minijuegos",
+      "subcategory": "Diversión",
+      "heroes": [
+        "Cassidy"
+      ],
+      "difficulty": "Baja",
+      "ratings": {
+        "average": 4.5,
+        "count": 220
+      },
+      "dateAdded": "2022-12-10",
+      "lastUpdated": "2024-11-05",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/9J4NE",
+      "tags": [
+        "minigame",
+        "hot potato",
+        "cassidy",
+        "fun"
+      ],
+      "popularity": 85,
+      "submittedBy": null
+    },
+    {
+      "id": 8,
+      "code": "DEVDA",
+      "title": "Gun Game All Heroes",
+      "author": "Hinki",
+      "description": "Modo de juego todos contra todos donde cambias de héroe cada vez que consigues una eliminación. ¡Demuestra tu versatilidad con todos los héroes!",
+      "category": "PvP",
+      "subcategory": "Deathmatch",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 250
+      },
+      "dateAdded": "2023-01-20",
+      "lastUpdated": "2025-02-15",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/DEVDA",
+      "tags": [
+        "gun game",
+        "deathmatch",
+        "pvp",
+        "all heroes"
+      ],
+      "popularity": 88,
+      "submittedBy": null
+    },
+    {
+      "id": 9,
+      "code": "CTHE4",
+      "title": "Loot Quest – Aventura PvE con progreso",
+      "author": "Delwion",
+      "description": "Embárcate en una aventura PvE estilo RPG con progresión y guardado de partida. Derrota enemigos, obtén botines y mejora tu personaje en este extenso modo.",
+      "category": "PvE",
+      "subcategory": "RPG",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.9,
+        "count": 300
+      },
+      "dateAdded": "2023-05-10",
+      "lastUpdated": "2025-03-25",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/CTHE4",
+      "tags": [
+        "pve",
+        "rpg",
+        "loot",
+        "progression"
+      ],
+      "popularity": 95,
+      "submittedBy": null
+    },
+    {
+      "id": 10,
+      "code": "9DFF3",
+      "title": "Lava Parkour",
+      "author": "Cenlus",
+      "description": "Desafía tus habilidades de movimiento en este mapa de parkour ambientado en La Habana. Evita las zonas de lava y supera obstáculos cada vez más difíciles.",
+      "category": "Parkour",
+      "subcategory": "Desafío",
+      "heroes": [
+        "Varios"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.7,
+        "count": 210
+      },
+      "dateAdded": "2023-04-05",
+      "lastUpdated": "2025-01-30",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/9DFF3",
+      "tags": [
+        "parkour",
+        "lava",
+        "movement",
+        "challenge"
+      ],
+      "popularity": 89,
+      "submittedBy": null
+    },
+    {
+      "id": 11,
+      "code": "VXEAT",
+      "title": "Entrenador de Puntería Personalizable",
+      "author": "Desconocido",
+      "description": "Personaliza tu entrenamiento de puntería con opciones avanzadas, como puntos de aparición de bots, guías de proyectiles y modos de presión donde los bots te atacan.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.8,
+        "count": 190
+      },
+      "dateAdded": "2023-06-10",
+      "lastUpdated": "2025-02-15",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/VXEAT",
+      "tags": [
+        "aim",
+        "training",
+        "customizable",
+        "bots"
+      ],
+      "popularity": 91,
+      "submittedBy": null
+    },
+    {
+      "id": 12,
+      "code": "FH93A",
+      "title": "Overwatch Pictionary",
+      "author": "PMAJellies",
+      "description": "Un divertido minijuego donde los jugadores dibujan y adivinan palabras al estilo Pictionary. Ideal para jugar con amigos y pasar un buen rato.",
+      "category": "Minijuegos",
+      "subcategory": "Diversión",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Baja",
+      "ratings": {
+        "average": 4.6,
+        "count": 160
+      },
+      "dateAdded": "2023-08-20",
+      "lastUpdated": "2025-03-10",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/FH93A",
+      "tags": [
+        "minigame",
+        "pictionary",
+        "fun",
+        "drawing"
+      ],
+      "popularity": 88,
+      "submittedBy": null
+    },
+    {
+      "id": 13,
+      "code": "TXCXX",
+      "title": "Arena 1v1",
+      "author": "Seita",
+      "description": "Enfréntate en duelos 1v1 con una rotación de 14 héroes. Ideal para mejorar tus habilidades en combates individuales.",
+      "category": "PvP",
+      "subcategory": "Duelo",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 210
+      },
+      "dateAdded": "2023-02-05",
+      "lastUpdated": "2025-01-25",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/TXCXX",
+      "tags": [
+        "1v1",
+        "duel",
+        "practice",
+        "arena"
+      ],
+      "popularity": 89,
+      "submittedBy": null
+    },
+    {
+      "id": 14,
+      "code": "N5YHJ",
+      "title": "Lucha PvE con Talentos",
+      "author": "Bonkorn",
+      "description": "Modo PvE estilo Paladins con talentos únicos para cada héroe. Enfréntate a enemigos con habilidades mejoradas y estrategias variadas.",
+      "category": "PvE",
+      "subcategory": "Talentos",
+      "heroes": [
+        "Varios"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.9,
+        "count": 250
+      },
+      "dateAdded": "2023-07-15",
+      "lastUpdated": "2025-04-05",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/N5YHJ",
+      "tags": [
+        "pve",
+        "talents",
+        "abilities",
+        "challenge"
+      ],
+      "popularity": 93,
+      "submittedBy": null
+    },
+    {
+      "id": 15,
+      "code": "HRMQ7",
+      "title": "Entrenador de Puntería a Larga Distancia",
+      "author": "OtaMegami",
+      "description": "Practica tu puntería a larga distancia contra objetivos en movimiento, incluyendo enemigos voladores como Pharah y Mercy.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 180
+      },
+      "dateAdded": "2023-09-10",
+      "lastUpdated": "2025-03-20",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/HRMQ7",
+      "tags": [
+        "aim",
+        "long distance",
+        "training",
+        "pharah"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 16,
+      "code": "ZHTD8",
+      "title": "Entrenador de Puntería Realista con Bots",
+      "author": "D4iChiN",
+      "description": "Un entrenador de puntería avanzado con bots que simulan comportamientos realistas, incluyendo movimientos aleatorios, uso de habilidades y personalización de la dificultad.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.9,
+        "count": 210
+      },
+      "dateAdded": "2023-05-15",
+      "lastUpdated": "2025-01-10",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/ZHTD8",
+      "tags": [
+        "aim",
+        "training",
+        "bots",
+        "realistic"
+      ],
+      "popularity": 94,
+      "submittedBy": null
+    },
+    {
+      "id": 17,
+      "code": "5Y71E",
+      "title": "Genji Ball",
+      "author": "Dawn",
+      "description": "Un minijuego donde todos juegan como Genji y deben desviar una bola explosiva para eliminar a los demás jugadores. ¡Sé el último en pie!",
+      "category": "Minijuegos",
+      "subcategory": "Diversión",
+      "heroes": [
+        "Genji"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 180
+      },
+      "dateAdded": "2023-07-20",
+      "lastUpdated": "2025-02-05",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/5Y71E",
+      "tags": [
+        "minigame",
+        "genji",
+        "dodgeball",
+        "fun"
+      ],
+      "popularity": 89,
+      "submittedBy": null
+    },
+    {
+      "id": 18,
+      "code": "729F7",
+      "title": "Juego de Armas: Todos los Héroes",
+      "author": "Hinki",
+      "description": "Modo todos contra todos donde cambias de héroe cada vez que eliminas a un oponente. ¡Sé el primero en recorrer todos los héroes para ganar!",
+      "category": "PvP",
+      "subcategory": "Deathmatch",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 200
+      },
+      "dateAdded": "2023-06-10",
+      "lastUpdated": "2025-03-15",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/729F7",
+      "tags": [
+        "gun game",
+        "ffa",
+        "deathmatch",
+        "fun"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 19,
+      "code": "S3PY3",
+      "title": "Invasión de Reinhardts Remasterizada",
+      "author": "Alomare",
+      "description": "Modo PvE donde debes sobrevivir a oleadas interminables de Reinhardts que se vuelven más poderosos con cada ronda. ¡Prepárate para la batalla!",
+      "category": "PvE",
+      "subcategory": "Supervivencia",
+      "heroes": [
+        "Varios"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.8,
+        "count": 220
+      },
+      "dateAdded": "2023-08-05",
+      "lastUpdated": "2025-04-10",
+      "imageUrl": "https://i.ytimg.com/vi/o5qkw4GPN0g/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/S3PY3",
+      "tags": [
+        "pve",
+        "reinhardt",
+        "survival",
+        "challenge"
+      ],
+      "popularity": 92,
+      "submittedBy": null
+    },
+    {
+      "id": 20,
+      "code": "J853B",
+      "title": "Flappy Mercy",
+      "author": "Vudjun",
+      "description": "Un divertido minijuego al estilo Flappy Bird donde controlas a Mercy y debes evitar obstáculos para lograr la mayor puntuación posible.",
+      "category": "Minijuegos",
+      "subcategory": "Diversión",
+      "heroes": [
+        "Mercy"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.5,
+        "count": 170
+      },
+      "dateAdded": "2023-09-12",
+      "lastUpdated": "2025-03-25",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/J853B",
+      "tags": [
+        "minigame",
+        "mercy",
+        "flappy bird",
+        "fun"
+      ],
+      "popularity": 87,
+      "submittedBy": null
+    },
+    {
+      "id": 21,
+      "code": "VXEAT",
+      "title": "Entrenador de Puntería Personalizable",
+      "author": "Desconocido",
+      "description": "Entrenador de puntería avanzado con opciones personalizables: puntos de aparición de bots, guía de proyectiles, modo de presión y más.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.9,
+        "count": 215
+      },
+      "dateAdded": "2023-04-10",
+      "lastUpdated": "2024-12-01",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/VXEAT",
+      "tags": [
+        "aim",
+        "training",
+        "customizable",
+        "bots"
+      ],
+      "popularity": 95,
+      "submittedBy": null
+    },
+    {
+      "id": 22,
+      "code": "FH93A",
+      "title": "Overwatch Pictionary",
+      "author": "PMAJellies",
+      "description": "Un divertido minijuego estilo Pictionary donde los jugadores dibujan y adivinan palabras relacionadas con Overwatch.",
+      "category": "Minijuegos",
+      "subcategory": "Diversión",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Baja",
+      "ratings": {
+        "average": 4.7,
+        "count": 180
+      },
+      "dateAdded": "2023-06-15",
+      "lastUpdated": "2025-01-20",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/FH93A",
+      "tags": [
+        "minigame",
+        "pictionary",
+        "fun",
+        "drawing"
+      ],
+      "popularity": 88,
+      "submittedBy": null
+    },
+    {
+      "id": 23,
+      "code": "CT04V",
+      "title": "Arena de Entrenamiento PvP",
+      "author": "Desconocido",
+      "description": "Una arena de entrenamiento PvP donde puedes practicar tus habilidades de combate contra otros jugadores en un entorno controlado.",
+      "category": "PvP",
+      "subcategory": "Entrenamiento",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 190
+      },
+      "dateAdded": "2023-05-20",
+      "lastUpdated": "2025-02-10",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/CT04V",
+      "tags": [
+        "pvp",
+        "training",
+        "arena",
+        "practice"
+      ],
+      "popularity": 89,
+      "submittedBy": null
+    },
+    {
+      "id": 24,
+      "code": "N5YHJ",
+      "title": "Lucha de Talentos PvE",
+      "author": "Bonkorn",
+      "description": "Modo PvE estilo Paladins con talentos únicos para cada héroe. Enfréntate a enemigos con habilidades mejoradas en combates intensos.",
+      "category": "PvE",
+      "subcategory": "Talentos",
+      "heroes": [
+        "Varios"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.8,
+        "count": 220
+      },
+      "dateAdded": "2023-07-10",
+      "lastUpdated": "2025-03-05",
+      "imageUrl": "https://i.ytimg.com/vi/o5qkw4GPN0g/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/N5YHJ",
+      "tags": [
+        "pve",
+        "talents",
+        "challenge",
+        "teamplay"
+      ],
+      "popularity": 91,
+      "submittedBy": null
+    },
+    {
+      "id": 25,
+      "code": "HRMQ7",
+      "title": "Entrenador de Puntería a Larga Distancia",
+      "author": "OtaMegami",
+      "description": "Practica tu puntería a larga distancia contra objetivos en movimiento. Ideal para mejorar la precisión con héroes de proyectiles.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 200
+      },
+      "dateAdded": "2023-08-05",
+      "lastUpdated": "2025-04-15",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/HRMQ7",
+      "tags": [
+        "aim",
+        "training",
+        "long distance",
+        "projectiles"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 26,
+      "code": "6CJXR1",
+      "title": "Entrenador de Puntería Vertical",
+      "author": "Desconocido",
+      "description": "Practica tu puntería contra objetivos en movimiento vertical. Ideal para mejorar la precisión contra enemigos aéreos como Pharah o Echo.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 210
+      },
+      "dateAdded": "2023-09-10",
+      "lastUpdated": "2025-03-15",
+      "imageUrl": "https://i.ytimg.com/vi/7p3IKo-VfA0/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/6CJXR1",
+      "tags": [
+        "aim",
+        "training",
+        "vertical",
+        "aerial"
+      ],
+      "popularity": 93,
+      "submittedBy": null
+    },
+    {
+      "id": 27,
+      "code": "W7XAX",
+      "title": "UNO para Overwatch",
+      "author": "Desconocido",
+      "description": "Disfruta del clásico juego de cartas UNO adaptado al mundo de Overwatch. Juega con tus amigos en este divertido minijuego.",
+      "category": "Minijuegos",
+      "subcategory": "Cartas",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Baja",
+      "ratings": {
+        "average": 4.8,
+        "count": 180
+      },
+      "dateAdded": "2023-11-05",
+      "lastUpdated": "2025-02-20",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/W7XAX",
+      "tags": [
+        "uno",
+        "minigame",
+        "cards",
+        "fun"
+      ],
+      "popularity": 89,
+      "submittedBy": null
+    },
+    {
+      "id": 28,
+      "code": "J853B",
+      "title": "Flappy Mercy",
+      "author": "Desconocido",
+      "description": "Un divertido minijuego donde controlas a Mercy en un estilo similar a Flappy Bird. Evita obstáculos y alcanza la mayor puntuación posible.",
+      "category": "Minijuegos",
+      "subcategory": "Arcade",
+      "heroes": [
+        "Mercy"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 160
+      },
+      "dateAdded": "2023-12-12",
+      "lastUpdated": "2025-01-25",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/J853B",
+      "tags": [
+        "flappy",
+        "mercy",
+        "minigame",
+        "arcade"
+      ],
+      "popularity": 87,
+      "submittedBy": null
+    },
+    {
+      "id": 29,
+      "code": "ZHTD8",
+      "title": "Entrenador de Puntería con Bots Realistas",
+      "author": "Desconocido",
+      "description": "Mejora tu puntería enfrentándote a bots con comportamientos realistas. Ideal para practicar en situaciones similares a partidas reales.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.9,
+        "count": 230
+      },
+      "dateAdded": "2023-10-20",
+      "lastUpdated": "2025-03-10",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/ZHTD8",
+      "tags": [
+        "aim",
+        "training",
+        "bots",
+        "realistic"
+      ],
+      "popularity": 94,
+      "submittedBy": null
+    },
+    {
+      "id": 30,
+      "code": "RONRY",
+      "title": "Crecimiento por Eliminaciones",
+      "author": "Desconocido",
+      "description": "Cada vez que eliminas a un enemigo, tu héroe crece en tamaño y poder. ¡Domina el campo de batalla convirtiéndote en un gigante!",
+      "category": "PvP",
+      "subcategory": "Deathmatch",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.5,
+        "count": 190
+      },
+      "dateAdded": "2023-09-30",
+      "lastUpdated": "2025-02-05",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/RONRY",
+      "tags": [
+        "pvp",
+        "growth",
+        "deathmatch",
+        "fun"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 31,
+      "code": "MHGGS",
+      "title": "Aim Trainer con Bots en Junkertown",
+      "author": "DX2T",
+      "description": "Entrenador de puntería avanzado en Junkertown. Enfréntate a bots que simulan un equipo completo en escenarios de combate realistas.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.8,
+        "count": 220
+      },
+      "dateAdded": "2023-08-15",
+      "lastUpdated": "2025-03-10",
+      "imageUrl": "https://i.ytimg.com/vi/7Gp_nR2f5GU/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/MHGGS",
+      "tags": [
+        "aim",
+        "training",
+        "bots",
+        "junkertown"
+      ],
+      "popularity": 95,
+      "submittedBy": null
+    },
+    {
+      "id": 32,
+      "code": "AA5QQ",
+      "title": "Laboratorios de Entrenamiento de Puntería",
+      "author": "Desconocido",
+      "description": "Entrenador de puntería tradicional con elementos como disparo en cuadrícula, seguimiento, entrenamiento de 360° y esquiva.",
+      "category": "Entrenamiento",
+      "subcategory": "Aim Trainer",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.7,
+        "count": 200
+      },
+      "dateAdded": "2023-09-20",
+      "lastUpdated": "2025-02-25",
+      "imageUrl": "https://i.ytimg.com/vi/7p3IKo-VfA0/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/AA5QQ",
+      "tags": [
+        "aim",
+        "training",
+        "labs",
+        "practice"
+      ],
+      "popularity": 90,
+      "submittedBy": null
+    },
+    {
+      "id": 33,
+      "code": "TXCXX",
+      "title": "Arena 1v1 de Héroes",
+      "author": "Seita y Mr.Pig",
+      "description": "Combate 1v1 en una arena cerrada contra un bot. Mejora tu puntería y tácticas de combate en duelos individuales.",
+      "category": "PvP",
+      "subcategory": "Duelo",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.6,
+        "count": 180
+      },
+      "dateAdded": "2023-10-10",
+      "lastUpdated": "2025-01-30",
+      "imageUrl": "https://i.ytimg.com/vi/kXKOPl0xQ9w/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/TXCXX",
+      "tags": [
+        "1v1",
+        "duel",
+        "practice",
+        "arena"
+      ],
+      "popularity": 88,
+      "submittedBy": null
+    },
+    {
+      "id": 34,
+      "code": "N5YHJ",
+      "title": "Talentos PvE",
+      "author": "Desconocido",
+      "description": "Modo PvE con talentos únicos para cada héroe. Enfréntate a enemigos controlados por la IA utilizando habilidades mejoradas.",
+      "category": "PvE",
+      "subcategory": "Talentos",
+      "heroes": [
+        "Varios"
+      ],
+      "difficulty": "Alta",
+      "ratings": {
+        "average": 4.5,
+        "count": 190
+      },
+      "dateAdded": "2023-11-15",
+      "lastUpdated": "2025-02-10",
+      "imageUrl": "https://i.ytimg.com/vi/o5qkw4GPN0g/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/N5YHJ",
+      "tags": [
+        "pve",
+        "talents",
+        "teamplay",
+        "challenge"
+      ],
+      "popularity": 85,
+      "submittedBy": null
+    },
+    {
+      "id": 35,
+      "code": "50N8F",
+      "title": "Overwatch 2: Reworked 2.0",
+      "author": "MushaSnazz",
+      "description": "Revisión completa de las mecánicas de juego de Overwatch 2, introduciendo modificaciones y mejoras en las habilidades de los héroes.",
+      "category": "Otros",
+      "subcategory": "Rework",
+      "heroes": [
+        "Todos"
+      ],
+      "difficulty": "Media",
+      "ratings": {
+        "average": 4.4,
+        "count": 170
+      },
+      "dateAdded": "2023-12-05",
+      "lastUpdated": "2025-01-20",
+      "imageUrl": "https://i.ytimg.com/vi/dXE9kyJw-Ts/maxresdefault.jpg",
+      "source": "Workshop.codes",
+      "sourceUrl": "https://workshop.codes/50N8F",
+      "tags": [
+        "rework",
+        "custom",
+        "heroes",
+        "abilities"
+      ],
+      "popularity": 83,
+      "submittedBy": null
+    }
+  ]
+}

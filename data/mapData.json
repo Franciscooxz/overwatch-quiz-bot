@@ -1,0 +1,947 @@
+[
+  {
+    "id": 1,
+    "name": "Busan",
+    "type": "Control",
+    "location": "Corea del Sur",
+    "description": "Un mapa de control ubicado en Corea del Sur que incluye tres áreas distintas: Santuario, Centro y Base MEKA.",
+    "bestHeroes": [
+      "D.Va",
+      "Lucio",
+      "Reinhardt"
+    ],
+    "worstHeroes": [
+      "Widowmaker",
+      "Bastion",
+      "Torbjörn"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2018-08-22",
+    "additionalInfo": "La Base MEKA es la sede de operaciones de D.Va y su escuadrón. El mapa combina la tradición coreana con tecnología futurista.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/busan.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ilios",
+    "type": "Control",
+    "location": "Grecia",
+    "description": "Un mapa de control con temática mediterránea ubicado en Grecia, con tres áreas: Pozo, Ruinas y Faro.",
+    "bestHeroes": [
+      "Lucio",
+      "Pharah",
+      "Roadhog"
+    ],
+    "worstHeroes": [
+      "Symmetra",
+      "Junkrat",
+      "Reaper"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2016-03-22",
+    "additionalInfo": "Famoso por el pozo en el centro de una de sus áreas, donde los héroes con habilidades de empuje pueden conseguir eliminaciones ambientales.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/ilios.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Lijiang Tower",
+    "type": "Control",
+    "location": "China",
+    "description": "Torre Lijiang es un mapa de control ubicado en China, con tres áreas: Jardín nocturno, Centro de control y Mercado nocturno.",
+    "bestHeroes": [
+      "Winston",
+      "Lucio",
+      "Zarya"
+    ],
+    "worstHeroes": [
+      "Ashe",
+      "Bastion",
+      "Sigma"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-03-22",
+    "additionalInfo": "Las tres áreas ofrecen oportunidades para eliminaciones ambientales, especialmente el Jardín con su puente central.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/lijiang-tower.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Nepal",
+    "type": "Control",
+    "location": "Nepal",
+    "description": "Un monasterio a gran altitud en Nepal, con tres áreas de control: Santuario, Pueblo y Altar. Actualmente se juega durante la noche.",
+    "bestHeroes": [
+      "Lucio",
+      "Wrecking Ball",
+      "Pharah"
+    ],
+    "worstHeroes": [
+      "Cassidy",
+      "Symmetra",
+      "Mercy"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-03-22",
+    "additionalInfo": "Hogar de los monjes Shambali, incluido Zenyatta. Proporciona buenas oportunidades para eliminaciones ambientales en el Santuario.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/nepal.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Oasis",
+    "type": "Control",
+    "location": "Irak",
+    "description": "Un avanzado centro científico ubicado en Irak, con tres áreas: Universidad, Jardines y Ciudad. Ahora se juega durante la mañana.",
+    "bestHeroes": [
+      "Pharah",
+      "Orisa",
+      "Lucio"
+    ],
+    "worstHeroes": [
+      "Symmetra",
+      "Junkrat",
+      "Mei"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2017-01-03",
+    "additionalInfo": "Incluye una carretera con tráfico que puede eliminar a los jugadores. La Universidad tiene un salto de gravedad que proporciona ventajas tácticas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/oasis.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Antarctic Peninsula",
+    "type": "Control",
+    "location": "Antártida",
+    "description": "Base de investigación en la Antártida, con tres áreas: Laboratorios, Plataforma de perforación y Estación submarina.",
+    "bestHeroes": [
+      "Mei",
+      "Sojourn",
+      "Kiriko"
+    ],
+    "worstHeroes": [
+      "Doomfist",
+      "Genji",
+      "Tracer"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2023-02-07",
+    "additionalInfo": "Revela detalles sobre el origen de Mei y su equipo de investigación climática. Tiene pasajes submarinos en una de sus áreas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/antarctic-peninsula.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Samoa",
+    "type": "Control",
+    "location": "Samoa",
+    "description": "Nuevo mapa tropical añadido en 2025 con tres áreas de control y ambientación polinesia.",
+    "bestHeroes": [
+      "Lucio",
+      "D.Va",
+      "Junkrat"
+    ],
+    "worstHeroes": [
+      "Widowmaker",
+      "Hanzo",
+      "Ana"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2025-05-01",
+    "additionalInfo": "Incluye una playa, un pueblo costero y un área ceremonial. Tiene muchas oportunidades para eliminaciones ambientales con caídas al océano.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/samoa.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Circuit Royal",
+    "type": "Escolta",
+    "location": "Mónaco",
+    "description": "Un mapa nocturno de escolta ubicado en Mónaco, con un recorrido a través de las calles donde se celebra el Gran Premio de Fórmula 1.",
+    "bestHeroes": [
+      "Widowmaker",
+      "Ashe",
+      "Echo"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Reaper",
+      "Symmetra"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2022-04-26",
+    "additionalInfo": "Tiene largas líneas de visión que favorecen a los francotiradores. El payload es un monoplaza de F1 futurista.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/circuit-royal.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Dorado",
+    "type": "Escolta",
+    "location": "México",
+    "description": "Un mapa de escolta en una pintoresca ciudad mexicana durante una celebración nocturna.",
+    "bestHeroes": [
+      "Soldier: 76",
+      "Reaper",
+      "Junkrat"
+    ],
+    "worstHeroes": [
+      "Winston",
+      "Wrecking Ball",
+      "D.Va"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "Ambientado durante el Festival de la Luz, tiene muchos callejones y puntos elevados estratégicos. Sombra creció en esta ciudad.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/dorado.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Havana",
+    "type": "Escolta",
+    "location": "Cuba",
+    "description": "Un mapa de escolta en La Habana, Cuba, donde los jugadores recorren desde una destilería de ron hasta un fuerte costero.",
+    "bestHeroes": [
+      "Widowmaker",
+      "Orisa",
+      "Baptiste"
+    ],
+    "worstHeroes": [
+      "Doomfist",
+      "Brigitte",
+      "Symmetra"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2019-05-07",
+    "additionalInfo": "Tiene tres fases distintas: la destilería Don Rumbotico, las calles de La Habana y el fuerte histórico. Ofrece excelentes líneas de visión para francotiradores.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/havana.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Junkertown",
+    "type": "Escolta",
+    "location": "Australia",
+    "description": "Un mapa de escolta en el Outback australiano, recorriendo la ciudad chatarra de los Junkers.",
+    "bestHeroes": [
+      "Junkrat",
+      "Widowmaker",
+      "Hanzo"
+    ],
+    "worstHeroes": [
+      "Winston",
+      "Reinhardt",
+      "Mei"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2017-09-19",
+    "additionalInfo": "Hogar de Junkrat y Roadhog. Tiene espacios abiertos y zonas estrechas que favorecen diferentes estilos de juego.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/junkertown.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Rialto",
+    "type": "Escolta",
+    "location": "Italia",
+    "description": "Un mapa de escolta ubicado en Venecia, Italia, recorriendo canales y calles estrechas.",
+    "bestHeroes": [
+      "Pharah",
+      "Ana",
+      "Zenyatta"
+    ],
+    "worstHeroes": [
+      "Roadhog",
+      "Doomfist",
+      "Junkrat"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2018-05-03",
+    "additionalInfo": "Basado en la misión de Retribution de Archivos. Tiene canales de agua donde los jugadores pueden caer, y puentes que crean puntos estratégicos.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/rialto.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Route 66",
+    "type": "Escolta",
+    "location": "Estados Unidos",
+    "description": "Un mapa de escolta ambientado en un desierto estadounidense con un estilo del viejo oeste.",
+    "bestHeroes": [
+      "Soldier: 76",
+      "Cassidy",
+      "Ashe"
+    ],
+    "worstHeroes": [
+      "Lucio",
+      "Mercy",
+      "Symmetra"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "Incluye una gasolinera, un restaurante y un cañón. Escenario de un atraco de la Banda Deadlock, a la que perteneció Cassidy.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/route-66.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Watchpoint: Gibraltar",
+    "type": "Escolta",
+    "location": "Gibraltar",
+    "description": "Un mapa de escolta en una antigua base de Overwatch en Gibraltar.",
+    "bestHeroes": [
+      "Winston",
+      "Pharah",
+      "Wrecking Ball"
+    ],
+    "worstHeroes": [
+      "Symmetra",
+      "Torbjörn",
+      "Junkrat"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "Base de operaciones de Winston después de la caída de Overwatch. El objetivo es lanzar un satélite para restaurar la red de comunicaciones de Overwatch.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/watchpoint-gibraltar.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Blizzard World",
+    "type": "Híbrido",
+    "location": "Estados Unidos",
+    "description": "Un parque de atracciones temático basado en los juegos de Blizzard. Actualmente tiene cielos nublados.",
+    "bestHeroes": [
+      "Orisa",
+      "Hanzo",
+      "Mercy"
+    ],
+    "worstHeroes": [
+      "Tracer",
+      "Genji",
+      "Widowmaker"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2018-01-23",
+    "additionalInfo": "Contiene áreas temáticas basadas en StarCraft, Warcraft, Diablo y Heroes of the Storm. Combina espacios abiertos con interiores cerrados.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/blizzard-world.jpg"
+  },
+    {
+    "id": 16,
+    "name": "Eichenwalde",
+    "type": "Híbrido",
+    "location": "Alemania",
+    "description": "Un mapa híbrido ubicado en Alemania. Se centra en un antiguo castillo y el pueblo abandonado que lo rodea.",
+    "bestHeroes": [
+      "Reinhardt",
+      "Hanzo",
+      "Zenyatta"
+    ],
+    "worstHeroes": [
+      "Tracer",
+      "Symmetra",
+      "Wrecking Ball"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2016-09-01",
+    "additionalInfo": "Lugar de la última batalla de Balderich von Adler, mentor de Reinhardt. Tiene un puente estrecho que actúa como punto de estrangulamiento para la defensa.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/eichenwalde.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Hollywood",
+    "type": "Híbrido",
+    "location": "Estados Unidos",
+    "description": "Un estudio de cine en Hollywood, California, con varios escenarios de películas.",
+    "bestHeroes": [
+      "Ashe",
+      "Sigma",
+      "Baptiste"
+    ],
+    "worstHeroes": [
+      "Winston",
+      "Doomfist",
+      "Reaper"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "El objetivo es escoltar a un ómnico director de cine llamado HAL-fred Glitchbot. Incluye escenarios del Viejo Oeste, ciencia ficción y fantasía.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/hollywood.jpg"
+  },
+  {
+    "id": 18,
+    "name": "King's Row",
+    "type": "Híbrido",
+    "location": "Inglaterra",
+    "description": "Un mapa híbrido ubicado en Londres, Inglaterra. Combina calles estrechas con interiores industriales.",
+    "bestHeroes": [
+      "Reinhardt",
+      "Torbjörn",
+      "Junkrat"
+    ],
+    "worstHeroes": [
+      "Pharah",
+      "Echo",
+      "Wrecking Ball"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "Ambientado en una noche invernal en Londres. El objetivo final es entregar un EMP para desactivar a los ómnicos en el subsuelo. Considerado por muchos como uno de los mapas más equilibrados.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/kings-row.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Midtown",
+    "type": "Híbrido",
+    "location": "Nueva York",
+    "description": "Un mapa híbrido situado en Nueva York, con lugares emblemáticos como Grand Central Station.",
+    "bestHeroes": [
+      "Sojourn",
+      "Cassidy",
+      "Kiriko"
+    ],
+    "worstHeroes": [
+      "Bastion",
+      "Reinhardt",
+      "Roadhog"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2022-04-26",
+    "additionalInfo": "Combina el estilo clásico de Nueva York con elementos futuristas. Los puntos clave incluyen Grand Central y una estación de bomberos, diseñados para ser puntos de referencia visualmente distintivos.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/midtown.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Numbani",
+    "type": "Híbrido",
+    "location": "Nigeria",
+    "description": "Un mapa híbrido ubicado en una ciudad futurista en Nigeria, donde humanos y ómnicos conviven en paz.",
+    "bestHeroes": [
+      "Winston",
+      "Doomfist",
+      "Ana"
+    ],
+    "worstHeroes": [
+      "Junkrat",
+      "Mei",
+      "Symmetra"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2016-05-24",
+    "additionalInfo": "Ciudad natal de Doomfist, quien atacó el aeropuerto para robar el guante. El objetivo es escoltar el guante de Doomfist a un museo.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/numbani.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Paraíso",
+    "type": "Híbrido",
+    "location": "Portugal",
+    "description": "Un mapa híbrido ubicado en Portugal, que captura la arquitectura y estilo del país ibérico con calles estrechas y varios interiores.",
+    "bestHeroes": [
+      "Pharah",
+      "Lucio",
+      "Reaper"
+    ],
+    "worstHeroes": [
+      "Widowmaker",
+      "Bastion",
+      "Orisa"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2022-08-09",
+    "additionalInfo": "Ciudad natal de Baptista. Incluye panaderías, restaurantes y calles estrechas que permiten flanqueos creativos y emboscadas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/paraiso.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Colosseo",
+    "type": "Empuje",
+    "location": "Roma",
+    "description": "Un mapa de empuje en Roma, Italia, que incluye el famoso Coliseo romano como punto central.",
+    "bestHeroes": [
+      "Lucio",
+      "Reinhardt",
+      "Kiriko"
+    ],
+    "worstHeroes": [
+      "Bastion",
+      "Widowmaker",
+      "Torbjörn"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2022-04-26",
+    "additionalInfo": "Primer mapa del modo Empuje. Combina la arquitectura antigua de Roma con elementos futuristas. El Coliseo actúa como punto focal del mapa.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/colosseo.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Esperança",
+    "type": "Empuje",
+    "location": "Portugal",
+    "description": "Un mapa de empuje añadido en 2025, situado en una colorida ciudad costera de Portugal.",
+    "bestHeroes": [
+      "Tracer",
+      "Echo",
+      "Lucio"
+    ],
+    "worstHeroes": [
+      "Bastion",
+      "Roadhog",
+      "Orisa"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2025-01-16",
+    "additionalInfo": "Caracterizado por sus casas coloridas y vistas al mar. Incluye múltiples niveles verticales que favorecen a héroes con movilidad vertical.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/esperanca.jpg"
+  },
+  {
+    "id": 24,
+    "name": "New Queen Street",
+    "type": "Empuje",
+    "location": "Toronto",
+    "description": "Un mapa de empuje ambientado en Toronto, Canadá, con nieve y hojas de arce que dan un ambiente fresco pero acogedor.",
+    "bestHeroes": [
+      "Sojourn",
+      "Soldier: 76",
+      "Mercy"
+    ],
+    "worstHeroes": [
+      "Junkrat",
+      "Sigma",
+      "Mei"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2022-04-26",
+    "additionalInfo": "Ciudad natal de Sojourn. Tiene un diseño simétrico con múltiples rutas para flanquear. El robot TW-1 es el objetivo que debe ser empujado.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/new-queen-street.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Hanaoka",
+    "type": "Clash",
+    "location": "Japón",
+    "description": "Un mapa para el modo Clash basado en el antiguo mapa Hanamura, con elementos japoneses tradicionales y cerezos en flor.",
+    "bestHeroes": [
+      "Genji",
+      "Hanzo",
+      "Kiriko"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Roadhog",
+      "Zarya"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2024-08-15",
+    "additionalInfo": "Rediseño del mapa Hanamura del modo Asalto. Mantiene la estética japonesa pero adaptada para el modo Clash con cinco puntos de control alineados.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/hanaoka.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Trono de Anubis",
+    "type": "Clash",
+    "location": "Egipto",
+    "description": "Un mapa para el modo Clash basado en el antiguo Templo de Anubis, que revela historias sobre la IA que causó la Crisis Ómnica.",
+    "bestHeroes": [
+      "Pharah",
+      "Ana",
+      "Reaper"
+    ],
+    "worstHeroes": [
+      "Wrecking Ball",
+      "Winston",
+      "D.Va"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2025-04-01",
+    "additionalInfo": "Rediseño del Templo de Anubis para el modo Clash. Contiene nuevos elementos narrativos sobre los orígenes de la Crisis Ómnica y el programa Anubis de IA.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/anubis-throne.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Río de Janeiro",
+    "type": "Empuje",
+    "location": "Brasil",
+    "description": "Un mapa de empuje en la ciudad natal de Lúcio con colores brillantes, permite luchar a través de edificios, tiendas y la oficina del alcalde.",
+    "bestHeroes": [
+      "Lucio",
+      "Wrecking Ball",
+      "Echo"
+    ],
+    "worstHeroes": [
+      "Widowmaker",
+      "Ana",
+      "Cassidy"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2023-06-20",
+    "additionalInfo": "Incluye elementos inspirados en Counter-Strike como callejones estrechos y entornos parcialmente destructibles. La oficina del alcalde sirve como punto estratégico central.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/rio.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Estadio de Nueva Zelanda",
+    "type": "Estadio",
+    "location": "Nueva Zelanda",
+    "description": "Un mapa exclusivo para el nuevo modo Estadio introducido en 2025, donde los jugadores pueden personalizar las habilidades de sus héroes.",
+    "bestHeroes": [
+      "Freja",
+      "Sigma",
+      "Lucio"
+    ],
+    "worstHeroes": [
+      "Torbjörn",
+      "Bastion",
+      "Symmetra"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2025-04-16",
+    "additionalInfo": "Primer mapa del modo Estadio. Diseñado específicamente para el sistema 'mejor de siete' donde los jugadores compran y personalizan habilidades entre rondas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/nz-stadium.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Arena Madrid",
+    "type": "Estadio",
+    "location": "España",
+    "description": "Un mapa del modo Estadio ubicado en Madrid, con un diseño que favorece encuentros estratégicos entre equipos.",
+    "bestHeroes": [
+      "Junkrat",
+      "Zenyatta",
+      "D.Va"
+    ],
+    "worstHeroes": [
+      "Ana",
+      "Widowmaker",
+      "Mercy"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2025-04-16",
+    "additionalInfo": "Inspirado en las plazas de toros españolas pero con un diseño futurista. Contiene áreas elevadas y múltiples entradas al punto central.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/madrid-arena.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Tokyo Arena",
+    "type": "Estadio",
+    "location": "Japón",
+    "description": "Un mapa de alta tecnología para el modo Estadio en Tokyo, con un entorno futurista que cambia durante la partida.",
+    "bestHeroes": [
+      "Genji",
+      "Kiriko",
+      "Hanzo"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Orisa",
+      "Roadhog"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2025-04-16",
+    "additionalInfo": "El escenario cambia dinámicamente entre rondas, alterando puntos de cobertura y rutas. Cuenta con elementos de neón y pantallas holográficas interactivas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/tokyo-arena.jpg"
+  },
+    {
+    "id": 31,
+    "name": "Palacio Guillard",
+    "type": "Duelo",
+    "location": "Francia",
+    "description": "Un mapa para modos Duelo y Combate a Muerte ubicado cerca de Annecy, en el sureste de Francia, antigua residencia de la familia Guillard.",
+    "bestHeroes": [
+      "Reaper",
+      "Tracer",
+      "Moira"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "D.Va",
+      "Sigma"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2017-08-29",
+    "additionalInfo": "Hogar ancestral de Widowmaker. Presenta interiores elegantes con pasillos estrechos, patios y una bodega subterránea. Ideal para combates cercanos.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/chateau-guillard.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Kanezaka",
+    "type": "Duelo",
+    "location": "Japón",
+    "description": "Un mapa de combate a muerte ubicado en un distrito a los pies del castillo de Hanamura en Japón.",
+    "bestHeroes": [
+      "Genji",
+      "Hanzo",
+      "Cassidy"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Zarya",
+      "Orisa"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2021-01-12",
+    "additionalInfo": "Incluye un restaurante de ramen, un club nocturno y callejones grafiteados. Contiene referencias a la historia de los hermanos Shimada y al clan Hashimoto.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/kanezaka.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Black Forest",
+    "type": "Arcade",
+    "location": "Alemania",
+    "description": "Un mapa de Arcade ambientado en un bosque nevado de Alemania, usado para modos como Eliminación y Duelo.",
+    "bestHeroes": [
+      "Mei",
+      "Cassidy",
+      "Moira"
+    ],
+    "worstHeroes": [
+      "Pharah",
+      "Echo",
+      "Winston"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2017-02-28",
+    "additionalInfo": "Pequeño mapa con un castillo central rodeado de bosque nevado. Los combates tienden a concentrarse en el interior del castillo.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/black-forest.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Necropolis",
+    "type": "Arcade",
+    "location": "Egipto",
+    "description": "Un mapa de Arcade ubicado en Egipto, usado principalmente para modos como Eliminación y Combate a muerte.",
+    "bestHeroes": [
+      "Pharah",
+      "Widowmaker",
+      "Ana"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Symmetra",
+      "Junkrat"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2017-05-23",
+    "additionalInfo": "Ubicación donde Ana se ocultó después de su supuesta muerte. Tiene estructuras verticales que favorecen a héroes con movilidad aérea.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/necropolis.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Castillo",
+    "type": "Arcade",
+    "location": "México",
+    "description": "Un mapa pequeño ambientado en una hacienda mexicana, utilizado para modos de Arcade como Eliminación.",
+    "bestHeroes": [
+      "Reaper",
+      "Cassidy",
+      "Junkrat"
+    ],
+    "worstHeroes": [
+      "Winston",
+      "D.Va",
+      "Reinhardt"
+    ],
+    "difficulty": "Baja",
+    "releaseDate": "2017-02-28",
+    "additionalInfo": "Basado en una sección del mapa de Dorado. Tiene pasillos estrechos y un patio central con una fuente, ideal para emboscadas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/castillo.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Ecopoint: Antarctica",
+    "type": "Arcade",
+    "location": "Antártida",
+    "description": "Una pequeña estación de investigación en la Antártida, usada principalmente para modos de Arcade.",
+    "bestHeroes": [
+      "Mei",
+      "Cassidy",
+      "Soldier: 76"
+    ],
+    "worstHeroes": [
+      "Pharah",
+      "Reinhardt",
+      "D.Va"
+    ],
+    "difficulty": "Baja",
+    "releaseDate": "2016-11-15",
+    "additionalInfo": "Base donde Mei y su equipo quedaron en crioestasis durante una tormenta. Mapa compacto con áreas interiores y un centro circular.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/ecopoint-antarctica.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Petra",
+    "type": "Duelo",
+    "location": "Jordania",
+    "description": "Un sitio arqueológico en Jordania, usado para modos de Combate a Muerte.",
+    "bestHeroes": [
+      "Pharah",
+      "Echo",
+      "Junkrat"
+    ],
+    "worstHeroes": [
+      "Mercy",
+      "Symmetra",
+      "Zarya"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2018-05-22",
+    "additionalInfo": "Tiene un gran foso central que se va derrumbando durante la partida. Combina áreas de excavación, cuevas naturales y ruinas antiguas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/petra.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Yokohama",
+    "type": "Estadio",
+    "location": "Japón",
+    "description": "Un nuevo mapa del modo Estadio añadido en 2025, ubicado en un distrito futurista de Yokohama, Japón.",
+    "bestHeroes": [
+      "Kiriko",
+      "Aqua",
+      "Hanzo"
+    ],
+    "worstHeroes": [
+      "Roadhog",
+      "Bastion",
+      "Zarya"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2025-06-18",
+    "additionalInfo": "Parte de la ampliación del modo Estadio en Temporada 17. Característico por sus pasarelas elevadas y numerosos elementos interactivos como plataformas móviles.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/yokohama.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Berlín",
+    "type": "Empuje",
+    "location": "Alemania",
+    "description": "Mapa de empuje ubicado en Berlín, con una mezcla de arquitectura histórica y moderna.",
+    "bestHeroes": [
+      "Reinhardt",
+      "Torbjörn",
+      "Ana"
+    ],
+    "worstHeroes": [
+      "Pharah",
+      "Echo",
+      "Tracer"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2024-12-05",
+    "additionalInfo": "Presenta la Puerta de Brandeburgo y elementos del Muro de Berlín. Tiene calles estrechas que se abren en plazas amplias, creando un ritmo dinámico de combate.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/berlin.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Sydney",
+    "type": "Híbrido",
+    "location": "Australia",
+    "description": "Mapa híbrido ambientado en Sydney, con vistas a la icónica Ópera y el puerto.",
+    "bestHeroes": [
+      "Junkrat",
+      "Roadhog",
+      "Sojourn"
+    ],
+    "worstHeroes": [
+      "Mei",
+      "Reinhardt",
+      "Winston"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2025-03-07",
+    "additionalInfo": "Incluye secciones del puerto, la Ópera y el distrito financiero. Tiene áreas con agua donde los jugadores pueden caer y ser eliminados.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/sydney.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Cairo",
+    "type": "Escolta",
+    "location": "Egipto",
+    "description": "Mapa de escolta ubicado en El Cairo moderno, con una mezcla de estructuras antiguas y futuristas.",
+    "bestHeroes": [
+      "Pharah",
+      "Ana",
+      "Widowmaker"
+    ],
+    "worstHeroes": [
+      "Mei",
+      "Reaper",
+      "Moira"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2024-09-12",
+    "additionalInfo": "Atraviesa mercados, calles modernas y zonas con visibilidad de las pirámides. Tiene muchas posiciones elevadas para francotiradores y corredores verticales.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/cairo.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Amsterdam",
+    "type": "Control",
+    "location": "Holanda",
+    "description": "Mapa de control situado en Amsterdam, con tres áreas que incluyen canales, plazas y el famoso barrio de los museos.",
+    "bestHeroes": [
+      "Lucio",
+      "Wrecking Ball",
+      "Mercy"
+    ],
+    "worstHeroes": [
+      "Bastion",
+      "Torbjörn",
+      "Junkrat"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2024-11-14",
+    "additionalInfo": "Caracterizado por sus puentes sobre canales que crean puntos estratégicos. Incorpora el famoso mercado de flores y una réplica del Rijksmuseum.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/amsterdam.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Mumbai",
+    "type": "Estadio",
+    "location": "India",
+    "description": "Mapa del modo Estadio ambientado en Mumbai, con arquitectura colorida y mercados bulliciosos.",
+    "bestHeroes": [
+      "Symmetra",
+      "Junkrat",
+      "Zenyatta"
+    ],
+    "worstHeroes": [
+      "Widowmaker",
+      "Ashe",
+      "Orisa"
+    ],
+    "difficulty": "Media-Alta",
+    "releaseDate": "2025-06-18",
+    "additionalInfo": "Tercer mapa añadido al modo Estadio. Destaca por sus espacios laberínticos y múltiples niveles verticales. Los combates se centran en un mercado central rodeado de edificios.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/mumbai.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Santorini",
+    "type": "Clash",
+    "location": "Grecia",
+    "description": "Mapa del modo Clash ambientado en la isla de Santorini, con sus características casas blancas y vistas al mar Egeo.",
+    "bestHeroes": [
+      "Pharah",
+      "Echo",
+      "Lucio"
+    ],
+    "worstHeroes": [
+      "Reinhardt",
+      "Roadhog",
+      "Zarya"
+    ],
+    "difficulty": "Media",
+    "releaseDate": "2025-05-30",
+    "additionalInfo": "Tercer mapa del modo Clash, que combina áreas estrechas entre edificios con espacios abiertos con vistas al mar. Proporciona muchas oportunidades para eliminaciones ambientales.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/santorini.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Dubai",
+    "type": "Híbrido",
+    "location": "Emiratos Árabes Unidos",
+    "description": "Mapa híbrido futurista ambientado en Dubai, con rascacielos, desierto y áreas tecnológicas avanzadas.",
+    "bestHeroes": [
+      "Echo",
+      "Pharah",
+      "Kiriko"
+    ],
+    "worstHeroes": [
+      "Junkrat",
+      "Mei",
+      "Cassidy"
+    ],
+    "difficulty": "Alta",
+    "releaseDate": "2025-02-19",
+    "additionalInfo": "Combina interiores lujosos con exteriores desérticos. Incluye secciones del Burj Khalifa futurista y un centro comercial tecnológico. Tiene áreas con gravedad reducida en las secciones elevadas.",
+    "imageUrl": "https://static.playoverwatch.com/img/pages/maps/images/dubai.jpg"
+  }
+]
