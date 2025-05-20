@@ -1,4 +1,20 @@
-// index.js
+// Añade esto a tu index.js
+const http = require('http');
+
+// Crear un servidor HTTP básico
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Bot está activo');
+});
+
+// Puerto que Render asigna automáticamente
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Servidor HTTP corriendo en puerto ${PORT}`);
+});
+
+
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
