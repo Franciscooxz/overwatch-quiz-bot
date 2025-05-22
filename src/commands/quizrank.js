@@ -13,6 +13,12 @@ module.exports = {
   
   async execute(interaction) {
     try {
+      // Verificar si la interacción sigue siendo válida
+      if (!interaction.isCommand()) {
+        console.log('Interacción no válida recibida');
+        return;
+      }
+
       // Obtener los datos del usuario actual
       const userId = interaction.user.id;
       const username = interaction.user.username;
@@ -29,34 +35,49 @@ module.exports = {
       // Crear botones para el ranking
       const row = this.createActionButtons();
       
-      // Responder con el embed y los botones
+      // Responder con el embed y los botones usando la nueva sintaxis
       const reply = await interaction.reply({
         embeds: [embed],
         components: [row],
-        fetchReply: true // Importante: obtener el mensaje de respuesta
+        // Usar withResponse en lugar de fetchReply (Discord.js v14+)
+        withResponse: true
       });
       
       // Guardar la referencia del mensaje para control posterior
-      activeRankings.set(reply.id, {
-        userId: interaction.user.id,
-        messageId: reply.id,
-        channelId: interaction.channelId,
-        guildId: interaction.guildId,
-        timestamp: Date.now()
-      });
-      
-      // Configurar collector para los botones
-      this.setupButtonCollector(interaction, reply);
+      if (reply) {
+        activeRankings.set(reply.id, {
+          userId: interaction.user.id,
+          messageId: reply.id,
+          channelId: interaction.channelId,
+          guildId: interaction.guildId,
+          timestamp: Date.now()
+        });
+        
+        // Configurar collector para los botones
+        this.setupButtonCollector(interaction, reply);
+      }
       
       // Limpiar rankings antiguos (más de 1 hora)
       this.cleanupOldRankings();
       
     } catch (error) {
       console.error('Error al mostrar el ranking:', error);
-      await interaction.reply({
-        content: 'Ha ocurrido un error al cargar el ranking. Por favor, inténtalo de nuevo más tarde.',
-        ephemeral: true
-      }).catch(console.error);
+      
+      // Manejo de errores mejorado con verificación de estado de interacción
+      try {
+        if (!interaction.replied && !interaction.deferred) {
+          await interaction.reply({
+            content: 'Ha ocurrido un error al cargar el ranking. Por favor, inténtalo de nuevo más tarde.',
+            flags: 64 // Ephemeral flag
+          });
+        } else if (interaction.deferred) {
+          await interaction.editReply({
+            content: 'Ha ocurrido un error al cargar el ranking. Por favor, inténtalo de nuevo más tarde.'
+          });
+        }
+      } catch (replyError) {
+        console.error('Error al enviar mensaje de error:', replyError);
+      }
     }
   },
   
@@ -91,27 +112,8 @@ module.exports = {
       .setThumbnail('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt5a7c3dc494771b95/6233336c12894d313443adc2/ow2-logo-small.png')
       .setFooter({
         text: `Actualizado • ${new Date().toLocaleTimeString()} • ${this.formatDate(new Date())}`,
-        iconURL: interaction?.guild?.iconURL?.() || null
-      })
-      .setImage('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt94e4f408edc8bebf/62aa9a573737c86bf5b1160c/header_overwatch2_logo.jpg');
-    
-    // Si el usuario no está en el top, mostrar su posición
-    if (!topPlayers.some(player => player.userId === userId) && userScore > 0) {
-      // Encontrar la posición del usuario
-      this.getUserPosition(userId, scoreService).then(userPosition => {
-        if (userPosition > 0) {
-          const medalEmoji = this.getMedalEmoji(userPosition);
-          
-          // Agregar campo con la información del usuario
-          embed.addFields({
-            name: '📊 Tu posición en el ranking',
-            value: `${medalEmoji} <@${userId}>: **${userScore}** pts (Posición #${userPosition})`
-          });
-        }
-      }).catch(error => {
-        console.error('Error al obtener posición del usuario:', error);
+        iconURL: interaction?.guild?.iconURL?.() || undefined
       });
-    }
     
     // Agregar estadísticas generales si hay jugadores
     if (topPlayers.length > 0) {
@@ -154,152 +156,219 @@ module.exports = {
   },
   
   /**
-   * Configura el collector para los botones
+   * Configura el collector para los botones con manejo mejorado de errores
    * @param {Interaction} interaction - Interacción original
    * @param {Message} reply - Mensaje de respuesta
    */
   setupButtonCollector(interaction, reply) {
-    // Filtro para detectar interacciones con los botones
-    const filter = i => {
-      // Verificar si es uno de nuestros botones
-      const validCustomId = i.customId === 'play_quiz' || i.customId === 'view_my_stats';
+    try {
+      // Filtro para detectar interacciones con los botones
+      const filter = i => {
+        // Verificar si es uno de nuestros botones
+        const validCustomId = i.customId === 'play_quiz' || i.customId === 'view_my_stats';
+        
+        // Si estamos en el mensaje correcto
+        return validCustomId && i.message.id === reply.id;
+      };
       
-      // Si estamos en el mensaje correcto
-      return validCustomId && i.message.id === reply.id;
-    };
-    
-    // Crear collector sobre el mensaje específico (más confiable)
-    const collector = reply.createMessageComponentCollector({ 
-      filter, 
-      time: 3600000 // 1 hora
-    });
-    
-    // Manejar interacciones
-    collector.on('collect', async i => {
-      try {
-        // Detener el collector actual para evitar problemas
-        collector.stop();
-        
-        // CRUCIAL: Primero hacer deferUpdate
-        await i.deferUpdate().catch(err => {
-          // Sólo registrar errores no relacionados con interacciones ya reconocidas
-          if (err.code !== 40060) { // 40060 es "Interaction has already been acknowledged"
-            console.error('Error al usar deferUpdate:', err);
+      // Crear collector sobre el mensaje específico con tiempo reducido
+      const collector = reply.createMessageComponentCollector({ 
+        filter, 
+        time: 300000 // 5 minutos (en lugar de 1 hora)
+      });
+      
+      // Manejar interacciones
+      collector.on('collect', async i => {
+        try {
+          // Verificar que la interacción sigue siendo válida
+          if (!i.isButton()) {
+            console.log('Interacción no es un botón');
+            return;
           }
-        });
-        
-        // Actualizar mensaje con "cargando..."
-        try {
-          await i.editReply({
-            content: i.customId === 'play_quiz' ? "🎮 **Iniciando quiz...**" : "📊 **Cargando estadísticas...**",
-            embeds: [],
-            components: []
-          });
+
+          // Detener el collector actual para evitar problemas
+          collector.stop();
+          
+          // Verificar si ya fue respondida
+          if (i.replied || i.deferred) {
+            console.log('Interacción ya fue procesada');
+            return;
+          }
+
+          // Hacer deferUpdate INMEDIATAMENTE
+          await i.deferUpdate();
+          
+          // Manejar según el tipo de botón
+          if (i.customId === 'play_quiz') {
+            await this.handleQuizButton(i, interaction);
+          } 
+          else if (i.customId === 'view_my_stats') {
+            await this.handleStatsButton(i, interaction);
+          }
+          
         } catch (error) {
-          console.error('Error al actualizar mensaje con cargando:', error);
-          // No bloqueamos la ejecución, continuamos
+          console.error('Error en interacción con botón:', error);
+          
+          // Intentar mostrar un mensaje de error si es posible
+          try {
+            if (!i.replied && !i.deferred) {
+              await i.reply({
+                content: `⚠️ Ha ocurrido un error al procesar tu solicitud. Por favor, usa \`/quizrank\` nuevamente.`,
+                flags: 64 // Ephemeral
+              });
+            }
+          } catch (replyError) {
+            console.error('No se pudo enviar mensaje de error:', replyError);
+          }
         }
-        
-        // Manejar según el tipo de botón
-        if (i.customId === 'play_quiz') {
-          // Iniciar quiz en nueva interacción para evitar problemas
-          await this.handleQuizButton(i, interaction);
-        } 
-        else if (i.customId === 'view_my_stats') {
-          await this.handleStatsButton(i, interaction);
-        }
-      } catch (error) {
-        console.error('Error en interacción con botón:', error);
-        // Intentar mostrar un mensaje de error al usuario
-        try {
-          await interaction.channel.send({
-            content: `⚠️ Ha ocurrido un error al procesar tu solicitud, ${interaction.user}. Por favor, intenta de nuevo usando \`/quizrank\` o \`/quiz\`.`,
-            ephemeral: true
-          }).catch(() => {}); // Silenciar errores adicionales
-        } catch (e) {
-          // Ignorar errores adicionales
-        }
-      }
-    });
+      });
+
+      // Manejar fin del collector
+      collector.on('end', collected => {
+        console.log(`Collector terminado. Interacciones procesadas: ${collected.size}`);
+        // Opcional: deshabilitar botones cuando expire
+        this.disableButtons(reply).catch(err => {
+          console.error('Error al deshabilitar botones:', err);
+        });
+      });
+
+    } catch (error) {
+      console.error('Error al configurar collector:', error);
+    }
+  },
+
+  /**
+   * Deshabilita los botones de un mensaje
+   * @param {Message} message - Mensaje a modificar
+   */
+  async disableButtons(message) {
+    try {
+      if (!message || !message.components) return;
+
+      const disabledComponents = message.components.map(row => {
+        const newRow = new ActionRowBuilder();
+        row.components.forEach(component => {
+          const newButton = ButtonBuilder.from(component)
+            .setDisabled(true);
+          newRow.addComponents(newButton);
+        });
+        return newRow;
+      });
+
+      await message.edit({
+        components: disabledComponents
+      });
+    } catch (error) {
+      console.error('Error al deshabilitar botones:', error);
+    }
   },
   
-/**
- * Maneja el botón de "Jugar Quiz"
- * @param {ButtonInteraction} i - Interacción del botón
- * @param {Interaction} originalInteraction - Interacción original del comando
- */
-async handleQuizButton(i, originalInteraction) {
-  try {
-    // Obtener el comando quiz
-    const { client } = originalInteraction;
-    const quizCommand = client.commands.get('quiz');
-    
-    if (!quizCommand) {
+  /**
+   * Maneja el botón de "Jugar Quiz" con manejo mejorado
+   * @param {ButtonInteraction} i - Interacción del botón
+   * @param {Interaction} originalInteraction - Interacción original del comando
+   */
+  async handleQuizButton(i, originalInteraction) {
+    try {
+      // Obtener el comando quiz
+      const { client } = originalInteraction;
+      const quizCommand = client.commands.get('quiz');
+      
+      if (!quizCommand) {
+        await i.editReply({
+          content: "❌ No se pudo encontrar el comando de quiz. Por favor, usa `/quiz` directamente.",
+          embeds: [],
+          components: []
+        });
+        return;
+      }
+      
+      // Actualizar mensaje con "cargando..."
       await i.editReply({
-        content: "❌ No se pudo encontrar el comando de quiz. Por favor, usa `/quiz` directamente.",
+        content: "🎮 **Iniciando quiz...**",
         embeds: [],
         components: []
       });
-      return;
+      
+      // Simular interacción para el quiz usando un enfoque más seguro
+      const simulatedInteraction = this.createSimulatedInteraction(i, originalInteraction);
+      
+      // Ejecutar el comando quiz
+      await quizCommand.execute(simulatedInteraction);
+      
+    } catch (error) {
+      console.error('Error al ejecutar quiz desde botón:', error);
+      
+      try {
+        await i.editReply({
+          content: "❌ Ocurrió un error al iniciar el quiz. Por favor, usa `/quiz` directamente.",
+          embeds: [],
+          components: []
+        });
+      } catch (editError) {
+        console.error('Error al mostrar mensaje de error:', editError);
+      }
     }
-    
-    // Crear una interacción falsa basada en la interacción del botón
-    const fakeInteraction = {
-      user: i.user,
-      channel: i.channel,
-      guild: i.guild,
-      client: i.client,
+  },
+
+  /**
+   * Crea una interacción simulada más robusta
+   * @param {ButtonInteraction} buttonInteraction - Interacción del botón
+   * @param {Interaction} originalInteraction - Interacción original
+   * @returns {Object} Interacción simulada
+   */
+  createSimulatedInteraction(buttonInteraction, originalInteraction) {
+    return {
+      user: buttonInteraction.user,
+      channel: buttonInteraction.channel,
+      guild: buttonInteraction.guild,
+      client: buttonInteraction.client,
+      
+      // Propiedades necesarias
+      isCommand: () => true,
+      replied: false,
+      deferred: false,
       
       // Opciones simuladas
       options: {
-        getString: () => null // Simula que no se envió ninguna opción
+        getString: () => null,
+        getInteger: () => null,
+        getBoolean: () => null
       },
       
       // Métodos simulados
       reply: async (options) => {
         try {
-          // Reemplazar el mensaje actual con la respuesta real del quiz
-          return await i.editReply(options);
+          return await buttonInteraction.editReply(options);
         } catch (err) {
-          console.error('Error al responder con quiz simulado:', err);
-          return null;
+          console.error('Error en reply simulado:', err);
+          throw err;
         }
       },
       
       editReply: async (options) => {
         try {
-          return await i.editReply(options);
+          return await buttonInteraction.editReply(options);
         } catch (err) {
-          console.error('Error al editar quiz simulado:', err);
-          return null;
+          console.error('Error en editReply simulado:', err);
+          throw err;
         }
       },
       
-      // Métodos adicionales que pueden ser necesarios
-      deferReply: async () => Promise.resolve(),
+      deferReply: async () => {
+        // Ya hicimos deferUpdate, no necesitamos hacer nada más
+        return Promise.resolve();
+      },
+      
       followUp: async (options) => {
         try {
-          return await i.channel.send(options);
+          return await buttonInteraction.channel.send(options);
         } catch (err) {
           console.error('Error en followUp simulado:', err);
-          return null;
+          throw err;
         }
       }
     };
-    
-    // Ejecutar el comando quiz con la interacción simulada
-    await quizCommand.execute(fakeInteraction);
-    
-  } catch (error) {
-    console.error('Error al ejecutar quiz desde botón:', error);
-    
-    // Mostrar mensaje de error
-    await i.editReply({
-      content: "❌ Ocurrió un error al iniciar el quiz. Por favor, usa `/quiz` directamente.",
-      embeds: [],
-      components: []
-    }).catch(() => {}); // Silenciamos errores adicionales
-  }
   },
   
   /**
@@ -312,28 +381,8 @@ async handleQuizButton(i, originalInteraction) {
       const userId = i.user.id;
       const username = i.user.username;
       
-      // Verificar si el servicio tiene un método para obtener estadísticas detalladas
-      let userStats = null;
-      
-      if (scoreService.getUserDetailedStats && typeof scoreService.getUserDetailedStats === 'function') {
-        userStats = await scoreService.getUserDetailedStats(userId);
-      } else {
-        // Alternativa: construir estadísticas básicas
-        const globalScore = await this.getUserScore(userId, scoreService) || 0;
-        const globalPosition = await this.getUserPosition(userId, scoreService) || 0;
-        
-        userStats = {
-          global: {
-            score: globalScore,
-            position: globalPosition
-          },
-          // Valores que pueden no estar disponibles
-          totalAnswered: 0,
-          correctAnswers: 0,
-          streak: 0,
-          bestStreak: 0
-        };
-      }
+      // Obtener estadísticas del usuario
+      const userStats = await this.getUserStats(userId, scoreService);
       
       // Crear embed para estadísticas del usuario
       const embed = new EmbedBuilder()
@@ -342,34 +391,12 @@ async handleQuizButton(i, originalInteraction) {
         .setThumbnail(i.user.displayAvatarURL())
         .setDescription(`Resumen de tu desempeño en el Quiz de Overwatch 2.`);
       
-      // Estadísticas globales
-      let statsText = '';
-      if (userStats.global?.score) {
-        statsText += `**Puntuación total:** ${userStats.global.score} pts\n`;
-      }
-      if (userStats.global?.position) {
-        const medalEmoji = this.getMedalEmoji(userStats.global.position);
-        statsText += `**Posición en ranking:** ${medalEmoji} #${userStats.global.position}\n`;
-      }
-      if (userStats.totalAnswered) {
-        statsText += `**Preguntas respondidas:** ${userStats.totalAnswered}\n`;
-      }
-      if (userStats.correctAnswers) {
-        const percentage = userStats.totalAnswered > 0 
-          ? Math.round((userStats.correctAnswers / userStats.totalAnswered) * 100) 
-          : 0;
-        statsText += `**Respuestas correctas:** ${userStats.correctAnswers} (${percentage}%)\n`;
-      }
-      if (userStats.streak) {
-        statsText += `**Racha actual:** ${userStats.streak}\n`;
-      }
-      if (userStats.bestStreak) {
-        statsText += `**Mejor racha:** ${userStats.bestStreak}`;
-      }
+      // Formatear estadísticas
+      const statsText = this.formatUserStats(userStats);
       
       embed.addFields({
         name: '🌐 Tus Estadísticas',
-        value: statsText || 'No hay estadísticas disponibles todavía. ¡Juega algunos quiz para ver tus resultados!',
+        value: statsText,
         inline: false
       });
       
@@ -400,62 +427,140 @@ async handleQuizButton(i, originalInteraction) {
         content: null,
         embeds: [embed],
         components: [row]
-      }).catch(err => {
-        console.error('Error al mostrar estadísticas:', err);
       });
       
-      // Crear un nuevo collector para estos botones
-      const newMessage = await i.fetchReply().catch(() => null);
-      if (!newMessage) return;
+      // Configurar nuevo collector para estos botones
+      this.setupStatsButtonCollector(i, originalInteraction);
       
-      const filter = interaction => 
-        (interaction.customId === 'new_quiz' || 
-         interaction.customId === 'back_ranking') &&
-        interaction.message.id === newMessage.id;
-      
-      const collector = newMessage.createMessageComponentCollector({
-        filter,
-        time: 600000 // 10 minutos
-      });
-      
-      collector.on('collect', async interaction => {
-        try {
-          // Detener el collector actual
-          collector.stop();
-          
-          // Reconocer la interacción
-          await interaction.deferUpdate().catch(err => {
-            if (err.code !== 40060) {
-              console.error('Error en deferUpdate de botones de estadísticas:', err);
-            }
-          });
-          
-          if (interaction.customId === 'new_quiz') {
-            // Iniciar nuevo quiz
-            await this.handleQuizButton(interaction, originalInteraction);
-          } 
-          else if (interaction.customId === 'back_ranking') {
-            // Mostrar el ranking de nuevo
-            await this.showRanking(interaction, originalInteraction);
-          }
-        } catch (error) {
-          console.error('Error en interacción con botones de estadísticas:', error);
-        }
-      });
     } catch (error) {
       console.error('Error al mostrar estadísticas del usuario:', error);
       
-      // Intentar mostrar un mensaje de error
       try {
         await i.editReply({
           content: "❌ Ocurrió un error al cargar tus estadísticas. Por favor, intenta de nuevo más tarde.",
           embeds: [],
           components: []
-        }).catch(() => {});
-      } catch (e) {
-        // Ignorar errores adicionales
+        });
+      } catch (editError) {
+        console.error('Error al mostrar mensaje de error de estadísticas:', editError);
       }
     }
+  },
+
+  /**
+   * Configura collector para botones de estadísticas
+   * @param {ButtonInteraction} statsInteraction - Interacción de estadísticas
+   * @param {Interaction} originalInteraction - Interacción original
+   */
+  async setupStatsButtonCollector(statsInteraction, originalInteraction) {
+    try {
+      const message = await statsInteraction.fetchReply();
+      
+      const filter = i => 
+        (i.customId === 'new_quiz' || i.customId === 'back_ranking') &&
+        i.message.id === message.id &&
+        i.user.id === statsInteraction.user.id;
+      
+      const collector = message.createMessageComponentCollector({
+        filter,
+        time: 300000 // 5 minutos
+      });
+      
+      collector.on('collect', async interaction => {
+        try {
+          collector.stop();
+          
+          if (interaction.replied || interaction.deferred) return;
+          
+          await interaction.deferUpdate();
+          
+          if (interaction.customId === 'new_quiz') {
+            await this.handleQuizButton(interaction, originalInteraction);
+          } 
+          else if (interaction.customId === 'back_ranking') {
+            await this.showRanking(interaction, originalInteraction);
+          }
+          
+        } catch (error) {
+          console.error('Error en collector de estadísticas:', error);
+        }
+      });
+      
+    } catch (error) {
+      console.error('Error al configurar collector de estadísticas:', error);
+    }
+  },
+
+  /**
+   * Obtiene estadísticas del usuario de forma segura
+   * @param {string} userId - ID del usuario
+   * @param {Object} scoreService - Servicio de puntuaciones
+   * @returns {Object} Estadísticas del usuario
+   */
+  async getUserStats(userId, scoreService) {
+    try {
+      // Intentar obtener estadísticas detalladas
+      if (scoreService.getUserDetailedStats && typeof scoreService.getUserDetailedStats === 'function') {
+        return await scoreService.getUserDetailedStats(userId);
+      }
+      
+      // Alternativa: construir estadísticas básicas
+      const globalScore = await this.getUserScore(userId, scoreService) || 0;
+      const globalPosition = await this.getUserPosition(userId, scoreService) || 0;
+      
+      return {
+        global: {
+          score: globalScore,
+          position: globalPosition
+        },
+        totalAnswered: 0,
+        correctAnswers: 0,
+        streak: 0,
+        bestStreak: 0
+      };
+      
+    } catch (error) {
+      console.error('Error al obtener estadísticas del usuario:', error);
+      return {
+        global: { score: 0, position: 0 },
+        totalAnswered: 0,
+        correctAnswers: 0,
+        streak: 0,
+        bestStreak: 0
+      };
+    }
+  },
+
+  /**
+   * Formatea las estadísticas del usuario
+   * @param {Object} userStats - Estadísticas del usuario
+   * @returns {string} Texto formateado
+   */
+  formatUserStats(userStats) {
+    let statsText = '';
+    
+    if (userStats.global?.score) {
+      statsText += `**Puntuación total:** ${userStats.global.score} pts\n`;
+    }
+    if (userStats.global?.position) {
+      const medalEmoji = this.getMedalEmoji(userStats.global.position);
+      statsText += `**Posición en ranking:** ${medalEmoji} #${userStats.global.position}\n`;
+    }
+    if (userStats.totalAnswered) {
+      statsText += `**Preguntas respondidas:** ${userStats.totalAnswered}\n`;
+    }
+    if (userStats.correctAnswers && userStats.totalAnswered) {
+      const percentage = Math.round((userStats.correctAnswers / userStats.totalAnswered) * 100);
+      statsText += `**Respuestas correctas:** ${userStats.correctAnswers} (${percentage}%)\n`;
+    }
+    if (userStats.streak) {
+      statsText += `**Racha actual:** ${userStats.streak}\n`;
+    }
+    if (userStats.bestStreak) {
+      statsText += `**Mejor racha:** ${userStats.bestStreak}`;
+    }
+    
+    return statsText || 'No hay estadísticas disponibles todavía. ¡Juega algunos quiz para ver tus resultados!';
   },
   
   /**
@@ -482,27 +587,23 @@ async handleQuizButton(i, originalInteraction) {
         content: null,
         embeds: [embed],
         components: [row]
-      }).catch(err => {
-        console.error('Error al mostrar ranking actualizado:', err);
       });
       
-      // Configurar un nuevo collector para este mensaje actualizado
-      const updatedMessage = await i.fetchReply().catch(() => null);
-      if (updatedMessage) {
-        this.setupButtonCollector(originalInteraction, updatedMessage);
-      }
+      // Configurar un nuevo collector
+      const updatedMessage = await i.fetchReply();
+      this.setupButtonCollector(originalInteraction, updatedMessage);
+      
     } catch (error) {
       console.error('Error al volver al ranking:', error);
       
-      // Intentar mostrar un mensaje de error
       try {
         await i.editReply({
           content: "❌ Ocurrió un error al cargar el ranking. Por favor, usa `/quizrank` nuevamente.",
           embeds: [],
           components: []
-        }).catch(() => {});
-      } catch (e) {
-        // Ignorar errores adicionales
+        });
+      } catch (editError) {
+        console.error('Error al mostrar mensaje de error de ranking:', editError);
       }
     }
   },
