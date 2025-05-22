@@ -2293,6 +2293,1206 @@
       "respuestaCorrecta": 3,
       "categoria": "Habilidades",
       "dificultad": "media"
-    }
+    },
+      {
+    "id": "hd20",
+    "texto": "¿Qué efecto tiene la habilidad 'Golpe Certero' de Reinhardt en Overwatch 2?",
+    "opciones": ["Aturdimiento", "Daño elevado", "Desplazamiento", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd21",
+    "texto": "¿Cuál es la mecánica de 'Pasión por la Batalla' de Junker Queen?",
+    "opciones": ["Aumenta su velocidad", "Causa sangrado a los enemigos", "Obtiene curación por enemigos sangrando", "B y C son correctas"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "c38",
+    "texto": "¿Qué cambio recibió el sistema de matchmaking en la Temporada 8 de Overwatch 2?",
+    "opciones": ["Emparejamiento basado en MMR reajustado", "Sistema de equilibrio de grupos", "Reducción de disparidad de habilidad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "h116",
+    "texto": "¿Qué nueva mecánica implementó Venture en su lanzamiento?",
+    "opciones": ["Controles de drones", "Sistema de evolución de armas", "Torretas reconfigurables", "Capacidad de escalar paredes"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "m58",
+    "texto": "¿Qué elemento interactivo único tiene el mapa 'New Junk City'?",
+    "opciones": ["Plataformas móviles", "Zonas de lanzamiento", "Áreas con efecto de gravedad reducida", "Compresor de basura"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "a20",
+    "texto": "¿Qué cambio introdujo la revisión del 'Juego con Rol' en la Temporada 10?",
+    "opciones": ["Recompensas mejoradas", "Sistema de emparejamiento ajustado", "Selección de preferencia de rol", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha39",
+    "texto": "¿Qué conexión narrativa existe entre Venture y Junkrat según la historia de Overwatch 2?",
+    "opciones": ["Rivales de negocios", "Antiguos compañeros de Junkertown", "Competidores por tecnología de chatarra", "Ninguna conexión directa"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "m59",
+    "texto": "¿Qué mecánica especial de juego se introdujo en el modo de Empuje en los mapas de Overwatch 2?",
+    "opciones": ["Rutas alternativas que se desbloquean", "Robot TS-1 con inteligencia artificial", "Barrera que avanza con el robot", "Puntos de control adicionales"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "h117",
+    "texto": "¿Qué sistema de recarga implementó Illari en su lanzamiento?",
+    "opciones": ["Recarga automática con el tiempo", "Energía solar que se acumula", "No necesita recargar", "Recarga más rápida bajo luz solar"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "c39",
+    "texto": "¿Qué sistema de penalización se implementó para los abandonos en partidas competitivas en Overwatch 2?",
+    "opciones": ["Suspensión temporal", "Pérdida de SR adicional", "Restricción de modos de juego", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+    {
+    "id": "h118",
+    "texto": "¿Qué tipo de armamento utiliza Space Ranger Cassidy en su skin mítica?",
+    "opciones": ["Pistolas láser", "Blasters espaciales", "Armas de plasma", "Pistolas con munición especial"],
+    "respuestaCorrecta": 1,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "m60",
+    "texto": "¿Qué característica única tiene el mapa 'Samoa' introducido en la Temporada 12?",
+    "opciones": ["Zonas submarinas explorables", "Cambios climáticos durante la partida", "Plataformas flotantes sobre el océano", "Corrientes de agua que afectan el movimiento"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "a21",
+    "texto": "¿Qué mecánica introdujo el sistema de 'Mejoras de rol' añadido en 2024?",
+    "opciones": ["Habilidades específicas según el rol", "Bonificaciones temporales", "Potenciadores que se acumulan durante la partida", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd22",
+    "texto": "¿Qué efecto produce la nueva habilidad 'Disrupción táctica' de Pharah tras su rediseño?",
+    "opciones": ["Desactiva habilidades por tiempo limitado", "Causa daño en área", "Empuja a los enemigos", "Reduce la velocidad de movimiento"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "c40",
+    "texto": "¿Qué requisito adicional se agregó para las partidas competitivas de alto nivel en Overwatch 2?",
+    "opciones": ["Verificación de cuenta por autenticación de dos factores", "Mínimo de horas jugadas con ciertos héroes", "Nivel mínimo requerido por rol", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "ha40",
+    "texto": "¿Qué conflicto narrativo se desarrolló entre Echo y Ramattra según los cómics de Overwatch 2?",
+    "opciones": ["Discrepancia sobre la libertad ómnica", "Disputa por tecnología antigua", "Interpretaciones opuestas sobre Iris", "No existe conflicto directo entre ellos"],
+    "respuestaCorrecta": 2,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h119",
+    "texto": "¿Qué mecánica implementa el sistema de 'Disparo de precisión' de Widowmaker en Overwatch 2?",
+    "opciones": ["Daño amplificado según tiempo de carga", "Revelación de puntos críticos", "Penetración de escudos", "Mayor velocidad de proyectil"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "a22",
+    "texto": "¿Qué cambio introdujo el sistema 'Mejora de grupos' implementado en 2024?",
+    "opciones": ["Matchmaking optimizado para premades", "Bonificaciones de experiencia", "Compatibilidad mejorada entre héroes en grupo", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "m61",
+    "texto": "¿Qué característica ambiental única tiene el mapa 'Suravasa' en Overwatch 2?",
+    "opciones": ["Jardines botánicos con plataformas elevadas", "Canales de agua navegables", "Zonas con efectos visuales de celebración", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd23",
+    "texto": "¿Qué interacción especial tiene la habilidad 'Látigo de cadena' de Junker Queen con las habilidades de otros héroes?",
+    "opciones": ["Cancela habilidades de movilidad", "Interrumpe ultimates en canalización", "Atraviesa escudos de barrera", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "difícil"
+  },
+    {
+    "id": "h120",
+    "texto": "¿Qué característica única tiene el diseño del héroe Spacetime?",
+    "opciones": ["Capacidad de manipular el tiempo", "Teletransporte entre dimensiones", "Control sobre la gravedad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "c41",
+    "texto": "¿Qué sistema introduce el 'Radar de comportamiento' implementado en el modo competitivo?",
+    "opciones": ["Detección de toxicidad en chat", "Análisis de patrones de juego", "Identificación de abandono de partidas", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "m62",
+    "texto": "¿Qué característica única de jugabilidad tiene el mapa 'Rio de Janeiro' rediseñado?",
+    "opciones": ["Terreno que cambia según el tiempo de partida", "Sistema de transporte por teleférico", "Sectores con música que afecta la jugabilidad", "Todas las anteriores"],
+    "respuestaCorrecta": 1,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha41",
+    "texto": "¿Qué revelación importante se hizo sobre la conexión entre Zenyatta y Echo en la historia de Overwatch 2?",
+    "opciones": ["Comparten el mismo creador", "Ambos tienen fragmentos de Iris", "Desarrollaron tecnología de conciencia artificial", "No existe conexión directa entre ellos"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a23",
+    "texto": "¿Qué sistema de personalización se introdujo con la función 'Armería avanzada'?",
+    "opciones": ["Personalización de efectos visuales de habilidades", "Modificación de colores de armas", "Distintos sonidos para las armas", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "hd24",
+    "texto": "¿Qué mecánica única implementa la habilidad 'Escudo absorbente' de Sigma?",
+    "opciones": ["Convierte daño en escudo", "Genera escudo temporal al absorber proyectiles", "Almacena daño para liberarlo después", "Todas las anteriores"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "h121",
+    "texto": "¿Qué tipo de recurso utiliza Moira para sus habilidades de daño?",
+    "opciones": ["Energía biótica", "Cargas de biotecnología", "Esencia vital", "No consume recursos para daño"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "m63",
+    "texto": "¿Qué mecánica especial implementa el nuevo modo de juego 'Control territorial'?",
+    "opciones": ["Puntos de control que se mueven", "Captura más rápida con más jugadores", "Zonas de influencia que expanden el control", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "c42",
+    "texto": "¿Qué sistema implementa el nuevo 'Modo torneos' en Overwatch 2?",
+    "opciones": ["Brackets automáticos", "Equilibrio dinámico entre equipos", "Premios especiales basados en rendimiento", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha42",
+    "texto": "¿Qué evento catastrófico ocurrió en el universo de Overwatch que conecta las historias de Junkrat y Roadhog?",
+    "opciones": ["Explosión nuclear en Australia", "Destrucción del Omnium australiano", "Colapso económico de Junkertown", "Guerra civil australiana"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "media"
+  },
+    {
+    "id": "h122",
+    "texto": "¿Qué mecánica fundamental cambió para Mercy en la actualización de equilibrio de la Temporada 11?",
+    "opciones": ["Sistema de regeneración de Ángel Guardián", "Cadencia de disparo de su Blaster", "Velocidad de vuelo durante Valkyrie", "Alcance de su rayo de curación"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "a24",
+    "texto": "¿Qué sistema introdujo la función 'Climatología dinámica' en los mapas de Overwatch 2?",
+    "opciones": ["Cambios visuales puramente estéticos", "Efectos climáticos que afectan la visibilidad", "Condiciones que alteran ligeramente la jugabilidad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "m64",
+    "texto": "¿Qué característica especial tiene el mapa 'Tokio' añadido en la colaboración con los Juegos Olímpicos?",
+    "opciones": ["Zonas temáticas de distintos deportes", "Área central que cambia entre partidas", "Referencias a la cultura japonesa", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "c43",
+    "texto": "¿Qué innovación introdujo el sistema 'Roles extendidos' en el modo competitivo?",
+    "opciones": ["Posibilidad de cambiar de rol a mitad de partida", "Selección de sub-roles específicos", "Habilidades especiales según combinación de héroes", "Ninguna de las anteriores"],
+    "respuestaCorrecta": 1,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd25",
+    "texto": "¿Qué interacción especial tiene la habilidad 'Matriz de defensa' de D.Va con la ultimate de Sojourn?",
+    "opciones": ["Puede absorber completamente el rayo", "Reduce el daño pero no lo anula", "No puede detener el disparo cargado", "Refleja parte del daño"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "ha43",
+    "texto": "¿Qué conexión narrativa se reveló entre Baptiste y Talon en las misiones PvE de Overwatch 2?",
+    "opciones": ["Fue reclutado a la fuerza", "Trabajó como médico para ellos", "Fue un agente doble infiltrado", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "h123",
+    "texto": "¿Qué característica fundamental distingue al sistema de combate de Doomfist tras su rework a tanque?",
+    "opciones": ["Mayor resistencia pasiva", "Habilidades de control de masas", "Daño basado en combos", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "m65",
+    "texto": "¿Qué elemento interactivo específico hace único al mapa 'Monte Fuji'?",
+    "opciones": ["Corrientes de aire ascendentes", "Nieve que reduce la fricción", "Áreas con poca gravedad", "Zonas con aguas termales curativas"],
+    "respuestaCorrecta": 0,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "a25",
+    "texto": "¿Qué característica implementó el sistema 'Ajuste dinámico de héroes' introducido en 2024?",
+    "opciones": ["Equilibrio en tiempo real basado en rendimiento", "Limitación temporal de ciertos héroes", "Bonificaciones para héroes menos utilizados", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "c44",
+    "texto": "¿Qué mecánica introdujo la 'Liga Amateur' en el sistema competitivo de Overwatch 2?",
+    "opciones": ["Torneos programados automáticamente", "Sistema de ascenso a ligas superiores", "Premios exclusivos por temporada", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+    {
+    "id": "h124",
+    "texto": "¿Qué mecánica especial implementa la habilidad 'Orbe de armonía' de Zenyatta?",
+    "opciones": ["Curación constante a distancia", "Curación que aumenta con el tiempo", "Curación que se mantiene sin línea de visión por tiempo limitado", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd26",
+    "texto": "¿Qué interacción única tiene el escudo de Reinhardt con las habilidades de control de masas?",
+    "opciones": ["Es inmune a aturdimientos", "Reduce la duración de efectos", "Protege contra algunos efectos pero no todos", "No ofrece protección especial contra control de masas"],
+    "respuestaCorrecta": 2,
+    "categoria": "Habilidades",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "m66",
+    "texto": "¿Qué mecánica especial implementó el rediseño del mapa 'Hanamura' en Overwatch 2?",
+    "opciones": ["Pasajes secretos entre puntos", "Elementos destructibles del entorno", "Plataformas móviles activables", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha44",
+    "texto": "¿Qué revelación narrativa conecta a Kiriko con los hermanos Shimada?",
+    "opciones": ["Es prima lejana de ellos", "Su familia protegía al clan Shimada", "Entrenó junto a ellos en artes marciales", "No existe conexión directa"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "a26",
+    "texto": "¿Qué sistema introdujo la función 'Arsenales personalizados' en Overwatch 2?",
+    "opciones": ["Modificación visual de armas", "Efectos sonoros alternativos", "Animaciones personalizadas de recarga", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "c45",
+    "texto": "¿Qué mecánica implementó el sistema 'Especialización de roles' en el modo competitivo?",
+    "opciones": ["Bonificaciones específicas por especialización", "Emparejamiento basado en estilos de juego", "Estadísticas detalladas por subroles", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "h125",
+    "texto": "¿Qué característica especial tiene el ataque cuerpo a cuerpo de Genji?",
+    "opciones": ["Daño aumentado por combo", "Reseteo de Swift Strike al eliminar", "Penetra escudos parcialmente", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "m67",
+    "texto": "¿Qué elemento interactivo único tiene el mapa 'Chicago' introducido en la Temporada 15?",
+    "opciones": ["Sistema de metro subterráneo", "Rascacielos con múltiples niveles", "Estaciones con entornos destructibles", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "ha45",
+    "texto": "¿Qué evento histórico conecta las historias de fondo de Soldier: 76 y Reaper antes de Overwatch?",
+    "opciones": ["Programa de supersoldados", "Operación militar clasificada", "Entrenamiento conjunto en fuerzas especiales", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "a27",
+    "texto": "¿Qué función implementó la actualización 'Comunicación avanzada' en Overwatch 2?",
+    "opciones": ["Sistema de ping con información contextual", "Comandos de voz automatizados", "Gestos tácticos con información estratégica", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+    {
+    "id": "h126",
+    "texto": "¿Qué mecánica implementa la habilidad 'Modo Configuración' de Bastion tras su rework?",
+    "opciones": ["Aumento de cadencia de disparo", "Inmovilización con escudo frontal", "Mayor alcance y precisión", "Disparo explosivo de artillería"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd27",
+    "texto": "¿Qué interacción tiene la habilidad 'Supercielo' de Pharah con los techos de los mapas?",
+    "opciones": ["No puede atravesarlos", "Rebota y aumenta altura", "Permite flotar temporalmente pegada al techo", "Reinicia la duración al tocar techo"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "m68",
+    "texto": "¿Qué característica única implementó el mapa 'Hong Kong' en su lanzamiento?",
+    "opciones": ["Zonas de parkour vertical", "Sistema de trenes en movimiento", "Entorno con múltiples niveles interconectados", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "c46",
+    "texto": "¿Qué sistema introdujo el 'Modo Director' en torneos competitivos de Overwatch 2?",
+    "opciones": ["Perspectivas personalizadas para espectadores", "Sistema de análisis en tiempo real", "Herramientas de dirección para transmisiones", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha46",
+    "texto": "¿Qué conexión narrativa existe entre Lifeweaver y Symmetra según la historia de Overwatch 2?",
+    "opciones": ["Rivales científicos", "Colaboraron en tecnología de luz dura", "Trabajaron para Vishkar en diferentes departamentos", "Competencia por recursos de investigación"],
+    "respuestaCorrecta": 2,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a28",
+    "texto": "¿Qué sistema implementó la actualización 'IA Táctica 2.0' en Overwatch 2?",
+    "opciones": ["Bots avanzados con comportamiento similar a humanos", "Asistente estratégico para entrenamientos", "Análisis de partidas con recomendaciones", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "h127",
+    "texto": "¿Qué mecánica fundamental distingue el sistema de daño de Symmetra?",
+    "opciones": ["Daño que aumenta con tiempo sostenido", "Proyectiles que atraviesan escudos", "Daño en área con carga", "Disparos que se bloquean mutuamente"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "m69",
+    "texto": "¿Qué elementos interactivos caracterizan al mapa 'Monte Olimpo' introducido en el evento aniversario?",
+    "opciones": ["Plataformas móviles ascendentes", "Zonas con gravedad reducida", "Portales entre secciones", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha47",
+    "texto": "¿Qué rol tuvo Ana Amari en la fundación original de Overwatch según la narrativa oficial?",
+    "opciones": ["Miembro fundador", "Reclutada en la primera expansión", "Agregada como consejera estratégica", "Supervisora externa de operaciones"],
+    "respuestaCorrecta": 0,
+    "categoria": "Historia",
+    "dificultad": "media"
+  },
+  {
+    "id": "c47",
+    "texto": "¿Qué sistema de calificación implementó la función 'Evaluación de rendimiento 2.0' en el modo competitivo?",
+    "opciones": ["Análisis específico por rol", "Métricas detalladas por héroe", "Comparativa con jugadores de rango similar", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+    {
+    "id": "h128",
+    "texto": "¿Qué mecánica especial implementa el sistema de 'Restauración de barrera' de Brigitte?",
+    "opciones": ["Curación que otorga armadura temporal", "Escudo que se regenera con eliminaciones", "Inspiración que aumenta con daño bloqueado", "Regeneración pasiva aumentada"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "media"
+  },
+  {
+    "id": "hd28",
+    "texto": "¿Qué interacción tiene la habilidad 'Retirada' de Tracer con efectos de control de masas?",
+    "opciones": ["No elimina efectos ya aplicados", "Limpia todos los efectos de control", "Solo elimina ralentizaciones", "Reduce duración de efectos futuros"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "m70",
+    "texto": "¿Qué característica única implementa el mapa 'Nueva Delhi' en el modo Control?",
+    "opciones": ["Zonas de captura multinivel", "Plataformas móviles entre puntos", "Áreas con alteraciones de gravedad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "a29",
+    "texto": "¿Qué innovación introdujo el sistema 'Modos de juego experimentales 2.0'?",
+    "opciones": ["Votación comunitaria de cambios", "Modificaciones temporales de héroes", "Mecánicas de juego alternativas", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha48",
+    "texto": "¿Qué evento histórico causó la desintegración de Overwatch según la línea temporal oficial?",
+    "opciones": ["Incidente de Venecia", "Explosión del cuartel general de Zurich", "Controversia por operaciones de Blackwatch", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "c48",
+    "texto": "¿Qué sistema introdujo el 'Modo liga de equipos' en el competitivo de Overwatch 2?",
+    "opciones": ["Temporadas con brackets de equipos", "Puntuación acumulativa por temporada", "Emparejamiento prioritario para grupos completos", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "h129",
+    "texto": "¿Qué característica especial tiene el sistema de munición de Echo?",
+    "opciones": ["Recarga automática cuando no dispara", "Mayor cadencia al disparar continuamente", "Munición que se regenera con eliminaciones", "Disparos que consumen energía variable"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "m71",
+    "texto": "¿Qué elementos de jugabilidad única ofrece el mapa 'Cairo' en Overwatch 2?",
+    "opciones": ["Sistema de mercado con objetos interactivos", "Pasillos subterráneos con atajos", "Zonas elevadas con ventaja táctica", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "ha49",
+    "texto": "¿Qué conexión narrativa existe entre Soldier: 76 y Ana Amari según los cómics de Overwatch?",
+    "opciones": ["Fueron compañeros en operaciones especiales", "Tuvieron un romance secreto", "Desconfianza mutua por desacuerdos tácticos", "Codirección de Overwatch durante crisis"],
+    "respuestaCorrecta": 0,
+    "categoria": "Historia",
+    "dificultad": "media"
+  },
+  {
+    "id": "a30",
+    "texto": "¿Qué sistema implementó la función 'Historial de combate mejorado' en Overwatch 2?",
+    "opciones": ["Replays con análisis de movimientos", "Estadísticas detalladas por héroe", "Comparación con rendimiento histórico", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "fácil"
+  },
+    {
+    "id": "h130",
+    "texto": "¿Qué mecánica única implementa la habilidad 'Campo biótico' de Soldier: 76?",
+    "opciones": ["Curación en área", "Regeneración continua", "Curación que aumenta con el tiempo", "Curación y daño a enemigos"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "hd29",
+    "texto": "¿Qué interacción tiene la habilidad 'Mina concusiva' de Junkrat con la física del juego?",
+    "opciones": ["Impulsa a Junkrat y enemigos", "Daña estructuras del entorno", "Cancela habilidades de movimiento", "Todas las anteriores"],
+    "respuestaCorrecta": 0,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "m72",
+    "texto": "¿Qué característica única implementa el sistema de 'Zonas dinámicas' en los nuevos mapas de Empuje?",
+    "opciones": ["Áreas que cambian según el progreso", "Rutas alternativas que se desbloquean", "Coberturas que aparecen y desaparecen", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "c49",
+    "texto": "¿Qué sistema introdujo la función 'Mentoría competitiva' en Overwatch 2?",
+    "opciones": ["Emparejamiento de jugadores novatos con veteranos", "Sistema de consejos personalizados", "Análisis de rendimiento con recomendaciones", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha50",
+    "texto": "¿Qué revelación se hizo sobre la relación entre Cassidy y Ashe en la historia expandida de Overwatch 2?",
+    "opciones": ["Fueron pareja romántica", "Fundaron juntos Deadlock Gang", "Traición que llevó a enemistad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "difícil"
+  },
+  {
+    "id": "a31",
+    "texto": "¿Qué sistema introdujo la función 'Personalización avanzada de controles' en Overwatch 2?",
+    "opciones": ["Ajustes específicos por héroe", "Asignación de botones personalizados", "Configuración de sensibilidad situacional", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "fácil"
+  },
+  {
+    "id": "h131",
+    "texto": "¿Qué característica distingue la mecánica de movimiento de Wrecking Ball?",
+    "opciones": ["Transformación entre formas", "Propulsión con gancho", "Rodamiento que gana velocidad", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "media"
+  },
+  {
+    "id": "m73",
+    "texto": "¿Qué elemento único de jugabilidad ofrece el mapa 'Sevilla' en Overwatch 2?",
+    "opciones": ["Plaza central con múltiples niveles", "Sistema de calles estrechas interconectadas", "Elementos culturales interactivos", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "media"
+  },
+  {
+    "id": "ha51",
+    "texto": "¿Qué evento histórico conecta las historias de Torbjörn y Reinhardt según la narrativa oficial?",
+    "opciones": ["Primera Crisis Ómnica", "Formación de Overwatch", "Defensa de Eichenwalde", "Todas las anteriores"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "media"
+  },
+  {
+    "id": "c50",
+    "texto": "¿Qué sistema implementa la función 'Equilibrio dinámico' en partidas competitivas?",
+    "opciones": ["Ajuste de habilidades en tiempo real", "Compensación para equipos en desventaja", "Limitación temporal de héroes dominantes", "Todas las anteriores"],
+    "respuestaCorrecta": 1,
+    "categoria": "Competitivo",
+    "dificultad": "difícil"
+  },
+    {
+    "id": "h132",
+    "texto": "¿Qué interacción precisa ocurre cuando la habilidad 'Desvío' de Genji intercepta la ultimate de Zarya?",
+    "opciones": ["El rayo es completamente reflejado", "Solo refleja parcialmente el daño", "No puede reflejar el rayo gravitón", "Refleja el rayo pero no el efecto gravitón"],
+    "respuestaCorrecta": 2,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd30",
+    "texto": "¿Qué valores específicos de daño tiene la combinación perfecta de disparo principal+melee+dash de Genji?",
+    "opciones": ["150 HP exactos", "178 HP", "164 HP", "196 HP"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m74",
+    "texto": "¿Qué mecánica específica implementan las zonas de presión en el mapa 'Atlantis' que lo diferencia de otros mapas submarinos?",
+    "opciones": ["Reducción gradual de velocidad de movimiento", "Daño por descompresión al salir rápidamente", "Modificación de la física de proyectiles", "Alteración de líneas de visión por refracción"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c51",
+    "texto": "¿Qué fórmula específica utiliza el sistema competitivo para calcular el MMR inicial después de las partidas de colocación?",
+    "opciones": ["Historial previo + rendimiento actual con peso 30/70", "Sistema bayesiano con ajuste por rol y héroe", "Cálculo adaptativo basado en victoria y métricas individuales", "Algoritmo de regresión con normalización por rango"],
+    "respuestaCorrecta": 1,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha52",
+    "texto": "¿Qué revelación específica sobre la tecnología de Sigma explica su conexión con el multiverso según los cómics de Overwatch 2?",
+    "opciones": ["Exposición a radiación de agujero negro", "Manipulación de gravedad cuántica", "Experimento de sincronización dimensional", "Contacto con energía del vacío extradimensional"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a32",
+    "texto": "¿Qué algoritmo específico implementa el sistema 'Balance adaptativo 3.0' para modificar las habilidades de héroes entre parches?",
+    "opciones": ["Ajuste estadístico por percentiles de rendimiento", "Machine learning con análisis de meta por rango", "Equilibrio predictivo basado en tendencias de selección", "Sistema de puntos de poder con límites dinámicos"],
+    "respuestaCorrecta": 1,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h133",
+    "texto": "¿Qué interacción específica ocurre cuando Echo duplica a D.Va y el mech es destruido?",
+    "opciones": ["Echo regresa a su forma normal", "Se transforma en D.Va piloto con habilidades limitadas", "El mech explota y Echo muere", "Puede llamar a otro mech con ultimate acelerada"],
+    "respuestaCorrecta": 1,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m75",
+    "texto": "¿Qué cálculo específico utiliza el sistema de físicas del robot TS-1 para determinar su velocidad de empuje en relación al número de jugadores cercanos?",
+    "opciones": ["Velocidad base + 0.5x por cada jugador aliado", "Aceleración logarítmica con tope de 3 jugadores", "Velocidad inversa al número de enemigos en zona", "Algoritmo de peso dinámico con penalización por oposición"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha53",
+    "texto": "¿Qué evento específico dentro de la cronología de Overwatch causó la transformación genética de Winston según los archivos clasificados de Horizon?",
+    "opciones": ["Exposición al Proyecto Génesis", "Terapia genética experimental del Dr. Harold Winston", "Mutación espontánea por radiación lunar", "Combinación de genes humanos y tecnología ómnica"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c52",
+    "texto": "¿Qué sistema específico implementa el análisis avanzado de 'Comportamiento tóxico' para distinguir entre comunicación agresiva y estratégica?",
+    "opciones": ["Análisis contextual de patrones de comunicación", "Sistema de reportes con verificación cruzada", "Inteligencia artificial con aprendizaje supervisado", "Detección de patrones emotivos con filtros adaptativos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h134",
+    "texto": "¿Qué secuencia precisa de cancelaciones de habilidades permite a Doomfist ejecutar el combo 'Meteor Strike' con máxima eficiencia de daño?",
+    "opciones": ["Uppercut > Slam > Primary > Meteor", "Slam > Primary > Uppercut > Meteor", "Slam cancel > Double Primary > Uppercut > Meteor", "Uppercut > Slam cancel > Primary animation cancel > Meteor"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd31",
+    "texto": "¿Qué interacción específica ocurre entre la habilidad 'Proyección de barrera' de Symmetra y el 'Orbe de discordia' de Zenyatta?",
+    "opciones": ["La barrera elimina el orbe al pasar", "El orbe permanece pero su efecto se suspende temporalmente", "El orbe atraviesa la barrera sin afectarla", "La barrera bloquea la línea de visión para aplicar el orbe pero no lo elimina"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m76",
+    "texto": "¿Qué cálculo específico determina el tiempo de reaparición de los paquetes de salud en mapas competitivos de Overwatch 2?",
+    "opciones": ["45 segundos para grandes, 30 para pequeños", "15 segundos para grandes, 7.5 para pequeños", "15 segundos para grandes con modificador de modo de juego", "Variable según el progreso del objetivo y densidad de jugadores"],
+    "respuestaCorrecta": 1,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c53",
+    "texto": "¿Qué específica distribución de percentiles utiliza el sistema de colocación competitiva para asignar rangos iniciales?",
+    "opciones": ["Distribución normal con el 50% en oro", "Sistema escalonado con límites dinámicos por temporada", "Distribución asimétrica con media en platino bajo", "Algoritmo de calibración con anclaje en diamante bajo"],
+    "respuestaCorrecta": 2,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha54",
+    "texto": "¿Qué tecnología específica desarrolló Moira que fue fundamental para la creación de Reaper según los archivos clasificados de Blackwatch?",
+    "opciones": ["Regeneración celular acelerada", "Manipulación cuántica de estructura molecular", "Tecnología de desplazamiento de sombra", "Recombinación genética con partículas de vacío"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a33",
+    "texto": "¿Qué parámetros específicos utiliza el sistema de 'Equilibrio adaptativo de héroes' para determinar necesidades de buff o nerf entre temporadas?",
+    "opciones": ["Tasa de selección y victoria con normalización por rango", "Análisis de metajuego con proyección de tendencias", "Factores de rendimiento ponderados por dificultad de héroe", "Algoritmo multifactorial con 17 variables independientes"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h135",
+    "texto": "¿Qué valor exacto tiene el multiplicador de daño crítico de Widowmaker cuando su disparo está completamente cargado?",
+    "opciones": ["2.0x", "2.5x", "3.0x", "Variable según distancia con máximo de 2.7x"],
+    "respuestaCorrecta": 2,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m77",
+    "texto": "¿Qué algoritmo específico determina la distribución de objetos destructibles en el mapa 'Neo Tokyo' para mantener el equilibrio competitivo?",
+    "opciones": ["Distribución simétrica con varianza controlada", "Generación procedural con semilla fija", "Distribución asimétrica balanceada por rutas", "Patrón fractal con equilibrio de cobertura calculado"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha55",
+    "texto": "¿Qué evento específico dentro de la cronología secreta de Talon estableció la conexión entre Doomfist y Maximilien según los archivos confidenciales?",
+    "opciones": ["Golpe financiero en Mónaco", "Adquisición hostil de Volskaya Industries", "Negociación del armisticio de Numbani", "Financiamiento del segundo levantamiento ómnico"],
+    "respuestaCorrecta": 0,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c54",
+    "texto": "¿Qué métrica específica utiliza el sistema 'Desempeño avanzado' para evaluar la efectividad de tanques más allá de daño y eliminaciones?",
+    "opciones": ["Tiempo de control de espacio", "Daño mitigado ajustado por engagement", "Índice compuesto de presencia objetiva", "Valor de supervivencia ponderado con factor de agresión"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h136",
+    "texto": "¿Qué interacción específica ocurre cuando Sombra hackea a un Torbjörn durante el despliegue exacto de su torreta?",
+    "opciones": ["La torreta se despliega pero sin funcionar", "El despliegue se cancela y la habilidad entra en cooldown", "La torreta se despliega en nivel 1 y no puede mejorarse", "El despliegue continúa pero la torreta aparece hackeada temporalmente"],
+    "respuestaCorrecta": 1,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd32",
+    "texto": "¿Qué fórmula exacta determina la curación por segundo del modo primario del arma de Moira?",
+    "opciones": ["65 HP/s con degradación lineal", "70 HP/s constante mientras dure el recurso", "80 HP/s inicial con degradación logarítmica", "55 HP/s + 15 HP/s de curación residual durante 2 segundos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m78",
+    "texto": "¿Qué parámetros específicos determinan la velocidad del robot TS-1 en modo Empuje cuando múltiples jugadores de ambos equipos están en la zona de influencia?",
+    "opciones": ["Diferencia neta de jugadores con peso variable por rol", "Sistema de puntos de presencia con degradación por distancia", "Cálculo vectorial con fuerzas opuestas y umbral de estancamiento", "Algoritmo de dominancia con factor de impulso por tiempo acumulado"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c55",
+    "texto": "¿Qué sistema específico utiliza el matchmaking para determinar la 'contribución oculta' de un jugador más allá de eliminaciones y objetivos?",
+    "opciones": ["Análisis multivariable con 32 métricas específicas por rol", "Sistema de puntuación dinámica con factores contextuales", "Algoritmo de aprendizaje supervisado con patrones de alto rendimiento", "Índice compuesto de impacto con normalización por héroe y mapa"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha56",
+    "texto": "¿Qué evento específico en la historia clasificada de Overwatch provocó la disolución del equipo original 'Primera Huelga' según los archivos revelados en las misiones PvE?",
+    "opciones": ["Traición interna de un agente de Talon", "Desacuerdo fundamental sobre protocolos ómnicos", "Fracaso de la misión en Rialto con bajas civiles", "Interferencia política del Consejo de Seguridad de la ONU"],
+    "respuestaCorrecta": 0,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a34",
+    "texto": "¿Qué sistema específico implementa el 'Rebalanceo profundo 4.0' para detectar y corregir sinergias desbalanceadas entre héroes?",
+    "opciones": ["Análisis estadístico de combinaciones de eliminación", "Sistema de puntos de poder con variables interdependientes", "Modelado predictivo de metajuego con simulaciones Monte Carlo", "Red neuronal entrenada con partidas profesionales y de alto rango"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h137",
+    "texto": "¿Qué mecánica específica permite a Mercy alcanzar la velocidad máxima teórica en el 'superjump' cuando se combina con la cancelación perfecta de Guardian Angel?",
+    "opciones": ["Agacharse exactamente 0.3s antes del final del vuelo", "Input buffer de salto durante el frame final de aceleración", "Cancelación del momentum vertical durante la curva ascendente", "Vector de impulso diagonal con ángulo preciso de cámara"],
+    "respuestaCorrecta": 1,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m79",
+    "texto": "¿Qué algoritmo específico determina la distribución de paquetes de salud en los mapas de Empuje para mantener un equilibrio perfecto conforme el robot avanza?",
+    "opciones": ["Distribución simétrica con desplazamiento dinámico", "Sistema de espejo inverso con punto pivotal móvil", "Regeneración adaptativa basada en densidad de jugadores", "Patrón fractal con equilibrio asimétrico calculado"],
+    "respuestaCorrecta": 1,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha57",
+    "texto": "¿Qué revelación específica sobre la tecnología de Echo explica su imposibilidad de duplicar a ciertos héroes según los diarios de laboratorio del Dr. Liao?",
+    "opciones": ["Incompatibilidad con firmas biométricas no humanoides", "Limitaciones del núcleo de adaptación morfológica", "Restricciones programadas para evitar sobrecarga de sistemas", "Incapacidad de replicar tecnologías cuánticas inestables"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c56",
+    "texto": "¿Qué sistema específico utiliza el 'Matchmaking predictivo' para minimizar la varianza de habilidad en partidas de alto nivel?",
+    "opciones": ["Agrupación por desviación estándar de rendimiento", "Algoritmo bayesiano con factores de confianza dinámicos", "Sistema de clusters con normalización por distribución de roles", "Redes neuronales con predicción de desempeño contextual"],
+    "respuestaCorrecta": 1,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h138",
+    "texto": "¿Qué secuencia específica de frames permite a Reinhardt ejecutar la técnica avanzada 'swing-cancel' para maximizar el DPS de su martillo?",
+    "opciones": ["Golpe > bloqueo de 3 frames > cancelación", "Golpe > dash de 1 frame > golpe", "Golpe parcial > emote cancel > golpe", "Golpe completo > micro-dash > cancelación de inercia"],
+    "respuestaCorrecta": 1,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd33",
+    "texto": "¿Qué valor exacto tiene el multiplicador de daño de la habilidad 'Nano Boost' de Ana cuando se aplica junto con efectos de daño amplificados por Mercy y Zenyatta?",
+    "opciones": ["3.0x multiplicativo", "2.3x aditivo", "2.5x con tope de daño", "2.0x con diminishing returns"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m80",
+    "texto": "¿Qué mecanismo exacto determina el comportamiento de la física de rebote en los elementos interactivos del mapa 'Lunar Colony Remake'?",
+    "opciones": ["Vector de rebote con conservación parcial de momentum", "Algoritmo de física lunar con gravedad reducida al 16.5%", "Sistema de rebote con energía cinética escalable", "Modelo físico no-euclidiano con conservación del ángulo de incidencia"],
+    "respuestaCorrecta": 1,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c57",
+    "texto": "¿Qué metodología específica utiliza el sistema de desafíos competitivos avanzados para determinar la dificultad personalizada por jugador?",
+    "opciones": ["Escalado por percentil de habilidad con ajuste por héroe", "Algoritmo adaptativo con análisis de patrones de juego", "Sistema predictivo basado en historial de rendimiento y tendencias", "Red bayesiana con cálculo de probabilidad de éxito personalizada"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha58",
+    "texto": "¿Qué revelación específica sobre el Proyecto Athena explica la conexión entre Winston y la IA del mismo nombre según los archivos clasificados de Overwatch?",
+    "opciones": ["Athena fue creada usando patrones neuronales de Winston", "El proyecto original era crear superinteligencia simia", "Winston transfirió consciencia humana a forma digital", "Ambos fueron desarrollados en paralelo como sistema simbiótico"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a35",
+    "texto": "¿Qué método algorítmico específico utiliza el sistema 'Meta Evolution' para predecir y contrarrestar tendencias emergentes de composiciones desbalanceadas?",
+    "opciones": ["Análisis de cluster con detección de anomalías", "Red neuronal con aprendizaje por refuerzo", "Sistema predictivo con variables latentes multifactoriales", "Modelo estocástico con simulación de escenarios de equilibrio"],
+    "respuestaCorrecta": 2,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h139",
+    "texto": "¿Qué interacción específica ocurre cuando Tracer intenta usar Recall exactamente en el mismo frame en que recibe daño letal?",
+    "opciones": ["Muere sin poder completar Recall", "El Recall se activa pero muere al finalizar", "Entra en estado de invulnerabilidad extendida", "Se activa con probabilidad del 50% dependiendo del tick del servidor"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m81",
+    "texto": "¿Qué parámetros específicos determinan la intensidad del 'screen shake' durante eventos ambientales en el mapa 'Volcanic Retreat'?",
+    "opciones": ["Amplitud variable con degradación por distancia", "Escala logarítmica con picos aleatorios controlados", "Sistema de frecuencias armónicas con patrones semi-predecibles", "Algoritmo de intensidad con variables dependientes de la fase eruptiva"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha59",
+    "texto": "¿Qué conexión específica revelan los archivos encriptados de Sombra sobre la relación entre Vishkar Corporation y el segundo levantamiento ómnico?",
+    "opciones": ["Tecnología de luz dura derivada de núcleos ómnicos", "Financiamiento encubierto de células de Null Sector", "Experimentos prohibidos con IA ómnica consciente", "Manipulación del mercado energético global a través de conflictos"],
+    "respuestaCorrecta": 2,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c58",
+    "texto": "¿Qué elementos específicos evalúa el sistema 'Performance Analytics 5.0' para determinar la efectividad de un jugador de apoyo más allá de curación y asistencias?",
+    "opciones": ["Posicionamiento táctico relativo al equipo", "Timing de habilidades críticas en momentos decisivos", "Prevención de daño potencial mediante posicionamiento", "Todas las anteriores con ponderaciones dinámicas"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h140",
+    "texto": "¿Qué interacción específica ocurre en la mecánica avanzada 'kinetic boost' de Wrecking Ball cuando se combina roll, grapple y piledriver en una secuencia precisa?",
+    "opciones": ["Conservación de momento angular con ganancia de altura", "Multiplicador de impulso vectorial en eje vertical", "Cancelación de inercia horizontal con aceleración exponencial", "Transferencia de energía cinética con pico de velocidad terminal"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd34",
+    "texto": "¿Qué valor exacto tiene la reducción de daño inherente a todos los tanques tras la actualización del sistema de roles en Overwatch 2?",
+    "opciones": ["20% global", "30% escalonado por tipo de daño", "15% con factor adicional por héroe específico", "25% con diminishing returns por acumulación"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m82",
+    "texto": "¿Qué algoritmo específico determina la generación procedural de rutas y coberturas en el mapa 'Adaptive Arena' introducido en el modo experimental?",
+    "opciones": ["Generación basada en patrones de calor de partidas previas", "Sistema fractal con semilla determinista por partida", "Algoritmo evolutivo con equilibrio dinámico por fase", "Red neuronal entrenada con mapas de alta valoración"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c59",
+    "texto": "¿Qué parámetros específicos utiliza el 'Impact Score System' para evaluar jugadas decisivas que alteran el resultado de una partida competitiva?",
+    "opciones": ["Delta de probabilidad de victoria pre/post acción", "Valor multifactorial con ponderación contextual", "Análisis bayesiano de contribución marginal al resultado", "Cálculo de punto de inflexión con factores situacionales"],
+    "respuestaCorrecta": 0,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha60",
+    "texto": "¿Qué descubrimiento específico hizo Moira en su investigación genética prohibida que conecta a los personajes Reaper, Doomfist y el origen de Sigma según los archivos clasificados?",
+    "opciones": ["Manipulación cuántica de materia celular", "Fusión de estructura molecular con energía del vacío", "Tecnología de translocación subatómica", "Regeneración avanzada mediante fisión molecular controlada"],
+    "respuestaCorrecta": 1,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a36",
+    "texto": "¿Qué metodología específica utiliza el sistema 'Deep Balance 6.0' para identificar micro-interacciones desbalanceadas entre habilidades de héroes?",
+    "opciones": ["Análisis estadístico multivariable con test de significancia", "Modelo de simulación con millones de iteraciones controladas", "Aprendizaje profundo con detección de anomalías de rendimiento", "Sistema de puntaje de poder con variables interdependientes y umbrales dinámicos"],
+    "respuestaCorrecta": 2,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h141",
+    "texto": "¿Qué interacción específica permite a Lucio ejecutar la técnica avanzada 'momentum skip' en superficies irregulares?",
+    "opciones": ["Cancelación de animación de wallride en frame perfecto", "Buffer de salto durante transición de superficies", "Conservación de vector de movimiento en ángulos precisos", "Transferencia de inercia entre planos no paralelos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m83",
+    "texto": "¿Qué variable específica determina la frecuencia de activación de los elementos ambientales peligrosos en el mapa 'Reactor Core'?",
+    "opciones": ["Temporizador fijo con varianza aleatoria controlada", "Sistema dependiente del progreso del objetivo", "Algoritmo basado en densidad y posición de jugadores", "Patrón predeterminado con alteraciones basadas en fase de juego"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha61",
+    "texto": "¿Qué revelación específica sobre el 'Protocolo Ícaro' explica la conexión entre la caída de Overwatch y el surgimiento de Talon según los documentos encriptados?",
+    "opciones": ["Infiltración sistemática de agentes en posiciones clave", "Manipulación mediática orquestada globalmente", "Sabotaje tecnológico con backdoors programados", "Todas las anteriores como fases de un plan maestro"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c60",
+    "texto": "¿Qué factores específicos considera el sistema 'Neural Matchmaking' para evaluar la compatibilidad de estilos de juego entre miembros del mismo equipo?",
+    "opciones": ["Patrones de agresividad y posicionamiento", "Preferencias de tempo de juego y rotaciones", "Tendencias de priorización de objetivos vs eliminaciones", "Todas las anteriores con aprendizaje adaptativo"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h142",
+    "texto": "¿Qué mecánica específica permite a Ana ejecutar la técnica avanzada 'quick-scope' que maximiza su precisión a distancias intermedias?",
+    "opciones": ["Ventana de precisión aumentada durante los primeros 0.3s de scope", "Reducción del bloom de disparo en frame perfecto de transición", "Cancelación de animación de zoom con buffer de disparo", "Reconciliación de hitboxes favorable en ángulos precisos de 35-45°"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd35",
+    "texto": "¿Qué interacción específica ocurre entre la habilidad 'Vaporización' de Mei y los efectos de 'anti-curación' de Ana?",
+    "opciones": ["La congelación suspende temporalmente el efecto anti-curación", "El efecto anti-curación persiste pero con duración reducida", "La congelación y anti-curación se cancelan mutuamente", "El efecto anti-curación prevalece y bloquea la regeneración al descongelar"],
+    "respuestaCorrecta": 3,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m84",
+    "texto": "¿Qué algoritmo específico determina la generación de entornos destructibles en el mapa 'Quantum Laboratory' para mantener el equilibrio competitivo?",
+    "opciones": ["Distribución simétrica con desviación controlada por patrones de uso", "Sistema procedural con equilibrio ponderado por accesibilidad", "Generación determinista con compensación dinámica", "Algoritmo de espejo imperfecto con factor de aleatoriedad limitado"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c61",
+    "texto": "¿Qué metodología específica utiliza el sistema 'Performance Variance Analysis' para distinguir entre jugadores consistentes y volátiles en partidas competitivas?",
+    "opciones": ["Desviación estándar de métricas clave con normalización", "Análisis de distribución de rendimiento con factores circadianos", "Algoritmo de regresión con variables latentes por contexto", "Modelo bayesiano con coeficientes de confianza dinámicos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha62",
+    "texto": "¿Qué revelación específica contienen los archivos cifrados de Sombra sobre la verdadera naturaleza de la 'Segunda Crisis Ómnica' según la narrativa expandida?",
+    "opciones": ["Fue orquestada por una IA superior a Anubis", "Resultado de manipulación genética ómnica por Moira", "Consecuencia imprevista de experimentos de Sigma", "Conspiración deliberada entre agentes de Talon y corporaciones"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a37",
+    "texto": "¿Qué tecnología específica implementa el sistema 'Adaptive Physics 2.0' para resolver inconsistencias en la detección de colisiones en situaciones de alta latencia?",
+    "opciones": ["Reconciliación predictiva con compensación de lag", "Hitboxes dinámicas con factor de corrección temporal", "Interpolación avanzada con prioridad jerárquica", "Algoritmo de resolución con umbral variable de tolerancia"],
+    "respuestaCorrecta": 1,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h143",
+    "texto": "¿Qué interacción específica permite a Sigma ejecutar la técnica avanzada 'shield-dance' para maximizar la eficiencia de su barrera en duelos 1v1?",
+    "opciones": ["Colocación precisa con ángulos de 37° de inclinación", "Microgestión de barrera con reposicionamiento en intervalos de 0.5s", "Movimiento perpendicular a la línea de visión con ciclos de barrera", "Manipulación del hitbox con rotación de cámara durante despliegue"],
+    "respuestaCorrecta": 2,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m85",
+    "texto": "¿Qué principio específico determina la física de rebote en las superficies anguladas del mapa 'Graviton Facility'?",
+    "opciones": ["Conservación parcial de momentum con vector ajustado", "Algoritmo de rebote no-newtoniano con campos de influencia", "Sistema vectorial con transformación no lineal", "Ecuaciones diferenciales con coeficientes dinámicos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha63",
+    "texto": "¿Qué conexión específica revelan los diarios encriptados entre el experimento fallido de Sigma y la tecnología de teletransporte de Symmetra?",
+    "opciones": ["Ambos manipulan las mismas dimensiones espaciales", "Tecnología de luz dura derivada de estudios de gravedad", "Compartimentación cuántica del mismo fenómeno físico", "Efectos colaterales similares en la estructura molecular"],
+    "respuestaCorrecta": 2,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c62",
+    "texto": "¿Qué factores específicos evalúa el sistema 'Meta Impact Score' para determinar la influencia real de un jugador en el establecimiento de tendencias competitivas?",
+    "opciones": ["Innovación en composiciones con tasa de adopción", "Efectividad estadística con héroes fuera de meta", "Adaptabilidad medida por varianza de rendimiento", "Todas las anteriores con ponderación dinámica"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+    {
+    "id": "h144",
+    "texto": "¿Qué interacción específica de frame permite a Genji ejecutar la técnica avanzada 'blade-dash reset' para maximizar el potencial de eliminaciones durante su ultimate?",
+    "opciones": ["Dash durante frame perfecto de activación de ultimate", "Cancelación de animación con melee en ventana de 0.2s", "Combinación de dash-ultimate-dash con buffer de inputs", "Ejecución de ultimate durante último frame de dash con reset instantáneo"],
+    "respuestaCorrecta": 3,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "hd36",
+    "texto": "¿Qué parámetros específicos determinan la efectividad de la reducción de daño de Orisa durante su habilidad 'Fortify'?",
+    "opciones": ["Reducción fija del 40% en todos los tipos de daño", "Reducción escalonada: 50% para control de masas, 35% para daño directo", "Reducción variable según fuente con límite de mitigación", "Algoritmo compuesto: 40% base + 15% contra efectos de control"],
+    "respuestaCorrecta": 1,
+    "categoria": "Habilidades",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m86",
+    "texto": "¿Qué principio físico específico gobierna el comportamiento de las zonas de 'distorsión temporal' en el mapa experimental 'Chronos Facility'?",
+    "opciones": ["Modificación selectiva de cooldowns de habilidades", "Alteración no lineal de velocidad de movimiento y proyectil", "Dilatación temporal con factor inverso por cercanía al centro", "Sistema de física relativista con reconciliación de servidor"],
+    "respuestaCorrecta": 2,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c63",
+    "texto": "¿Qué algoritmo específico utiliza el sistema 'Deep Pattern Recognition' para identificar estrategias emergentes en el metajuego competitivo?",
+    "opciones": ["Red neuronal convolucional con análisis de patrones espacio-temporales", "Sistema de clustering con agrupación multidimensional adaptativa", "Modelo de aprendizaje por refuerzo con optimización bayesiana", "Análisis de topología de datos con visualización de manifolds estratégicos"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha64",
+    "texto": "¿Qué conexión específica revelan los archivos clasificados sobre la relación entre el experimento que creó a Reaper y la tecnología detrás de las habilidades de Moira?",
+    "opciones": ["Manipulación molecular compartiendo principios de desvanecimiento", "Transferencia de energía entre dimensiones paralelas", "Tecnología de regeneración celular con efectos secundarios divergentes", "Todas las anteriores como fases de un mismo proyecto secreto"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "a38",
+    "texto": "¿Qué metodología específica implementa el sistema 'Netcode Evolution 3.0' para resolver desincronizaciones en habilidades de alta precisión temporal?",
+    "opciones": ["Predicción clientside con reconciliación adaptativa", "Buffer de inputs con prioridad jerárquica de colisiones", "Interpolación de estado con compensación avanzada de lag", "Sistema híbrido con transferencia de autoridad dinámica"],
+    "respuestaCorrecta": 3,
+    "categoria": "Actualizaciones",
+    "dificultad": "experto"
+  },
+  {
+    "id": "h145",
+    "texto": "¿Qué mecánica específica permite a Sombra ejecutar la técnica avanzada 'translocator jump' para alcanzar posiciones teóricamente inaccesibles?",
+    "opciones": ["Lanzamiento preciso a 62° con translocación en ápice", "Buffer de interacción durante último frame de invisibilidad", "Cancelación de animación con timing específico de 0.15s", "Explotación del hitbox durante transición de estados"],
+    "respuestaCorrecta": 0,
+    "categoria": "Héroes",
+    "dificultad": "experto"
+  },
+  {
+    "id": "m87",
+    "texto": "¿Qué sistema específico determina la generación de corrientes atmosféricas en el mapa 'Stratospheric Platform' que afectan trayectorias de proyectiles?",
+    "opciones": ["Patrón predeterminado con varianza controlada", "Simulación de dinámica de fluidos con vectores de fuerza", "Algoritmo procedural con semilla determinista por partida", "Sistema de zonas con influencia variable según fase de juego"],
+    "respuestaCorrecta": 1,
+    "categoria": "Mapas",
+    "dificultad": "experto"
+  },
+  {
+    "id": "ha65",
+    "texto": "¿Qué revelación específica contienen los documentos encriptados sobre la verdadera naturaleza del proyecto que creó a Echo y su conexión con el Dr. Liao?",
+    "opciones": ["Transferencia de consciencia humana a formato digital", "Integración de algoritmos ómnico-humanos prohibidos", "Implementación de IA evolutiva con matrices éticas", "Todas las anteriores como componentes de un sistema simbiótico"],
+    "respuestaCorrecta": 3,
+    "categoria": "Historia",
+    "dificultad": "experto"
+  },
+  {
+    "id": "c64",
+    "texto": "¿Qué factores específicos evalúa el sistema 'Strategic Depth Analysis' para determinar la verdadera contribución táctica de un jugador más allá de estadísticas convencionales?",
+    "opciones": ["Creación y control de espacio efectivo", "Timing de engagements y disengagements", "Optimización de economía de recursos y habilidades", "Todas las anteriores con ponderación contextual dinámica"],
+    "respuestaCorrecta": 3,
+    "categoria": "Competitivo",
+    "dificultad": "experto"
+  }
   ]
 }

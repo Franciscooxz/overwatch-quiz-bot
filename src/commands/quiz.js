@@ -17,6 +17,9 @@ const {
 // Tiempo de respuesta fijo en 30 segundos
 const ANSWER_TIMEOUT = 30000;
 
+// Definir emojis de letras aquí para que estén disponibles en todo el módulo
+const LETTER_EMOJIS = ['🇦', '🇧', '🇨', '🇩'];
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('quiz')
@@ -108,7 +111,7 @@ module.exports = {
   },
   
   /**
-   * Crea un embed mejorado para la pregunta
+   * Crea un embed mejorado para la pregunta con diseño visual avanzado
    * @param {Object} question - Pregunta completa
    * @param {string} username - Nombre del usuario
    * @param {string} categoria - Categoría seleccionada
@@ -169,40 +172,52 @@ module.exports = {
       categoryLabel = `${emoji} ${question.categoria}`;
     }
     
-    // Crear el embed base
+    // Crear el embed base con diseño mejorado
     const embed = new EmbedBuilder()
       .setColor(color)
-      .setTitle('❓ Pregunta de Overwatch 2')
+      .setTitle(`${categoryEmojis[question.categoria.toLowerCase()] || '❓'} Pregunta de Overwatch 2`)
       .setDescription(`**${question.pregunta || question.texto}**`)
       .addFields(
-        { name: 'A', value: question.opciones[0], inline: false },
-        { name: 'B', value: question.opciones[1], inline: false },
-        { name: 'C', value: question.opciones[2], inline: false },
-        { name: 'D', value: question.opciones[3], inline: false }
+        { name: LETTER_EMOJIS[0], value: question.opciones[0], inline: true },
+        { name: LETTER_EMOJIS[1], value: question.opciones[1], inline: true },
+        { name: '\u200B', value: '\u200B', inline: false }, // Separador invisible
+        { name: LETTER_EMOJIS[2], value: question.opciones[2], inline: true },
+        { name: LETTER_EMOJIS[3], value: question.opciones[3], inline: true }
       )
       .setFooter({
-        text: `Quiz para ${username} • ${difficultyLabel} ${categoryLabel}`.trim(),
+        text: `Quiz para ${username} • ${difficultyLabel} • ${categoryLabel}`.trim(),
         iconURL: interaction?.user?.displayAvatarURL?.() || null
       })
       .setTimestamp();
     
-    // Imagen oficial de Overwatch (banner para todos los embeds)
-    embed.setImage('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt94e4f408edc8bebf/62aa9a573737c86bf5b1160c/header_overwatch2_logo.jpg');
+    // Imagen según la categoría - Imágenes más actualizadas y de alta calidad
+    const categoryImages = {
+      'héroes': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt0b41403bf33c96db/647e32b97b34ae6f50df26ae/Mauga_Social.jpg',
+      'habilidades': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt60db75e6beb3d789/6466a7fa7b34ae67e0d37d4a/OW2_Mercy_16x9_Web.jpg',
+      'mapas': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltde07aed43e044696/64266ca7b57bc765c567c87d/Antarctica-Banner.jpg',
+      'historia': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt86c3f3986652c944/643fb36bb28d204b83fb4e2a/OW2_S4_PR_Kit_Banner_Storm_Rising.jpg',
+      'actualizaciones': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt3aaa3c3dc96c824b/653bf2c2f4fa8d7ac3ec6a1d/OW2_Season-7_Game-Features_WotN-Banner_16-9.jpg',
+      'competitivo': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt5241faed0f5a9aca/6516d7f244a6e87cc31c0182/OW2_SC2023_Comp-Updates_Header_16-9.jpg'
+    };
     
-    // Thumbnail según la categoría (imagen más pequeña en la esquina)
-    if (question.categoria) {
-      const categoryImages = {
-        'héroes': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt0b41403bf33c96db/647e32b97b34ae6f50df26ae/Mauga_Social.jpg',
-        'habilidades': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt60db75e6beb3d789/6466a7fa7b34ae67e0d37d4a/OW2_Mercy_16x9_Web.jpg',
-        'mapas': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltde07aed43e044696/64266ca7b57bc765c567c87d/Antarctica-Banner.jpg',
-        'historia': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt86c3f3986652c944/643fb36bb28d204b83fb4e2a/OW2_S4_PR_Kit_Banner_Storm_Rising.jpg',
-        'actualizaciones': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt3aaa3c3dc96c824b/653bf2c2f4fa8d7ac3ec6a1d/OW2_Season-7_Game-Features_WotN-Banner_16-9.jpg',
-        'competitivo': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt5241faed0f5a9aca/6516d7f244a6e87cc31c0182/OW2_SC2023_Comp-Updates_Header_16-9.jpg'
-      };
-      
-      if (categoryImages[question.categoria.toLowerCase()]) {
-        embed.setThumbnail(categoryImages[question.categoria.toLowerCase()]);
-      }
+    // Seleccionar imagen según la categoría
+    if (question.categoria && categoryImages[question.categoria.toLowerCase()]) {
+      embed.setImage(categoryImages[question.categoria.toLowerCase()]);
+    } else {
+      // Imagen por defecto de Overwatch 2
+      embed.setImage('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt94e4f408edc8bebf/62aa9a573737c86bf5b1160c/header_overwatch2_logo.jpg');
+    }
+    
+    // Agregar thumbnail específico para la dificultad
+    const difficultyThumbnails = {
+      'fácil': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt0dca8c81f6343fa5/62a3855a8dce4d7c6f17d4bf/OW2_Hero_DVA_Tile.png',
+      'media': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltcff0402db4ab5bf0/62a3858bfd7aa57c7e0d74b9/OW2_Hero_Genji_Tile.png',
+      'difícil': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt86be0b18e23dc4ae/62a385e1fd7aa57c7e0d74c3/OW2_Hero_Pharah_Tile.png',
+      'experto': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt7dcc1464017af809/62a3862cca891230bfb1c7bd/OW2_Hero_Widowmaker_Tile.png'
+    };
+    
+    if (question.dificultad && difficultyThumbnails[question.dificultad.toLowerCase()]) {
+      embed.setThumbnail(difficultyThumbnails[question.dificultad.toLowerCase()]);
     }
     
     // Si la pregunta tiene una imagen específica, reemplazar la imagen genérica
@@ -223,12 +238,11 @@ module.exports = {
     const labels = ['A', 'B', 'C', 'D'];
     
     question.opciones.forEach((opcion, index) => {
-      const buttonText = labels[index];
-      
       row.addComponents(
         new ButtonBuilder()
           .setCustomId(`quiz_${question.id}_${index}`)
-          .setLabel(buttonText)
+          .setLabel(labels[index])
+          .setEmoji(LETTER_EMOJIS[index])
           .setStyle(ButtonStyle.Primary) // Todos azules (Primary)
       );
     });
@@ -281,8 +295,11 @@ module.exports = {
         try {
           // Verificar si es el botón de continuar
           if (i.customId === `quiz_continue_${question.id}`) {
-            // Iniciar nuevo quiz con la misma categoría
-            await this.startNewQuiz(i, categoria, this.getNextDifficulty(dificultad));
+            // Obtener la siguiente dificultad (rotación) manteniendo la categoría
+            const nextDifficulty = this.getNextDifficulty(dificultad);
+            
+            // Iniciar nuevo quiz con la misma categoría y la siguiente dificultad
+            await this.startNewQuiz(i, categoria, nextDifficulty);
             collector.stop();
             return;
           }
@@ -308,17 +325,17 @@ module.exports = {
             this.updateResultEmbed(embed, result, question, selectedIndex);
           }
           
-          // Crear botón de "Continuar" después de responder
+          // Crear fila de botones de navegación mejorados
           const continueRow = new ActionRowBuilder()
             .addComponents(
               new ButtonBuilder()
                 .setCustomId(`quiz_continue_${question.id}`)
-                .setLabel('Continuar')
+                .setLabel(`Siguiente pregunta (${this.getNextDifficultyDisplay(dificultad)})`)
                 .setStyle(ButtonStyle.Success)
                 .setEmoji('▶️')
             );
           
-          // Eliminar el mensaje de temporizador y actualizar con el embed y el botón de continuar
+          // Eliminar el mensaje de temporizador y actualizar con el embed y botones
           await i.update({
             content: null, // Eliminar el mensaje de temporizador
             embeds: [embed],
@@ -406,9 +423,9 @@ module.exports = {
       const userId = interaction.user.id;
       const username = interaction.user.username;
       
-      // Mensaje temporal mientras se carga la siguiente pregunta
+      // Mensaje temporal animado mientras se carga la siguiente pregunta
       await interaction.update({
-        content: "🔄 Cargando siguiente pregunta...",
+        content: "🔄 **Preparando siguiente pregunta...**",
         embeds: [],
         components: []
       });
@@ -419,7 +436,7 @@ module.exports = {
       // Si no hay preguntas que cumplan los filtros
       if (!pregunta) {
         return interaction.editReply({
-          content: "No hay más preguntas disponibles con esos filtros. ¡Intenta con otras opciones!",
+          content: `No hay más preguntas disponibles de dificultad **${dificultad}** en la categoría **${categoria}**. ¡Intenta con otras opciones!`,
           embeds: [],
           components: []
         });
@@ -490,6 +507,29 @@ module.exports = {
   },
   
   /**
+   * Obtiene un texto formateado para mostrar la siguiente dificultad
+   * @param {string} currentDifficulty - Dificultad actual
+   * @returns {string} Texto de siguiente dificultad
+   */
+  getNextDifficultyDisplay(currentDifficulty) {
+    const nextDifficulty = this.getNextDifficulty(currentDifficulty);
+    
+    const difficultyEmojis = {
+      'fácil': '🟢',
+      'media': '🟡',
+      'difícil': '🔴',
+      'experto': '⚡'
+    };
+    
+    const emoji = difficultyEmojis[nextDifficulty] || '❓';
+    
+    // Convertir primera letra a mayúscula
+    const formattedDifficulty = nextDifficulty.charAt(0).toUpperCase() + nextDifficulty.slice(1);
+    
+    return `${emoji} ${formattedDifficulty}`;
+  },
+  
+  /**
    * Actualiza los botones según la respuesta con estilos mejorados
    * @param {ActionRowBuilder} row - Fila con botones
    * @param {number} correctIndex - Índice de la respuesta correcta
@@ -497,32 +537,26 @@ module.exports = {
    */
   updateButtons(row, correctIndex, selectedIndex = null) {
     const labels = ['A', 'B', 'C', 'D'];
-    const emojis = {
+    const resultEmojis = {
       correct: '✅',
-      incorrect: '❌',
-      neutral: '⬛'
+      incorrect: '❌'
     };
     
     row.components.forEach((button, index) => {
       // Deshabilitar todos los botones
       button.setDisabled(true);
       
-      // Determinar qué emoji usar según el resultado
-      let emoji = '';
-      
       // Cambiar estilo según el resultado
       if (index === correctIndex) {
         button.setStyle(ButtonStyle.Success);
-        emoji = emojis.correct;
+        button.setEmoji(resultEmojis.correct);
       } else if (selectedIndex !== null && index === selectedIndex) {
         button.setStyle(ButtonStyle.Danger);
-        emoji = emojis.incorrect;
+        button.setEmoji(resultEmojis.incorrect);
       } else {
         button.setStyle(ButtonStyle.Secondary);
+        button.setEmoji(LETTER_EMOJIS[index]); // Usar la constante global
       }
-      
-      // Actualizar etiqueta con emoji si corresponde
-      button.setLabel(`${labels[index]}${emoji ? ` ${emoji}` : ''}`);
     });
   },
   
@@ -539,14 +573,21 @@ module.exports = {
     if (isCorrect) {
       embed.setColor('#43B581'); // Verde para respuesta correcta
       embed.setTitle('✅ ¡Respuesta Correcta!');
+      
+      // Agregar un mensaje motivacional para respuesta correcta
+      embed.addFields({
+        name: '🌟 ¡Buen trabajo!',
+        value: `Has elegido correctamente: **${question.opciones[question.respuestaCorrecta]}**`,
+        inline: false
+      });
     } else {
       embed.setColor('#F04747'); // Rojo para respuesta incorrecta
       embed.setTitle('❌ Respuesta Incorrecta');
       
-      // Agregar campo para mostrar la respuesta correcta
+      // Agregar campo para mostrar la respuesta correcta con diseño mejorado
       embed.addFields({
         name: '💡 Respuesta Correcta',
-        value: `**${question.opciones[question.respuestaCorrecta]}**`,
+        value: `La respuesta correcta era: **${question.opciones[question.respuestaCorrecta]}**`,
         inline: false
       });
     }
@@ -560,25 +601,28 @@ module.exports = {
       });
     }
     
-    // Agregar estadísticas si existen en el resultado
+    // Agregar estadísticas si existen en el resultado con mejor presentación
     if (result && result.stats) {
       let statsText = '';
       
       if (result.stats.totalAnswered) {
-        statsText += `📊 Preguntas respondidas: ${result.stats.totalAnswered}\n`;
+        statsText += `📊 **Preguntas respondidas:** ${result.stats.totalAnswered}\n`;
       }
       
       if (result.stats.correctAnswers) {
-        statsText += `✅ Respuestas correctas: ${result.stats.correctAnswers}\n`;
+        const percentage = result.stats.totalAnswered > 0 
+          ? Math.round((result.stats.correctAnswers / result.stats.totalAnswered) * 100) 
+          : 0;
+        statsText += `✅ **Respuestas correctas:** ${result.stats.correctAnswers} (${percentage}%)\n`;
       }
       
       if (result.stats.streak) {
-        statsText += `🔥 Racha actual: ${result.stats.streak}`;
+        statsText += `🔥 **Racha actual:** ${result.stats.streak}`;
       }
       
       if (statsText) {
         embed.addFields({
-          name: 'Estadísticas',
+          name: '📈 Estadísticas',
           value: statsText,
           inline: false
         });
@@ -596,10 +640,10 @@ module.exports = {
     embed.setColor('#747F8D'); // Gris para timeout
     embed.setTitle('⌛ ¡Tiempo Agotado!');
     
-    // Agregar campo para mostrar la respuesta correcta
+    // Agregar campo para mostrar la respuesta correcta con diseño mejorado
     embed.addFields({
       name: '💡 Respuesta Correcta',
-      value: `**${question.opciones[correctIndex]}**`,
+      value: `La respuesta correcta era: **${question.opciones[correctIndex]}**`,
       inline: false
     });
     
@@ -611,5 +655,12 @@ module.exports = {
         inline: false
       });
     }
+    
+    // Agregar mensaje de ánimo
+    embed.addFields({
+      name: '🌠 ¡Sigue intentando!',
+      value: 'La próxima vez tendrás más suerte. ¡Cada pregunta es una oportunidad para aprender!',
+      inline: false
+    });
   }
 };
