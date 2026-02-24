@@ -195,6 +195,61 @@ class OverwatchApiService {
   }
 
   // ─────────────────────────────────────────────────────────
+  // Métodos públicos — Jugadores (sin caché — datos específicos de usuario)
+  // ─────────────────────────────────────────────────────────
+
+  /**
+   * Busca jugadores por nombre/BattleTag.
+   * El BattleTag debe tener # reemplazado por - (ej: 'TeKrop-2217').
+   * @param {string} name - Nombre o BattleTag del jugador
+   * @returns {Promise<Array|null>} Array de resultados o null si hay error
+   */
+  async searchPlayer(name) {
+    if (!name) return null;
+    const data = await this._fetch(`/players?name=${encodeURIComponent(name)}`);
+    if (!data) return null;
+    // La API devuelve { total, results: [...] } o directamente un array
+    if (Array.isArray(data)) return data;
+    if (data.results && Array.isArray(data.results)) return data.results;
+    return null;
+  }
+
+  /**
+   * Obtiene el resumen de perfil de un jugador por su player_id.
+   * Incluye: username, avatar, título, endorsement, rangos competitivos por rol.
+   * Nota: El perfil debe ser público en el juego.
+   * @param {string} playerId - ID del jugador (ej: 'TeKrop-2217')
+   * @returns {Promise<Object|null>}
+   */
+  async getPlayerSummary(playerId) {
+    if (!playerId) return null;
+    return await this._fetch(`/players/${encodeURIComponent(playerId)}/summary`);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // Métodos públicos — Meta / Estadísticas globales de héroes
+  // ─────────────────────────────────────────────────────────
+
+  /**
+   * Obtiene estadísticas de pick rate y win rate de héroes en ranked.
+   * Los datos se actualizan cada hora en el servidor de la API.
+   * @param {Object} options - Filtros opcionales
+   * @param {string} [options.gamemode='competitive'] - Modo de juego
+   * @param {string} [options.platform='pc']          - Plataforma
+   * @param {string} [options.role]                   - 'tank', 'damage' o 'support'
+   * @param {string} [options.region]                 - 'americas', 'europe' o 'asia-pacific'
+   * @returns {Promise<Array|null>} Array de { hero, pickrate, winrate } o null
+   */
+  async getHeroStats(options = {}) {
+    const params = new URLSearchParams();
+    params.set('gamemode', options.gamemode || 'competitive');
+    params.set('platform', options.platform || 'pc');
+    if (options.role)   params.set('role',   options.role);
+    if (options.region) params.set('region', options.region);
+    return await this._fetch(`/heroes/stats?${params.toString()}`);
+  }
+
+  // ─────────────────────────────────────────────────────────
   // Utilidades
   // ─────────────────────────────────────────────────────────
 
