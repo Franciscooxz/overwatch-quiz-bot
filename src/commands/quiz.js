@@ -14,8 +14,8 @@ const {
   createTimeoutEmbed
 } = require('../utils/embedBuilder');
 const overwatchApi = require('../services/overwatchApiService');
-// Fuente única de verdad para el timeout — ya no hay dos valores distintos
 const { ANSWER_TIMEOUT } = require('../config/quizConfig');
+const { COLORS } = require('../config/colors');
 
 // Definir emojis de letras aquí para que estén disponibles en todo el módulo
 const LETTER_EMOJIS = ['🇦', '🇧', '🇨', '🇩'];
@@ -133,12 +133,7 @@ module.exports = {
     }
     
     // Si no, creamos uno nuevo con diseño mejorado
-    const difficultyColors = {
-      'fácil': '#43B581',      // Verde
-      'media': '#FAA61A',      // Amarillo
-      'difícil': '#F04747',    // Rojo
-      'experto': '#9B59B6'     // Púrpura
-    };
+    const difficultyColors = COLORS.DIFFICULTY;
     
     const difficultyEmojis = {
       'fácil': '🟢',
@@ -579,7 +574,7 @@ module.exports = {
     const isCorrect = selectedIndex === question.respuestaCorrecta;
     
     if (isCorrect) {
-      embed.setColor('#43B581'); // Verde para respuesta correcta
+      embed.setColor(COLORS.SUCCESS);
       embed.setTitle('✅ ¡Respuesta Correcta!');
       
       // Agregar un mensaje motivacional para respuesta correcta
@@ -589,7 +584,7 @@ module.exports = {
         inline: false
       });
     } else {
-      embed.setColor('#F04747'); // Rojo para respuesta incorrecta
+      embed.setColor(COLORS.ERROR);
       embed.setTitle('❌ Respuesta Incorrecta');
       
       // Agregar campo para mostrar la respuesta correcta con diseño mejorado
@@ -645,7 +640,7 @@ module.exports = {
    * @param {number} correctIndex - Índice de la respuesta correcta
    */
   createTimeoutEmbed(embed, question, correctIndex) {
-    embed.setColor('#747F8D'); // Gris para timeout
+    embed.setColor(COLORS.GRAY);
     embed.setTitle('⌛ ¡Tiempo Agotado!');
     
     // Agregar campo para mostrar la respuesta correcta con diseño mejorado

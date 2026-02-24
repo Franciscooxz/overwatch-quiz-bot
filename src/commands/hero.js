@@ -6,6 +6,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder } = require('discord.js');
 const overwatchApi = require('../services/overwatchApiService');
+const { COLORS } = require('../config/colors');
+const { createProgressBar } = require('../utils/embedBuilder');
 
 // ─────────────────────────────────────────────────────────
 // Utilidades de presentación
@@ -23,10 +25,11 @@ const ROLE_NAMES_ES = {
   damage: 'Daño'
 };
 
+// Mapeado desde colors.js para consistencia con el resto del bot
 const ROLE_COLORS = {
-  support: '#43B581', // Verde
-  tank:    '#4A90E2', // Azul
-  damage:  '#F04747'  // Rojo
+  support: COLORS.SUPPORT,
+  tank:    COLORS.TANK,
+  damage:  COLORS.DAMAGE
 };
 
 /**
@@ -72,18 +75,20 @@ function createHeroEmbed(hero) {
     embed.addFields({ name: '🎂 Edad', value: `${hero.age} años`, inline: true });
   }
 
-  // ── Puntos de vida ───────────────────────────────────────
+  // ── Puntos de vida con barras visuales ──────────────────
   if (hero.hitpoints) {
     const hp = hero.hitpoints;
-    const parts = [];
-    if (hp.health  > 0) parts.push(`❤️ Vida: **${hp.health}**`);
-    if (hp.shields > 0) parts.push(`🔵 Escudos: **${hp.shields}**`);
-    if (hp.armor   > 0) parts.push(`🟡 Armadura: **${hp.armor}**`);
-    parts.push(`💪 Total: **${hp.total}**`);
+    const total = hp.total || 1;
+    const lines = [];
+
+    if (hp.health  > 0) lines.push(`❤️ Vida      \`${createProgressBar(hp.health,  total, 10)}\` **${hp.health}**`);
+    if (hp.shields > 0) lines.push(`🔵 Escudos   \`${createProgressBar(hp.shields, total, 10)}\` **${hp.shields}**`);
+    if (hp.armor   > 0) lines.push(`🟡 Armadura  \`${createProgressBar(hp.armor,   total, 10)}\` **${hp.armor}**`);
+    lines.push(`💪 **Total: ${hp.total}**`);
 
     embed.addFields({
       name: '💓 Puntos de vida',
-      value: parts.join(' | '),
+      value: lines.join('\n'),
       inline: false
     });
   }

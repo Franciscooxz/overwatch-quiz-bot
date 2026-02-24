@@ -21,10 +21,10 @@ module.exports = {
         .setColor('#FA9C1E') // Color naranja de Overwatch
         .setThumbnail('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltbcf2689c29fa39b9/622906a991f4232f0085d3cc/Masthead_Overwatch2_Logo.png')
         .addFields(
-          { 
-            name: '📋 Comandos Disponibles', 
-            value: '`/map` - Información sobre mapas de Overwatch 2\n`/quiz` - Pon a prueba tus conocimientos\n`/quizrank` - Ranking de los mejores en el quiz\n`/workshop` - Busca y comparte códigos de workshop\n`/info` - Muestra esta información', 
-            inline: false 
+          {
+            name: '📋 Comandos Disponibles',
+            value: '`/quiz` - Pon a prueba tus conocimientos\n`/quizrank` - Ranking de los mejores en el quiz\n`/hero` - Información detallada de cualquier héroe\n`/map` - Información sobre mapas de Overwatch 2\n`/workshop` - Busca y comparte códigos de workshop\n`/info` - Muestra esta información',
+            inline: false
           },
           { 
             name: '🗺️ Sistema de Mapas', 
@@ -46,10 +46,10 @@ module.exports = {
             value: `• **Mapas:** 30+ mapas con información detallada\n• **Quiz:** 100+ preguntas de diversas categorías\n• **Workshop:** Base de datos creciente de códigos\n• **Servidores activos:** ${interaction.client.guilds.cache.size}`, 
             inline: false 
           },
-          { 
-            name: '🆕 Actualizaciones Recientes', 
-            value: '• Compatibilidad total con Discord.js v14\n• Sistema mejorado de manejo de interacciones\n• Nuevos mapas de Overwatch 2\n• Optimizaciones de rendimiento', 
-            inline: false 
+          {
+            name: '🆕 Actualizaciones Recientes',
+            value: '• Nuevo comando `/hero` con datos en tiempo real de la OverFast API\n• Mapas actualizados automáticamente desde la API oficial\n• Ranking con barras de progreso visuales\n• Barras de HP en fichas de héroes\n• Colores consistentes en todos los embeds',
+            inline: false
           }
         )
         .setFooter({ 
@@ -408,7 +408,7 @@ module.exports = {
       .setColor('#FA9C1E')
       .setThumbnail('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltbcf2689c29fa39b9/622906a991f4232f0085d3cc/Masthead_Overwatch2_Logo.png')
       .addFields(
-        { name: '📋 Comandos Disponibles', value: '`/map` - `/quiz` - `/quizrank` - `/workshop` - `/info`', inline: false },
+        { name: '📋 Comandos Disponibles', value: '`/quiz` · `/quizrank` · `/hero` · `/map` · `/workshop` · `/info`', inline: false },
         { name: '🎮 Funcionalidades', value: 'Mapas, Quiz interactivos, Workshop codes, Rankings', inline: false }
       )
       .setFooter({ text: `v2.0.0 | Latencia: ${interaction.client.ws.ping}ms` })

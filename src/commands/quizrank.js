@@ -2,6 +2,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const scoreService = require('../services/ScoreService');
+const { COLORS } = require('../config/colors');
+const { createProgressBar } = require('../utils/embedBuilder');
 
 // Crear un mapa de mensajes de ranking activos para un mejor control
 const activeRankings = new Map();
@@ -106,9 +108,8 @@ module.exports = {
    * @returns {EmbedBuilder} Embed con el ranking
    */
   createRankingEmbed(topPlayers, userId, userScore, interaction) {
-    // Crear embed base con diseño mejorado
     const embed = new EmbedBuilder()
-      .setColor('#F99E1A') // Color naranja de Overwatch
+      .setColor(COLORS.PRIMARY)
       .setTitle('🏆 Ranking del Quiz de Overwatch 2')
       .setDescription(`${this.getRandomMotivationalPhrase()}\n\n${this.formatTopPlayers(topPlayers, userId)}`)
       .setThumbnail('https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt5a7c3dc494771b95/6233336c12894d313443adc2/ow2-logo-small.png')
@@ -388,7 +389,7 @@ module.exports = {
       
       // Crear embed para estadísticas del usuario
       const embed = new EmbedBuilder()
-        .setColor('#43B581') // Verde
+        .setColor(COLORS.SUCCESS)
         .setTitle(`📊 Estadísticas de ${username}`)
         .setThumbnail(i.user.displayAvatarURL())
         .setDescription(`Resumen de tu desempeño en el Quiz de Overwatch 2.`);
@@ -711,26 +712,23 @@ module.exports = {
     if (!players || players.length === 0) {
       return 'No hay jugadores en el ranking todavía. ¡Sé el primero en jugar!';
     }
-    
+
+    const maxPoints = players[0].points || 1;
+
     return players.map((player, index) => {
       const position = index + 1;
       const medalEmoji = this.getMedalEmoji(position);
       const isCurrentUser = player.userId === currentUserId;
-      
-      // Formato mejorado con emojis y destacado para el usuario actual
-      let userDisplay = `<@${player.userId}>`;
-      
-      // Agregar un indicador para el usuario actual
-      if (isCurrentUser) {
-        userDisplay = `**${userDisplay} (Tú)**`;
-      }
-      
-      // Mostrar puntuación con formato
-      const pointsDisplay = `**${player.points}** pts`;
-      
-      // Combinar todo
-      return `${medalEmoji} ${userDisplay}: ${pointsDisplay}${player.streak ? ` 🔥 Racha: ${player.streak}` : ''}`;
-    }).join('\n\n');
+
+      const userDisplay = isCurrentUser
+        ? `**<@${player.userId}> ← Tú**`
+        : `<@${player.userId}>`;
+
+      const bar = createProgressBar(player.points, maxPoints, 12);
+      const streakText = player.streak ? ` 🔥 ×${player.streak}` : '';
+
+      return `${medalEmoji} ${userDisplay}\n╰ \`${bar}\` **${player.points} pts**${streakText}`;
+    }).join('\n');
   },
   
   /**
