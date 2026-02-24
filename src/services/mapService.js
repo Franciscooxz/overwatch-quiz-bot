@@ -159,4 +159,6 @@ class MapService {
   }
 }
 
-module.exports = MapService;
+// Singleton — una sola instancia carga los mapas una vez al arrancar
+// y los mantiene en memoria para todas las consultas posteriores.
+module.exports = new MapService();

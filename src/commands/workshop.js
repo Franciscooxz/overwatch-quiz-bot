@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { ActionRowBuilder, StringSelectMenuBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const WorkshopCodeService = require('../services/workshopCodeService');
+// Singleton: una sola instancia comparte caché y estado en todo el bot
+const workshopService = require('../services/workshopCodeService');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -117,7 +118,6 @@ module.exports = {
             ))),
   
   async execute(interaction) {
-    const workshopService = new WorkshopCodeService();
     const subcommand = interaction.options.getSubcommand();
 
     switch (subcommand) {
@@ -148,7 +148,6 @@ module.exports = {
 
 // Función para mostrar resultados de búsqueda
 async function displayResults(interaction, codes, title) {
-  const workshopService = new WorkshopCodeService(); // Crear una nueva instancia aquí para asegurar que esté disponible en el ámbito del collector
 
   if (codes.length === 0) {
     await interaction.reply({
@@ -502,7 +501,9 @@ async function handleRate(interaction, workshopService) {
 }
 
 // Configurar manejadores de botones para el copiar código
-function setupButtonHandlers(client, workshopService) {
+// El parámetro workshopService se mantiene por compatibilidad con index.js
+// pero el módulo ya usa el singleton directamente
+function setupButtonHandlers(client) {
   client.on('interactionCreate', async interaction => {
     if (!interaction.isButton()) return;
     

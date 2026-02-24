@@ -14,9 +14,8 @@ const {
   createTimeoutEmbed
 } = require('../utils/embedBuilder');
 const overwatchApi = require('../services/overwatchApiService');
-
-// Tiempo de respuesta fijo en 30 segundos
-const ANSWER_TIMEOUT = 30000;
+// Fuente única de verdad para el timeout — ya no hay dos valores distintos
+const { ANSWER_TIMEOUT } = require('../config/quizConfig');
 
 // Definir emojis de letras aquí para que estén disponibles en todo el módulo
 const LETTER_EMOJIS = ['🇦', '🇧', '🇨', '🇩'];

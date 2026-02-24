@@ -9,6 +9,9 @@ class WorkshopCodeService {
     this.nextId = 1;
     // Guardamos la promesa de carga para que los métodos puedan esperarla
     this._ready = this._loadCodes();
+    // Mutex: cadena de promesas que serializa todas las escrituras a disco
+    // evitando que dos operaciones concurrentes sobreescriban datos
+    this._writeMutex = Promise.resolve();
   }
 
   async _loadCodes() {
@@ -23,14 +26,32 @@ class WorkshopCodeService {
     }
   }
 
+  /**
+   * Ejecuta una función de escritura dentro del mutex para evitar race conditions.
+   * Cada llamada espera a que la anterior termine antes de ejecutarse.
+   * @param {Function} fn - Función async a ejecutar en exclusividad
+   * @returns {Promise<any>} Resultado de fn
+   */
+  _withWriteMutex(fn) {
+    this._writeMutex = this._writeMutex
+      .then(() => fn())
+      .catch(err => {
+        console.error('[WorkshopCodeService] Error en operación de escritura:', err);
+        throw err;
+      });
+    return this._writeMutex;
+  }
+
   async _saveCodes() {
-    try {
-      await writeJsonFile(this.dataPath, { workshopCodes: this.codes });
-      return true;
-    } catch (error) {
-      console.error('Error al guardar los códigos de workshop:', error);
-      return false;
-    }
+    return this._withWriteMutex(async () => {
+      try {
+        await writeJsonFile(this.dataPath, { workshopCodes: this.codes });
+        return true;
+      } catch (error) {
+        console.error('Error al guardar los códigos de workshop:', error);
+        return false;
+      }
+    });
   }
 
   _getNextId() {
@@ -167,4 +188,6 @@ class WorkshopCodeService {
   }
 }
 
-module.exports = WorkshopCodeService;
+// Singleton — una sola instancia comparte estado y caché en todo el bot.
+// Evita cargar el archivo múltiples veces y garantiza consistencia del nextId.
+module.exports = new WorkshopCodeService();

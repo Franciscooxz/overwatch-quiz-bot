@@ -1,251 +1,230 @@
+// src/commands/map.js
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { ActionRowBuilder, StringSelectMenuBuilder, EmbedBuilder } = require('discord.js');
-const MapService = require('../services/mapService');
+// Singleton: ya no se crea 'new MapService()' en cada ejecución
+const mapService = require('../services/mapService');
+
+// Emojis por héroe para el embed de mapa
+const HERO_ICONS = {
+  // Tanques
+  'Reinhardt': '🛡️', 'Winston': '🦍', 'D.Va': '🤖', 'Orisa': '🐎',
+  'Wrecking Ball': '🐹', 'Zarya': '💪', 'Sigma': '🧠', 'Roadhog': '🐷',
+  'Doomfist': '👊', 'Ramattra': '🐉', 'Mauga': '🔥', 'Junker Queen': '👑',
+  // DPS
+  'Soldier: 76': '🔫', 'Reaper': '💀', 'Tracer': '⏱️', 'Genji': '🥷',
+  'Hanzo': '🏹', 'Cassidy': '🤠', 'Ashe': '🔥', 'Widowmaker': '🕸️',
+  'Junkrat': '💣', 'Mei': '❄️', 'Bastion': '⚙️', 'Symmetra': '🔷',
+  'Torbjörn': '🔨', 'Pharah': '🚀', 'Echo': '🦋', 'Sojourn': '⚡',
+  'Sombra': '💻', 'Venture': '⛏️',
+  // Apoyo
+  'Mercy': '👼', 'Lúcio': '🎵', 'Ana': '💉', 'Moira': '🧪',
+  'Brigitte': '🔧', 'Zenyatta': '🧘', 'Baptiste': '💊', 'Kiriko': '🦊',
+  'Illari': '☀️', 'Lifeweaver': '🌸', 'Juno': '🛸'
+};
+
+// Colores por tipo de mapa
+const TYPE_COLORS = {
+  'Control':           '#FF9900',
+  'Escolta':           '#0099FF',
+  'Híbrido':           '#9900FF',
+  'Empuje':            '#00CC66',
+  'Clash':             '#FF6600',
+  'Flashpoint':        '#FF3399',
+  'Estadio':           '#FFCC00',
+  'Duelo':             '#FF3366',
+  'Duelo por equipos': '#CC3366',
+  'Arcade':            '#66CCFF'
+};
+
+// Iconos de dificultad
+const DIFFICULTY_ICONS = {
+  'Baja':       '⭐',
+  'Media':      '⭐⭐',
+  'Media-Alta': '⭐⭐⭐',
+  'Alta':       '⭐⭐⭐⭐'
+};
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('map')
     .setDescription('Muestra información sobre mapas de Overwatch 2'),
-  
+
   async execute(interaction) {
-    const mapService = new MapService();
-    const maps = await mapService.getAllMaps();
-    
-    if (maps.length === 0) {
-      await interaction.reply({
-        content: 'No se encontraron mapas en la base de datos.',
-        ephemeral: true
-      });
-      return;
-    }
+    try {
+      // El singleton ya tiene los mapas cargados desde el arranque
+      const maps = await mapService.getAllMaps();
 
-    // Agrupar mapas por tipo para mostrarlos ordenados
-    const mapsByType = {};
-    maps.forEach(map => {
-      if (!mapsByType[map.type]) {
-        mapsByType[map.type] = [];
-      }
-      mapsByType[map.type].push(map);
-    });
-
-    // Crear opciones para el menú desplegable, agrupadas por tipo
-    const options = [];
-    Object.keys(mapsByType).sort().forEach(type => {
-      // Añadir separador para cada tipo
-      if (options.length > 0) {
-        options.push({
-          label: `---- ${type} ----`,
-          description: `Categoría: ${type}`,
-          value: `category_${type}`,
-          default: false
-        });
-      }
-      
-      // Añadir mapas de este tipo
-      mapsByType[type].sort((a, b) => a.name.localeCompare(b.name)).forEach(map => {
-        options.push({
-          label: map.name,
-          description: `${map.type} - ${map.location}`,
-          value: map.id.toString()
-        });
-      });
-    });
-
-    // Crear menú desplegable con los mapas
-    const row = new ActionRowBuilder()
-      .addComponents(
-        new StringSelectMenuBuilder()
-          .setCustomId('map_select')
-          .setPlaceholder('Selecciona un mapa')
-          .addOptions(options.slice(0, 25)) // Discord tiene un límite de 25 opciones
-      );
-    
-    // El mensaje inicial ahora es visible para todos
-    await interaction.reply({
-      content: `${interaction.user} quiere ver información sobre un mapa de Overwatch 2. ¡Selecciona uno!`,
-      components: [row],
-      ephemeral: false // Hacemos que sea visible para todos
-    });
-    
-    // Configurar colector para manejar la selección
-    const filter = i => i.customId === 'map_select';
-    const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
-    
-    collector.on('collect', async i => {
-      const selectedValue = i.values[0];
-      
-      // Verificar si es una categoría o un mapa
-      if (selectedValue.startsWith('category_')) {
-        await i.update({
-          content: `${i.user} seleccionó la categoría ${selectedValue.replace('category_', '')}. Por favor, selecciona un mapa específico.`,
-          components: [row]
+      if (maps.length === 0) {
+        await interaction.reply({
+          content: 'No se encontraron mapas en la base de datos.',
+          ephemeral: true
         });
         return;
       }
-      
-      const selectedMapId = parseInt(selectedValue);
-      const selectedMap = await mapService.getMapById(selectedMapId);
-      
-      if (selectedMap) {
-        // Definir colores basados en el tipo de mapa
-        const typeColors = {
-          'Control': '#FF9900',       // Naranja
-          'Escolta': '#0099FF',       // Azul
-          'Híbrido': '#9900FF',       // Púrpura
-          'Empuje': '#00CC66',        // Verde
-          'Clash': '#FF6600',         // Naranja oscuro
-          'Estadio': '#FFCC00',       // Amarillo
-          'Duelo': '#FF3366',         // Rosa
-          'Arcade': '#66CCFF'         // Azul claro
-        };
-        
-        const mapColor = typeColors[selectedMap.type] || '#FF9900';
-        
-        // Crear un icono para la dificultad
-        let difficultyIcon = '⭐';
-        switch(selectedMap.difficulty) {
-          case 'Baja':
-            difficultyIcon = '⭐';
-            break;
-          case 'Media':
-            difficultyIcon = '⭐⭐';
-            break;
-          case 'Media-Alta':
-            difficultyIcon = '⭐⭐⭐';
-            break;
-          case 'Alta':
-            difficultyIcon = '⭐⭐⭐⭐';
-            break;
-        }
-        
-        // Crear embed principal con la información del mapa
-        const embed = new EmbedBuilder()
-          .setTitle(`🗺️ ${selectedMap.name}`)
-          .setDescription(`*${selectedMap.description}*`)
-          .setColor(mapColor)
-          .setImage(selectedMap.imageUrl)
-          .addFields(
-            { 
-              name: '📊 Información general', 
-              value: `**Tipo:** ${selectedMap.type}\n**Ubicación:** ${selectedMap.location}\n**Dificultad:** ${difficultyIcon}\n**Lanzamiento:** ${selectedMap.getFormattedReleaseDate() || 'Desconocido'}`, 
-              inline: false 
-            }
-          );
-        
-        // Añadir bloque de héroes recomendados
-        if (selectedMap.bestHeroes && selectedMap.bestHeroes.length > 0) {
-          const heroIcons = {
-            // Tanques
-            'Reinhardt': '🛡️',
-            'Winston': '🦍',
-            'D.Va': '🤖',
-            'Orisa': '🐎',
-            'Wrecking Ball': '🐹',
-            'Zarya': '💪',
-            'Sigma': '🧠',
-            'Roadhog': '🐷',
-            'Doomfist': '👊',
-            
-            // DPS
-            'Soldier: 76': '🔫',
-            'Reaper': '💀',
-            'Tracer': '⏱️',
-            'Genji': '🥷',
-            'Hanzo': '🏹',
-            'Cassidy': '🤠',
-            'Ashe': '🔥',
-            'Widowmaker': '🕸️',
-            'Junkrat': '💣',
-            'Mei': '❄️',
-            'Bastion': '🤖',
-            'Symmetra': '🔷',
-            'Torbjörn': '🔨',
-            'Pharah': '🚀',
-            'Echo': '🦋',
-            'Sojourn': '⚡',
-            'Freja': '🏹',
-            'Aqua': '💧',
-            
-            // Apoyo
-            'Mercy': '👼',
-            'Lucio': '🎵',
-            'Ana': '💉',
-            'Moira': '🧪',
-            'Brigitte': '🛡️',
-            'Zenyatta': '🧘',
-            'Baptiste': '💊',
-            'Kiriko': '🦊'
-          };
-          
-          const bestHeroesFormatted = selectedMap.bestHeroes.map(hero => {
-            const icon = heroIcons[hero] || '👤';
-            return `${icon} ${hero}`;
-          }).join(' | ');
-          
-          embed.addFields({ 
-            name: '✅ Héroes recomendados', 
-            value: bestHeroesFormatted, 
-            inline: false 
-          });
-        }
-        
-        // Añadir bloque de héroes no recomendados
-        if (selectedMap.worstHeroes && selectedMap.worstHeroes.length > 0) {
-          const worstHeroesFormatted = selectedMap.worstHeroes.join(' | ');
-          
-          embed.addFields({ 
-            name: '❌ Héroes no recomendados', 
-            value: worstHeroesFormatted, 
-            inline: false 
-          });
-        }
-        
-        // Añadir información adicional si está disponible
-        if (selectedMap.additionalInfo) {
-          embed.addFields({ 
-            name: '📝 Detalles adicionales', 
-            value: selectedMap.additionalInfo, 
-            inline: false 
-          });
-        }
-        
-        // Añadir footer con info del comando y quién lo solicitó
-        embed.setFooter({ 
-          text: `Solicitado por ${i.user.tag} | Usa /map para ver otros mapas`,
-        });
-        
-        // Añadir timestamp
-        embed.setTimestamp();
 
-        // Mantenemos el menú desplegable para que otros usuarios puedan seleccionar mapas
-        const newRow = new ActionRowBuilder()
-          .addComponents(
-            new StringSelectMenuBuilder()
-              .setCustomId('map_select')
-              .setPlaceholder('Selecciona otro mapa')
-              .addOptions(options.slice(0, 25))
-          );
+      // Agrupar mapas por tipo para mostrarlos ordenados
+      const mapsByType = {};
+      maps.forEach(map => {
+        if (!mapsByType[map.type]) mapsByType[map.type] = [];
+        mapsByType[map.type].push(map);
+      });
 
-        await i.update({
-          content: `${i.user} ha seleccionado **${selectedMap.name}**`,
-          embeds: [embed],
-          components: [newRow]
-        });
-      }
-    });
-    
-    collector.on('end', collected => {
-      if (collected.size === 0) {
-        interaction.editReply({
-          content: 'No se seleccionó ningún mapa. Comando expirado.',
-          components: [],
-        });
-      } else {
-        // Si hubo interacciones, solo eliminamos el menú
-        interaction.editReply({
-          components: []
-        }).catch(console.error);
-      }
-    });
+      // Construir opciones del menú (máximo 25 — límite de Discord)
+      const options = [];
+      Object.keys(mapsByType).sort().forEach(type => {
+        mapsByType[type]
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .forEach(map => {
+            if (options.length >= 25) return;
+            options.push({
+              label: map.name,
+              description: `${map.type} · ${map.location || 'Ubicación desconocida'}`,
+              value: map.id.toString()
+            });
+          });
+      });
+
+      const selectMenu = new StringSelectMenuBuilder()
+        .setCustomId('map_select')
+        .setPlaceholder('Selecciona un mapa para ver su información')
+        .addOptions(options);
+
+      const row = new ActionRowBuilder().addComponents(selectMenu);
+
+      await interaction.reply({
+        content: `🗺️ **${interaction.user.username}** quiere ver información sobre un mapa. ¡Elige uno!`,
+        components: [row]
+      });
+
+      // FIX: collector acotado al mensaje de respuesta (no a todo el canal)
+      // FIX: filtro por usuario — solo quien ejecutó el comando puede seleccionar
+      const replyMessage = await interaction.fetchReply();
+      const filter = i =>
+        i.customId === 'map_select' &&
+        i.user.id === interaction.user.id;
+
+      const collector = replyMessage.createMessageComponentCollector({
+        filter,
+        time: 60000
+      });
+
+      collector.on('collect', async i => {
+        try {
+          const selectedMapId = parseInt(i.values[0]);
+          const selectedMap = await mapService.getMapById(selectedMapId);
+
+          if (!selectedMap) {
+            await i.update({ content: '❌ No se encontró ese mapa.', components: [] });
+            return;
+          }
+
+          const embed = this.createMapEmbed(selectedMap, i.user);
+
+          // Recreamos el menú para que el usuario pueda seguir eligiendo
+          const newRow = new ActionRowBuilder()
+            .addComponents(
+              new StringSelectMenuBuilder()
+                .setCustomId('map_select')
+                .setPlaceholder('Selecciona otro mapa')
+                .addOptions(options)
+            );
+
+          await i.update({
+            content: `🗺️ **${i.user.username}** ha seleccionado **${selectedMap.name}**`,
+            embeds: [embed],
+            components: [newRow]
+          });
+        } catch (error) {
+          console.error('[Map] Error al procesar selección:', error);
+          try {
+            await i.update({ content: '❌ Error al cargar el mapa.', components: [] });
+          } catch (_) {}
+        }
+      });
+
+      collector.on('end', (collected) => {
+        if (collected.size === 0) {
+          interaction.editReply({
+            content: 'ℹ️ Selección de mapa expirada. Usa `/map` de nuevo.',
+            components: []
+          }).catch(() => {});
+        } else {
+          interaction.editReply({ components: [] }).catch(() => {});
+        }
+      });
+
+    } catch (error) {
+      console.error('[Map] Error al ejecutar comando:', error);
+      try {
+        if (!interaction.replied && !interaction.deferred) {
+          await interaction.reply({
+            content: '❌ Ha ocurrido un error al cargar los mapas. Inténtalo de nuevo.',
+            ephemeral: true
+          });
+        }
+      } catch (_) {}
+    }
+  },
+
+  /**
+   * Crea el embed de detalle para un mapa
+   * @param {Object} map - Mapa seleccionado
+   * @param {User} user - Usuario de Discord que solicitó el mapa
+   * @returns {EmbedBuilder}
+   */
+  createMapEmbed(map, user) {
+    const color = TYPE_COLORS[map.type] || '#FF9900';
+    const difficultyIcon = DIFFICULTY_ICONS[map.difficulty] || '❓';
+
+    const embed = new EmbedBuilder()
+      .setTitle(`🗺️ ${map.name}`)
+      .setColor(color)
+      .setTimestamp()
+      .setFooter({
+        text: `Solicitado por ${user.username} · Usa /map para ver otros mapas`
+      });
+
+    if (map.description) {
+      embed.setDescription(`*${map.description}*`);
+    }
+
+    if (map.imageUrl) {
+      embed.setImage(map.imageUrl);
+    }
+
+    // Información general con campos inline para compactar el diseño
+    embed.addFields(
+      { name: '🎮 Tipo',       value: map.type || 'Desconocido',     inline: true },
+      { name: '📍 Ubicación',  value: map.location || 'Desconocida', inline: true },
+      { name: '⭐ Dificultad', value: difficultyIcon,                inline: true }
+    );
+
+    if (map.releaseDate) {
+      const formatted = map.getFormattedReleaseDate
+        ? map.getFormattedReleaseDate()
+        : map.releaseDate;
+      embed.addFields({ name: '📅 Lanzamiento', value: formatted, inline: true });
+    }
+
+    if (map.bestHeroes && map.bestHeroes.length > 0) {
+      const formatted = map.bestHeroes
+        .map(h => `${HERO_ICONS[h] || '👤'} ${h}`)
+        .join(' · ');
+      embed.addFields({ name: '✅ Héroes recomendados', value: formatted, inline: false });
+    }
+
+    if (map.worstHeroes && map.worstHeroes.length > 0) {
+      embed.addFields({
+        name: '❌ Héroes no recomendados',
+        value: map.worstHeroes.join(' · '),
+        inline: false
+      });
+    }
+
+    if (map.additionalInfo) {
+      embed.addFields({ name: '📝 Detalles adicionales', value: map.additionalInfo, inline: false });
+    }
+
+    return embed;
   }
 };

@@ -7,8 +7,8 @@ module.exports = {
     'difícil': 3,
     'experto': 5
   },
-  // Tiempo de respuesta en milisegundos (15 segundos)
-  ANSWER_TIMEOUT: 15000,
+  // Tiempo de respuesta en milisegundos (30 segundos — alineado con quiz.js y el UI)
+  ANSWER_TIMEOUT: 30000,
   // Máximo de jugadores en el ranking
   MAX_RANKING_PLAYERS: 10,
   // Categorías de preguntas
