@@ -325,6 +325,27 @@ module.exports = {
             this.updateResultEmbed(embed, result, question, selectedIndex);
           }
 
+          // ── Celebración de racha si el usuario lleva 2+ aciertos seguidos ──
+          if (result.stats && result.isCorrect && result.stats.currentStreak >= 2) {
+            const milestones = [10, 7, 5, 3, 2];
+            const milestone  = milestones.find(m => result.stats.currentStreak >= m);
+            const streakMsgs = {
+              10: '¡LEYENDA! 🌟',
+              7:  '¡Imparable! ⚡',
+              5:  '¡En llamas! 🔥',
+              3:  '¡Gran racha!',
+              2:  '¡Vas bien!'
+            };
+            const pct = result.stats.totalAnswered > 0
+              ? Math.round((result.stats.totalCorrect / result.stats.totalAnswered) * 100)
+              : 0;
+            embed.addFields({
+              name:   `🔥 Racha ×${result.stats.currentStreak} — ${streakMsgs[milestone] || '¡Buen trabajo!'}`,
+              value:  `Mejor racha: **${result.stats.bestStreak}** | Respondidas: **${result.stats.totalAnswered}** | Precisión: **${pct}%**`,
+              inline: false
+            });
+          }
+
           const continueRow = new ActionRowBuilder()
             .addComponents(
               new ButtonBuilder()

@@ -2,6 +2,7 @@
 const path = require('path');
 const { readJsonFile } = require('../utils/fileOperations');
 const scoreService = require('../services/ScoreService');
+const statsService = require('../services/StatsService');
 const { DIFFICULTY_POINTS, CATEGORIES } = require('../config/quizConfig');
 
 class QuizManager {
@@ -136,18 +137,27 @@ class QuizManager {
   async processAnswer(userId, question, selectedIndex) {
     const isCorrect = this.isCorrectAnswer(question, selectedIndex);
     let updatedScore = 0;
-    
+
     if (isCorrect) {
       const points = this.getDifficultyPoints(question.dificultad);
       updatedScore = await scoreService.updateScore(userId, points);
     }
-    
+
+    // Registrar stats detalladas (errores silenciados — no deben bloquear el quiz)
+    const userStats = await statsService
+      .recordAnswer(userId, question.categoria, isCorrect)
+      .catch(err => {
+        console.error('[QuizManager] Error al guardar stats:', err);
+        return null;
+      });
+
     return {
       isCorrect,
       correctAnswerIndex: question.respuestaCorrecta,
-      correctAnswer: question.opciones[question.respuestaCorrecta],
-      points: isCorrect ? this.getDifficultyPoints(question.dificultad) : 0,
-      totalScore: updatedScore
+      correctAnswer:      question.opciones[question.respuestaCorrecta],
+      points:     isCorrect ? this.getDifficultyPoints(question.dificultad) : 0,
+      totalScore: updatedScore,
+      stats:      userStats   // { totalAnswered, totalCorrect, currentStreak, bestStreak, byCategory }
     };
   }
 

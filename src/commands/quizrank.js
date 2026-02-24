@@ -2,6 +2,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const scoreService = require('../services/ScoreService');
+const statsService = require('../services/StatsService');
 const { COLORS } = require('../config/colors');
 const { createProgressBar } = require('../utils/embedBuilder');
 
@@ -383,9 +384,26 @@ module.exports = {
     try {
       const userId = i.user.id;
       const username = i.user.username;
-      
-      // Obtener estadísticas del usuario
-      const userStats = await this.getUserStats(userId, scoreService);
+
+      // Obtener puntos + posición + estadísticas detalladas en paralelo
+      const [globalScore, globalPosition, detailedStats] = await Promise.all([
+        this.getUserScore(userId, scoreService),
+        this.getUserPosition(userId, scoreService),
+        statsService.getUserStats(userId)
+      ]);
+
+      // Combinar en el formato que espera formatUserStats()
+      const userStats = {
+        global: {
+          score:    globalScore    || 0,
+          position: globalPosition || 0
+        },
+        totalAnswered: detailedStats.totalAnswered,
+        correctAnswers: detailedStats.totalCorrect,    // renombrado para formatUserStats
+        streak:    detailedStats.currentStreak,         // ídem
+        bestStreak: detailedStats.bestStreak,
+        byCategory: detailedStats.byCategory
+      };
       
       // Crear embed para estadísticas del usuario
       const embed = new EmbedBuilder()
@@ -560,9 +578,20 @@ module.exports = {
       statsText += `**Racha actual:** ${userStats.streak}\n`;
     }
     if (userStats.bestStreak) {
-      statsText += `**Mejor racha:** ${userStats.bestStreak}`;
+      statsText += `**Mejor racha:** ${userStats.bestStreak}\n`;
     }
-    
+
+    // Categoría con mejor porcentaje de aciertos (mínimo 2 preguntas para fiabilidad)
+    if (userStats.byCategory && Object.keys(userStats.byCategory).length > 0) {
+      const bestCat = Object.entries(userStats.byCategory)
+        .filter(([, d]) => d.total >= 2)
+        .map(([name, d]) => ({ name, pct: d.correct / d.total }))
+        .sort((a, b) => b.pct - a.pct)[0];
+      if (bestCat) {
+        statsText += `**Mejor categoría:** ${bestCat.name} (${Math.round(bestCat.pct * 100)}% de acierto)`;
+      }
+    }
+
     return statsText || 'No hay estadísticas disponibles todavía. ¡Juega algunos quiz para ver tus resultados!';
   },
   
@@ -619,26 +648,31 @@ module.exports = {
    */
   async getTopPlayers(scoreService, limit = 10) {
     try {
-      // Si existe getRanking, usarlo
+      let players = [];
+
+      // ── Obtener jugadores ordenados por puntos ───────────
       if (scoreService.getRanking && typeof scoreService.getRanking === 'function') {
-        return await scoreService.getRanking(limit);
-      }
-      
-      // Alternativa: construir el ranking manualmente
-      if (scoreService.getAllScores && typeof scoreService.getAllScores === 'function') {
+        players = await scoreService.getRanking(limit);
+      } else if (scoreService.getAllScores && typeof scoreService.getAllScores === 'function') {
         const allScores = await scoreService.getAllScores();
-        
-        // Convertir a array y ordenar
-        const players = Object.entries(allScores)
+        players = Object.entries(allScores)
           .map(([userId, points]) => ({ userId, points }))
           .sort((a, b) => b.points - a.points)
           .slice(0, limit);
-        
-        return players;
       }
-      
-      // Si no hay datos, devolver array vacío
-      return [];
+
+      // ── Enriquecer con racha actual desde StatsService ───
+      // (fallback silencioso: si falla, se muestra el ranking sin racha)
+      try {
+        const streakData = await statsService.getTopStreaks(players.length + limit);
+        const streakMap  = new Map(streakData.map(s => [s.userId, s.currentStreak]));
+        players = players.map(p => ({
+          ...p,
+          streak: streakMap.get(p.userId) || 0
+        }));
+      } catch (_) { /* no crítico */ }
+
+      return players;
     } catch (error) {
       console.error('Error al obtener top players:', error);
       return [];
