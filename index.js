@@ -1,21 +1,20 @@
-// Añade esto a tu index.js
+require('dotenv').config();
+
 const http = require('http');
 
-// Crear un servidor HTTP básico
+// Crear un servidor HTTP básico (keep-alive para Render.com)
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Bot está activo');
 });
 
-// Puerto que Render asigna automáticamente
+// Puerto que Render asigna automáticamente (ahora disponible porque dotenv ya cargó)
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Servidor HTTP corriendo en puerto ${PORT}`);
 });
 
-
-require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { Client, Collection, GatewayIntentBits, Events } = require('discord.js');
@@ -93,6 +92,14 @@ try {
   console.log('⚠️ Workshop Code Manager no pudo ser inicializado. Asegúrate de tener todos los archivos necesarios.');
 }
 
+// Inicializar la OverFast API Service (carga caché en background al arrancar)
+try {
+  require('./src/services/overwatchApiService');
+  console.log('✅ OverFast API Service inicializado.');
+} catch (error) {
+  console.error('⚠️ Error al inicializar OverFast API Service:', error.message);
+}
+
 // Cargar datos del quiz (código existente)
 try {
   console.log('✅ Datos del quiz cargados correctamente');
@@ -103,6 +110,21 @@ try {
 // Evento de inicio
 client.once(Events.ClientReady, () => {
   console.log(`¡Bot iniciado como ${client.user.tag}!`);
+});
+
+// Manejo de autocomplete (debe registrarse antes del handler de comandos)
+client.on(Events.InteractionCreate, async interaction => {
+  if (!interaction.isAutocomplete()) return;
+
+  const command = client.commands.get(interaction.commandName);
+  if (!command?.autocomplete) return;
+
+  try {
+    await command.autocomplete(interaction);
+  } catch (error) {
+    console.error(`[Autocomplete] Error en /${interaction.commandName}:`, error);
+    // No lanzamos más — Discord cerrará la ventana de autocomplete solo
+  }
 });
 
 // Manejo de comandos de barra

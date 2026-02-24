@@ -8,7 +8,44 @@ class QuizManager {
   constructor() {
     this.quizDataPath = path.join(__dirname, '../../data/quizData.json');
     this.quizData = null;
-    this.loadQuizData();
+    this.activeGames = new Map(); // userId -> { questionId, startedAt }
+    // Guardamos la promesa para que los métodos puedan esperar la carga inicial
+    this._ready = this.loadQuizData();
+  }
+
+  /**
+   * Registra un juego activo para un usuario
+   * @param {string} userId - ID del usuario
+   * @param {string|number} questionId - ID de la pregunta activa
+   */
+  registerActiveGame(userId, questionId) {
+    this.activeGames.set(userId, { questionId, startedAt: Date.now() });
+  }
+
+  /**
+   * Elimina el juego activo de un usuario
+   * @param {string} userId - ID del usuario
+   */
+  clearActiveGame(userId) {
+    this.activeGames.delete(userId);
+  }
+
+  /**
+   * Obtiene el juego activo de un usuario
+   * @param {string} userId - ID del usuario
+   * @returns {Object|null} Datos del juego activo o null
+   */
+  getActiveGame(userId) {
+    const game = this.activeGames.get(userId);
+    if (!game) return null;
+
+    // Auto-limpiar juegos que llevan más de 2 minutos (timeout de seguridad)
+    if (Date.now() - game.startedAt > 120000) {
+      this.activeGames.delete(userId);
+      return null;
+    }
+
+    return game;
   }
 
   /**
@@ -52,7 +89,8 @@ class QuizManager {
    * @param {string} difficulty - Dificultad de la pregunta (opcional)
    * @returns {Object|null} Pregunta aleatoria o null si no hay coincidencias
    */
-  getRandomQuestion(category, difficulty) {
+  async getRandomQuestion(category, difficulty) {
+    await this._ready;
     if (!this.quizData || !this.quizData.preguntas || this.quizData.preguntas.length === 0) {
       return null;
     }

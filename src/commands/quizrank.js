@@ -35,26 +35,28 @@ module.exports = {
       // Crear botones para el ranking
       const row = this.createActionButtons();
       
-      // Responder con el embed y los botones usando la nueva sintaxis
-      const reply = await interaction.reply({
+      // Responder con el embed y los botones
+      const callbackResponse = await interaction.reply({
         embeds: [embed],
         components: [row],
-        // Usar withResponse en lugar de fetchReply (Discord.js v14+)
         withResponse: true
       });
-      
+
+      // withResponse: true devuelve InteractionCallbackResponse { resource: { message } }
+      const replyMessage = callbackResponse.resource?.message;
+
       // Guardar la referencia del mensaje para control posterior
-      if (reply) {
-        activeRankings.set(reply.id, {
+      if (replyMessage) {
+        activeRankings.set(replyMessage.id, {
           userId: interaction.user.id,
-          messageId: reply.id,
+          messageId: replyMessage.id,
           channelId: interaction.channelId,
           guildId: interaction.guildId,
           timestamp: Date.now()
         });
-        
+
         // Configurar collector para los botones
-        this.setupButtonCollector(interaction, reply);
+        this.setupButtonCollector(interaction, replyMessage);
       }
       
       // Limpiar rankings antiguos (más de 1 hora)
@@ -312,61 +314,61 @@ module.exports = {
   },
 
   /**
-   * Crea una interacción simulada más robusta
+   * Crea una interacción simulada para ejecutar el comando quiz desde un botón.
+   * Envía el quiz como un mensaje nuevo en el canal en lugar de editar el ranking.
    * @param {ButtonInteraction} buttonInteraction - Interacción del botón
    * @param {Interaction} originalInteraction - Interacción original
    * @returns {Object} Interacción simulada
    */
   createSimulatedInteraction(buttonInteraction, originalInteraction) {
+    // Estado mutable para rastrear correctamente replied/deferred
+    const state = { replied: false, deferred: false, lastMessage: null };
+
     return {
       user: buttonInteraction.user,
       channel: buttonInteraction.channel,
       guild: buttonInteraction.guild,
       client: buttonInteraction.client,
-      
-      // Propiedades necesarias
+      channelId: buttonInteraction.channelId,
+      guildId: buttonInteraction.guildId,
+
       isCommand: () => true,
-      replied: false,
-      deferred: false,
-      
-      // Opciones simuladas
+      isChatInputCommand: () => true,
+
+      // Getters para que quiz.js lea el estado actualizado
+      get replied() { return state.replied; },
+      get deferred() { return state.deferred; },
+
+      // Opciones sin filtros — el quiz arrancará sin categoría ni dificultad
       options: {
         getString: () => null,
         getInteger: () => null,
         getBoolean: () => null
       },
-      
-      // Métodos simulados
+
+      // reply() envía un mensaje NUEVO en el canal (no edita el ranking)
       reply: async (options) => {
-        try {
-          return await buttonInteraction.editReply(options);
-        } catch (err) {
-          console.error('Error en reply simulado:', err);
-          throw err;
-        }
+        state.replied = true;
+        state.lastMessage = await buttonInteraction.channel.send(options);
+        return state.lastMessage;
       },
-      
+
+      // editReply() edita el último mensaje enviado por este quiz simulado
       editReply: async (options) => {
-        try {
-          return await buttonInteraction.editReply(options);
-        } catch (err) {
-          console.error('Error en editReply simulado:', err);
-          throw err;
+        if (state.lastMessage) {
+          return await state.lastMessage.edit(options);
         }
+        state.lastMessage = await buttonInteraction.channel.send(options);
+        return state.lastMessage;
       },
-      
+
       deferReply: async () => {
-        // Ya hicimos deferUpdate, no necesitamos hacer nada más
+        state.deferred = true;
         return Promise.resolve();
       },
-      
+
       followUp: async (options) => {
-        try {
-          return await buttonInteraction.channel.send(options);
-        } catch (err) {
-          console.error('Error en followUp simulado:', err);
-          throw err;
-        }
+        return await buttonInteraction.channel.send(options);
       }
     };
   },

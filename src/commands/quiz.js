@@ -1,18 +1,19 @@
 // src/commands/quiz.js
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { 
-  ActionRowBuilder, 
-  ButtonBuilder, 
-  ButtonStyle, 
+const {
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
   EmbedBuilder,
-  ComponentType 
+  ComponentType
 } = require('discord.js');
 const quizManager = require('../models/QuizManager');
-const { 
-  createQuizQuestionEmbed, 
-  updateQuizResultEmbed, 
-  createTimeoutEmbed 
+const {
+  createQuizQuestionEmbed,
+  updateQuizResultEmbed,
+  createTimeoutEmbed
 } = require('../utils/embedBuilder');
+const overwatchApi = require('../services/overwatchApiService');
 
 // Tiempo de respuesta fijo en 30 segundos
 const ANSWER_TIMEOUT = 30000;
@@ -68,7 +69,7 @@ module.exports = {
       }
       
       // Obtener pregunta aleatoria con los filtros
-      const pregunta = quizManager.getRandomQuestion(categoria, dificultad);
+      const pregunta = await quizManager.getRandomQuestion(categoria, dificultad);
       
       // Si no hay preguntas que cumplan los filtros
       if (!pregunta) {
@@ -78,27 +79,33 @@ module.exports = {
         });
       }
       
+      // Si la pregunta tiene un héroe asociado, buscar su retrato real en la API
+      let heroPortrait = null;
+      if (pregunta.heroe) {
+        heroPortrait = await overwatchApi.getHeroPortrait(pregunta.heroe).catch(() => null);
+      }
+
       // Crear el embed con la pregunta (ahora mejorado)
-      const embed = this.createEnhancedEmbed(pregunta, username, categoria, dificultad, interaction);
-      
+      const embed = this.createEnhancedEmbed(pregunta, username, categoria, dificultad, interaction, heroPortrait);
+
       // Crear botones para las opciones
       const row = this.createOptionsButtons(pregunta);
-      
+
       // Crear mensaje con temporizador y embed combinados
       const timerMessage = `⏱️ **${interaction.user.username}** tienes **30 segundos** para responder esta pregunta de Overwatch 2!`;
-      
+
       // Enviar mensaje con temporizador y el embed
       await interaction.reply({
         content: timerMessage,
         embeds: [embed],
         components: [row]
       });
-      
+
       // Registrar que este usuario tiene un juego activo
       if (quizManager.registerActiveGame && typeof quizManager.registerActiveGame === 'function') {
         quizManager.registerActiveGame(userId, pregunta.id);
       }
-      
+
       // Configurar el collector para respuestas
       await this.setupResponseCollector(interaction, pregunta, embed, row, userId, categoria, dificultad);
     } catch (error) {
@@ -117,9 +124,10 @@ module.exports = {
    * @param {string} categoria - Categoría seleccionada
    * @param {string} dificultad - Dificultad seleccionada
    * @param {Interaction} interaction - Interacción original
+   * @param {string|null} [heroPortrait] - URL del portrait del héroe (opcional, de la API)
    * @returns {EmbedBuilder} Embed mejorado
    */
-  createEnhancedEmbed(question, username, categoria, dificultad, interaction) {
+  createEnhancedEmbed(question, username, categoria, dificultad, interaction, heroPortrait = null) {
     // Si hay una función existente, la usamos
     if (typeof createQuizQuestionEmbed === 'function') {
       return createQuizQuestionEmbed(question);
@@ -216,15 +224,18 @@ module.exports = {
       'experto': 'https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt7dcc1464017af809/62a3862cca891230bfb1c7bd/OW2_Hero_Widowmaker_Tile.png'
     };
     
-    if (question.dificultad && difficultyThumbnails[question.dificultad.toLowerCase()]) {
+    // Prioridad de thumbnail: portrait real del héroe (API) > imagen de dificultad
+    if (heroPortrait) {
+      embed.setThumbnail(heroPortrait);
+    } else if (question.dificultad && difficultyThumbnails[question.dificultad.toLowerCase()]) {
       embed.setThumbnail(difficultyThumbnails[question.dificultad.toLowerCase()]);
     }
-    
+
     // Si la pregunta tiene una imagen específica, reemplazar la imagen genérica
     if (question.imagen) {
       embed.setImage(question.imagen);
     }
-    
+
     return embed;
   },
   
@@ -291,41 +302,35 @@ module.exports = {
         componentType: ComponentType.Button
       });
       
+      // ID del timeout del botón "continuar" — se cancela si el usuario lo pulsa
+      let continueTimeoutId = null;
+
       collector.on('collect', async i => {
         try {
-          // Verificar si es el botón de continuar
+          // Botón "continuar" — cancelar timeout pendiente y arrancar nuevo quiz
           if (i.customId === `quiz_continue_${question.id}`) {
-            // Obtener la siguiente dificultad (rotación) manteniendo la categoría
+            if (continueTimeoutId !== null) {
+              clearTimeout(continueTimeoutId);
+              continueTimeoutId = null;
+            }
             const nextDifficulty = this.getNextDifficulty(dificultad);
-            
-            // Iniciar nuevo quiz con la misma categoría y la siguiente dificultad
             await this.startNewQuiz(i, categoria, nextDifficulty);
-            collector.stop();
+            collector.stop('user_continued');
             return;
           }
-          
-          // Si llegamos aquí, es un botón de respuesta
-          // Obtener el índice seleccionado
+
+          // Botón de respuesta
           const selectedIndex = parseInt(i.customId.split('_')[2]);
-          
-          // Actualizar botones según la respuesta
           this.updateButtons(row, question.respuestaCorrecta, selectedIndex);
-          
-          // Procesar la respuesta
-          const result = await quizManager.processAnswer(
-            userId,
-            question,
-            selectedIndex
-          );
-          
-          // Actualizar el embed con el resultado
+
+          const result = await quizManager.processAnswer(userId, question, selectedIndex);
+
           if (typeof updateQuizResultEmbed === 'function') {
             updateQuizResultEmbed(embed, result);
           } else {
             this.updateResultEmbed(embed, result, question, selectedIndex);
           }
-          
-          // Crear fila de botones de navegación mejorados
+
           const continueRow = new ActionRowBuilder()
             .addComponents(
               new ButtonBuilder()
@@ -334,74 +339,72 @@ module.exports = {
                 .setStyle(ButtonStyle.Success)
                 .setEmoji('▶️')
             );
-          
-          // Eliminar el mensaje de temporizador y actualizar con el embed y botones
+
           await i.update({
-            content: null, // Eliminar el mensaje de temporizador
+            content: null,
             embeds: [embed],
-            components: [row, continueRow] // Agregar fila con botón de continuar
+            components: [row, continueRow]
           });
-          
-          // Liberar el estado de juego activo
-          if (quizManager.clearActiveGame && typeof quizManager.clearActiveGame === 'function') {
-            quizManager.clearActiveGame(userId);
-          }
-          
-          // Establecer un nuevo tiempo para el botón de continuar
-          setTimeout(async () => {
-            try {
-              // Verificar si el collector ya está cerrado
-              if (collector.ended) return;
-              
-              // Si no, cerrar el collector
-              collector.stop();
-            } catch (error) {
-              console.error('Error al finalizar collector tras respuesta:', error);
+
+          quizManager.clearActiveGame(userId);
+
+          // Guardamos el ID para cancelarlo si el usuario pulsa "continuar"
+          continueTimeoutId = setTimeout(() => {
+            continueTimeoutId = null;
+            if (!collector.ended) {
+              collector.stop('timeout_continue');
             }
-          }, 60000); // 1 minuto para decidir si continuar
-          
+          }, 60000);
+
         } catch (error) {
           console.error('Error al procesar respuesta:', error);
-          await i.reply({
-            content: "Ha ocurrido un error al procesar tu respuesta.",
-            ephemeral: true
-          });
+          try {
+            await i.reply({ content: "Ha ocurrido un error al procesar tu respuesta.", ephemeral: true });
+          } catch (replyErr) {
+            console.error('Error al enviar mensaje de error:', replyErr);
+          }
         }
       });
-      
-      collector.on('end', async collected => {
+
+      collector.on('end', async (collected, reason) => {
         try {
-          // Si no se interactuó con ningún botón (timeout)
+          // El usuario pulsó "continuar" — nuevo quiz ya corriendo, nada que hacer
+          if (reason === 'user_continued') return;
+
+          // El usuario respondió pero no pulsó "continuar" en 60 segundos
+          if (reason === 'timeout_continue') {
+            try {
+              await interaction.editReply({ components: [] });
+            } catch (e) { /* el mensaje puede haber sido eliminado */ }
+            quizManager.clearActiveGame(userId);
+            return;
+          }
+
+          // Timeout original de 30 segundos — el usuario no respondió
           if (collected.size === 0) {
-            // Si el usuario no respondió a tiempo
             this.updateButtons(row, question.respuestaCorrecta);
-            
-            // Actualizar embed para timeout
+
             if (typeof createTimeoutEmbed === 'function') {
               createTimeoutEmbed(embed, question.opciones[question.respuestaCorrecta]);
             } else {
               this.createTimeoutEmbed(embed, question, question.respuestaCorrecta);
             }
-            
-            // Actualizar el mensaje eliminando el texto de temporizador
+
             await interaction.editReply({
-              content: null, // Eliminar el mensaje de temporizador
+              content: null,
               embeds: [embed],
               components: [row]
             });
-            
-            // Liberar el estado de juego activo
-            if (quizManager.clearActiveGame && typeof quizManager.clearActiveGame === 'function') {
-              quizManager.clearActiveGame(userId);
+
+            quizManager.clearActiveGame(userId);
+
+            if (interaction.channel) {
+              await interaction.channel.send({
+                content: `⌛ **¡Se acabó el tiempo, ${interaction.user.username}!** La respuesta correcta era **${question.opciones[question.respuestaCorrecta]}**`,
+                allowedMentions: { parse: [] }
+              });
             }
-            
-            // Mensaje adicional sobre tiempo agotado
-            await interaction.channel.send({
-              content: `⌛ **¡Se acabó el tiempo, ${interaction.user.username}!** La respuesta correcta era **${question.opciones[question.respuestaCorrecta]}**`,
-              allowedMentions: { parse: [] } // Evitar menciones
-            });
           }
-          // Si se respondió pero no se dio a continuar, no hacemos nada extra
         } catch (error) {
           console.error('Error en el evento end del collector:', error);
         }
@@ -431,7 +434,7 @@ module.exports = {
       });
       
       // Obtener pregunta aleatoria con los filtros
-      const pregunta = quizManager.getRandomQuestion(categoria, dificultad);
+      const pregunta = await quizManager.getRandomQuestion(categoria, dificultad);
       
       // Si no hay preguntas que cumplan los filtros
       if (!pregunta) {
@@ -441,9 +444,15 @@ module.exports = {
           components: []
         });
       }
-      
+
+      // Si la pregunta tiene un héroe asociado, buscar su retrato real en la API
+      let heroPortrait = null;
+      if (pregunta.heroe) {
+        heroPortrait = await overwatchApi.getHeroPortrait(pregunta.heroe).catch(() => null);
+      }
+
       // Crear el embed con la nueva pregunta
-      const embed = this.createEnhancedEmbed(pregunta, username, categoria, dificultad, interaction);
+      const embed = this.createEnhancedEmbed(pregunta, username, categoria, dificultad, interaction, heroPortrait);
       
       // Crear botones para las opciones
       const row = this.createOptionsButtons(pregunta);

@@ -179,19 +179,19 @@ async function displayResults(interaction, codes, title) {
     components: [row],
     ephemeral: false
   });
-  
-  // Configurar colector
+
+  // Obtener el mensaje enviado para scopear el collector solo a ese mensaje
+  const replyMessage = await interaction.fetchReply();
   const filter = i => i.customId === 'workshop_select' && i.user.id === interaction.user.id;
-  const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
+  const collector = replyMessage.createMessageComponentCollector({ filter, time: 60000 });
   
   collector.on('collect', async i => {
     const selectedId = parseInt(i.values[0]);
-    // Usar la instancia local de workshopService que creamos arriba
-    const selectedCode = workshopService.getCodeById(selectedId);
-    
+    const selectedCode = await workshopService.getCodeById(selectedId);
+
     if (selectedCode) {
       // Incrementar popularidad
-      workshopService.updatePopularity(selectedCode.code);
+      await workshopService.updatePopularity(selectedCode.code);
       
       // Crear embed
       const embed = createCodeEmbed(selectedCode);
@@ -314,7 +314,7 @@ function createCodeEmbed(code) {
 // Manejador para búsqueda
 async function handleSearch(interaction, workshopService) {
   const searchTerm = interaction.options.getString('término');
-  const results = workshopService.searchCodes(searchTerm);
+  const results = await workshopService.searchCodes(searchTerm);
   
   if (results.length === 0) {
     await interaction.reply({
@@ -330,7 +330,7 @@ async function handleSearch(interaction, workshopService) {
 // Manejador para búsqueda por categoría
 async function handleCategory(interaction, workshopService) {
   const category = interaction.options.getString('categoría');
-  const results = workshopService.getCodesByCategory(category);
+  const results = await workshopService.getCodesByCategory(category);
   
   if (results.length === 0) {
     await interaction.reply({
@@ -346,7 +346,7 @@ async function handleCategory(interaction, workshopService) {
 // Manejador para búsqueda por héroe
 async function handleHero(interaction, workshopService) {
   const hero = interaction.options.getString('héroe');
-  const results = workshopService.getCodesByHero(hero);
+  const results = await workshopService.getCodesByHero(hero);
   
   if (results.length === 0) {
     await interaction.reply({
@@ -361,7 +361,7 @@ async function handleHero(interaction, workshopService) {
 
 // Manejador para mostrar códigos populares
 async function handlePopular(interaction, workshopService) {
-  const popularCodes = workshopService.getPopularCodes(10);
+  const popularCodes = await workshopService.getPopularCodes(10);
   
   if (popularCodes.length === 0) {
     await interaction.reply({
@@ -376,7 +376,7 @@ async function handlePopular(interaction, workshopService) {
 
 // Manejador para mostrar códigos nuevos
 async function handleNew(interaction, workshopService) {
-  const newCodes = workshopService.getNewestCodes(10);
+  const newCodes = await workshopService.getNewestCodes(10);
   
   if (newCodes.length === 0) {
     await interaction.reply({
@@ -422,7 +422,7 @@ async function handleAdd(interaction, workshopService) {
   }
   
   // Comprobar si el código ya existe
-  const existingCode = workshopService.getCodeByCode(code);
+  const existingCode = await workshopService.getCodeByCode(code);
   if (existingCode) {
     await interaction.reply({
       content: `El código ${code} ya existe en la base de datos.`,
@@ -445,7 +445,7 @@ async function handleAdd(interaction, workshopService) {
   };
   
   // Añadir el código
-  const result = workshopService.addCode(newCodeData, interaction.user.id);
+  const result = await workshopService.addCode(newCodeData, interaction.user.id);
   
   if (result.success) {
     // Crear embed para mostrar el código añadido
@@ -470,7 +470,7 @@ async function handleRate(interaction, workshopService) {
   const rating = interaction.options.getInteger('valoración');
   
   // Comprobar si el código existe
-  const workshopCode = workshopService.getCodeByCode(code);
+  const workshopCode = await workshopService.getCodeByCode(code);
   if (!workshopCode) {
     await interaction.reply({
       content: `No se encontró ningún código "${code}" en la base de datos.`,
@@ -480,7 +480,7 @@ async function handleRate(interaction, workshopService) {
   }
   
   // Registrar la valoración
-  const result = workshopService.rateCode(code, rating, interaction.user.id);
+  const result = await workshopService.rateCode(code, rating, interaction.user.id);
   
   if (result.success) {
     // Crear mensaje con las estrellas visuales
@@ -521,7 +521,7 @@ function setupButtonHandlers(client, workshopService) {
     // Manejar botón de valorar
     if (customId.startsWith('rate_')) {
       const code = customId.replace('rate_', '');
-      const workshopCode = workshopService.getCodeByCode(code);
+      const workshopCode = await workshopService.getCodeByCode(code);
       
       if (!workshopCode) {
         await interaction.reply({
@@ -569,7 +569,7 @@ function setupButtonHandlers(client, workshopService) {
       const rating = parseInt(ratingStr);
       
       // Registrar la valoración
-      const result = workshopService.rateCode(code, rating, interaction.user.id);
+      const result = await workshopService.rateCode(code, rating, interaction.user.id);
       
       if (result.success) {
         // Crear mensaje con las estrellas visuales

@@ -99,14 +99,17 @@ module.exports = {
         );
 
       // Enviar respuesta con manejo mejorado de errores
-      const reply = await interaction.reply({
+      const callbackResponse = await interaction.reply({
         embeds: [embed],
         components: [row, supportRow],
         withResponse: true
       });
 
-      // Configurar colector con manejo mejorado
-      this.setupInfoCollector(interaction, reply);
+      // withResponse: true devuelve InteractionCallbackResponse { resource: { message } }
+      const replyMessage = callbackResponse.resource?.message;
+      if (replyMessage) {
+        this.setupInfoCollector(interaction, replyMessage);
+      }
 
     } catch (error) {
       console.error('Error en comando info:', error);
@@ -126,53 +129,44 @@ module.exports = {
   },
 
   /**
-   * Configura el collector para los botones de información
+   * Configura UN ÚNICO collector para toda la sesión de /info.
+   * Maneja todos los botones (secciones + retorno) sin crear collectors anidados.
    * @param {Interaction} interaction - Interacción original
-   * @param {Message} reply - Mensaje de respuesta
+   * @param {Message} message - Mensaje de respuesta (ya extraído de callbackResponse)
    */
-  setupInfoCollector(interaction, reply) {
+  setupInfoCollector(interaction, message) {
     try {
-      // Filtro para detectar interacciones válidas
-      const filter = i => {
-        const validCustomIds = [
-          'info_map', 'info_quiz', 'info_workshop', 
-          'info_support', 'info_stats'
-        ];
-        return validCustomIds.includes(i.customId) && 
-               i.message.id === reply.id &&
-               i.user.id === interaction.user.id;
-      };
+      const validCustomIds = [
+        'info_map', 'info_quiz', 'info_workshop',
+        'info_support', 'info_stats', 'info_back'
+      ];
 
-      // Crear collector con tiempo reducido
-      const collector = reply.createMessageComponentCollector({ 
-        filter, 
+      const filter = i =>
+        validCustomIds.includes(i.customId) &&
+        i.message.id === message.id &&
+        i.user.id === interaction.user.id;
+
+      // Un solo collector para toda la sesión — sin recursión
+      const collector = message.createMessageComponentCollector({
+        filter,
         time: 300000 // 5 minutos
       });
 
-      // Manejar interacciones
       collector.on('collect', async i => {
         try {
-          // Verificar estado de la interacción
-          if (!i.isButton() || i.replied || i.deferred) {
-            return;
-          }
-
-          // Hacer deferUpdate inmediatamente
+          if (!i.isButton() || i.replied || i.deferred) return;
           await i.deferUpdate();
-          
-          // Procesar según el botón presionado
-          await this.handleInfoButton(i, interaction.user);
-          
+
+          if (i.customId === 'info_back') {
+            await this.showMainInfo(i);
+          } else {
+            await this.handleInfoButton(i, interaction.user);
+          }
         } catch (error) {
           console.error('Error en collector de info:', error);
-          
-          // Intentar enviar mensaje de error
           try {
             if (!i.replied && !i.deferred) {
-              await i.reply({
-                content: '⚠️ Ha ocurrido un error al procesar tu solicitud.',
-                flags: 64
-              });
+              await i.reply({ content: '⚠️ Ha ocurrido un error al procesar tu solicitud.', flags: 64 });
             }
           } catch (replyError) {
             console.error('Error al responder con mensaje de error:', replyError);
@@ -180,14 +174,10 @@ module.exports = {
         }
       });
 
-      // Manejar fin del collector
-      collector.on('end', collected => {
-        console.log(`Info collector terminado. Interacciones: ${collected.size}`);
-        
-        // Deshabilitar botones al finalizar
-        this.disableInfoButtons(reply).catch(err => {
-          console.error('Error al deshabilitar botones de info:', err);
-        });
+      collector.on('end', () => {
+        this.disableInfoButtons(message).catch(err =>
+          console.error('Error al deshabilitar botones de info:', err)
+        );
       });
 
     } catch (error) {
@@ -235,14 +225,11 @@ module.exports = {
             .setEmoji('🔙')
         );
 
-      // Actualizar mensaje
+      // Actualizar mensaje — el collector principal ya escucha 'info_back'
       await interaction.editReply({
         embeds: [targetEmbed],
         components: [backRow]
       });
-
-      // Configurar collector para el botón de retorno
-      this.setupBackButton(interaction, originalUser);
 
     } catch (error) {
       console.error('Error al manejar botón de info:', error);
@@ -410,47 +397,7 @@ module.exports = {
   },
 
   /**
-   * Configura el botón de retorno
-   * @param {ButtonInteraction} interaction - Interacción actual
-   * @param {User} originalUser - Usuario original
-   */
-  async setupBackButton(interaction, originalUser) {
-    try {
-      const message = await interaction.fetchReply();
-      
-      const filter = i => 
-        i.customId === 'info_back' && 
-        i.message.id === message.id &&
-        i.user.id === originalUser.id;
-      
-      const collector = message.createMessageComponentCollector({
-        filter,
-        time: 300000 // 5 minutos
-      });
-      
-      collector.on('collect', async i => {
-        try {
-          collector.stop();
-          
-          if (i.replied || i.deferred) return;
-          
-          await i.deferUpdate();
-          
-          // Volver al embed principal
-          await this.showMainInfo(i);
-          
-        } catch (error) {
-          console.error('Error en botón de retorno:', error);
-        }
-      });
-      
-    } catch (error) {
-      console.error('Error al configurar botón de retorno:', error);
-    }
-  },
-
-  /**
-   * Muestra la información principal del bot
+   * Muestra la información principal del bot (al pulsar "Volver")
    * @param {ButtonInteraction} interaction - Interacción del botón
    */
   async showMainInfo(interaction) {
@@ -474,14 +421,11 @@ module.exports = {
         new ButtonBuilder().setCustomId('info_workshop').setLabel('Workshop').setStyle(ButtonStyle.Secondary).setEmoji('🔧')
       );
     
+    // El collector principal sigue activo — no necesitamos crear uno nuevo
     await interaction.editReply({
       embeds: [embed],
       components: [row]
     });
-    
-    // Reconfigurar collector principal
-    const message = await interaction.fetchReply();
-    this.setupInfoCollector({ user: interaction.user }, message);
   },
 
   /**
