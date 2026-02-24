@@ -9,7 +9,7 @@ module.exports = {
   
   async execute(interaction) {
     const mapService = new MapService();
-    const maps = mapService.getAllMaps();
+    const maps = await mapService.getAllMaps();
     
     if (maps.length === 0) {
       await interaction.reply({
@@ -84,7 +84,7 @@ module.exports = {
       }
       
       const selectedMapId = parseInt(selectedValue);
-      const selectedMap = mapService.getMapById(selectedMapId);
+      const selectedMap = await mapService.getMapById(selectedMapId);
       
       if (selectedMap) {
         // Definir colores basados en el tipo de mapa
