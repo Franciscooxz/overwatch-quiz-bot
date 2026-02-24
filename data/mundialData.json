@@ -1,0 +1,141 @@
+{
+  "tournament": {
+    "name": "Overwatch World Cup 2026",
+    "edition": "BlizzCon 2026 — 10° Aniversario de Overwatch Esports",
+    "location": "Anaheim Convention Center, Anaheim, California",
+    "teams": 16,
+    "format": "4 grupos round-robin → eliminación directa",
+    "prizePool": "TBA",
+    "links": {
+      "official": "https://esports.overwatch.com/en-us/news/overwatch-world-cup-2026",
+      "liquipedia": "https://liquipedia.net/overwatch/Overwatch_World_Cup/2026",
+      "owcs": "https://overwatch.blizzard.com/en-us/news/24246297/owcs-2026-season-competitive-details/"
+    }
+  },
+
+  "phases": [
+    {
+      "name": "Selección de Comités",
+      "emoji": "📋",
+      "startDate": "2026-01-01",
+      "endDate": "2026-02-06",
+      "description": "Aplicaciones para los comités nacionales. Cerradas el 6 de febrero."
+    },
+    {
+      "name": "Conference Cups",
+      "emoji": "🏆",
+      "startDate": "2026-03-01",
+      "endDate": "2026-04-30",
+      "description": "Torneos regionales en AMER, EMEA y ASIA. Los equipos Wildcard se clasifican aquí."
+    },
+    {
+      "name": "Clasificatorios Online",
+      "emoji": "🌐",
+      "startDate": "2026-05-01",
+      "endDate": "2026-07-28",
+      "description": "28 equipos en 7 grupos por conferencia. Top 2 de cada grupo avanzan a la Fase de Grupos."
+    },
+    {
+      "name": "Fase de Grupos",
+      "emoji": "🗂️",
+      "startDate": "2026-07-29",
+      "endDate": "2026-09-11",
+      "description": "16 equipos en 4 grupos round-robin. Los 2 mejores de cada grupo avanzan a la Final."
+    },
+    {
+      "name": "Gran Final — BlizzCon",
+      "emoji": "🎉",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-13",
+      "description": "Eliminación directa en el Anaheim Convention Center. La última nación en pie se corona campeona."
+    }
+  ],
+
+  "owcsSchedule": [
+    {
+      "name": "OWCS EMEA Etapa 1",
+      "emoji": "🌍",
+      "start": "2026-03-21",
+      "end":   "2026-04-12",
+      "region": "EMEA",
+      "prize": "$75,000"
+    },
+    {
+      "name": "OWCS Pacífico Etapa 1",
+      "emoji": "🌏",
+      "start": "2026-03-16",
+      "end":   "2026-04-23",
+      "region": "Asia-Pacífico",
+      "prize": "TBA"
+    },
+    {
+      "name": "OWCS Corea Etapa 1",
+      "emoji": "🇰🇷",
+      "start": "2026-03-16",
+      "end":   "2026-05-03",
+      "region": "Corea",
+      "prize": "TBA"
+    },
+    {
+      "name": "OWCS Champions Clash",
+      "emoji": "⚡",
+      "start": "2026-05-22",
+      "end":   "2026-05-24",
+      "region": "Global",
+      "prize": "TBA"
+    },
+    {
+      "name": "OWCS EMEA Etapa 2",
+      "emoji": "🌍",
+      "start": "2026-06-13",
+      "end":   "2026-07-05",
+      "region": "EMEA",
+      "prize": "TBA"
+    },
+    {
+      "name": "OWCS Midseason Championship",
+      "emoji": "🏆",
+      "start": "2026-07-29",
+      "end":   "2026-08-02",
+      "region": "Global",
+      "prize": "TBA"
+    },
+    {
+      "name": "OWWC Gran Final",
+      "emoji": "🎉",
+      "start": "2026-09-12",
+      "end":   "2026-09-13",
+      "region": "Global — BlizzCon",
+      "prize": "TBA"
+    }
+  ],
+
+  "teams": {
+    "confirmed": [
+      { "name": "Arabia Saudita", "flag": "🇸🇦", "seed": "Campeón OWWC 2023 (auto-clasificado)" },
+      { "name": "China",          "flag": "🇨🇳", "seed": "Subcampeón OWWC 2023 (auto-clasificado)" }
+    ],
+    "invited": [
+      { "name": "Corea del Sur",   "flag": "🇰🇷", "seed": "Invitado — Top OWWC 2023" },
+      { "name": "Francia",         "flag": "🇫🇷", "seed": "Invitado — Top EMEA" },
+      { "name": "Suecia",          "flag": "🇸🇪", "seed": "Invitado — Top EMEA" },
+      { "name": "Canadá",          "flag": "🇨🇦", "seed": "Invitado — Top AMER" },
+      { "name": "Estados Unidos",  "flag": "🇺🇸", "seed": "Invitado — Top AMER" },
+      { "name": "Australia",       "flag": "🇦🇺", "seed": "Invitado — Top Asia-Pacífico" },
+      { "name": "Japón",           "flag": "🇯🇵", "seed": "Invitado — Top Asia" },
+      { "name": "Alemania",        "flag": "🇩🇪", "seed": "Invitado — Top EMEA" },
+      { "name": "Reino Unido",     "flag": "🇬🇧", "seed": "Invitado — Top EMEA" },
+      { "name": "Brasil",          "flag": "🇧🇷", "seed": "Invitado — Top AMER" },
+      { "name": "Tailandia",       "flag": "🇹🇭", "seed": "Invitado — Top Asia-Pacífico" },
+      { "name": "Filipinas",       "flag": "🇵🇭", "seed": "Invitado — Top Asia-Pacífico" },
+      { "name": "Hong Kong",       "flag": "🇭🇰", "seed": "Invitado — Top Asia" },
+      { "name": "Polonia",         "flag": "🇵🇱", "seed": "Invitado — Top EMEA" },
+      { "name": "Tailandia",       "flag": "🇹🇭", "seed": "Invitado — Top Asia" }
+    ],
+    "wildcardSpots": 4,
+    "wildcardNote": "4 plazas para equipos que clasifiquen vía Conference Cups"
+  },
+
+  "_lastUpdated": "2026-02-24",
+  "_note": "Actualiza este archivo cuando se confirmen nuevos equipos o fechas. El comando /mundial lo lee en tiempo real."
+}
